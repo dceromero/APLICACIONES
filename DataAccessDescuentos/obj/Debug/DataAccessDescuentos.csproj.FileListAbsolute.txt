@@ -1,0 +1,14 @@
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataAccessDescuentos.dll.config
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataAccessDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataAccessDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataEntitysDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataEntitysDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.xml
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csprojAssemblyReference.cache
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csproj.CoreCompileInputs.cache
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csproj.CopyComplete
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.pdb

@@ -1,0 +1,23 @@
+﻿body {
+    background-image: url(/Image/fondoaprob.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.card-footer, .card-header {
+    padding: .1rem .1rem !important;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.card-body {
+    padding:15px!important;
+}
+
+.list-inline{
+    margin-top:1em!important;
+}
+
