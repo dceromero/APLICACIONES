@@ -1,7 +1,8 @@
-namespace DataEntitysDescuentos
+namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
-    using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class CANALES
     {
@@ -10,12 +11,15 @@ namespace DataEntitysDescuentos
         {
             VENDEDORES = new HashSet<VENDEDORES>();
         }
-        
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public short ID_CANAL { get; set; }
 
-    
+        [StringLength(30)]
         public string NAMECANALES { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VENDEDORES> VENDEDORES { get; set; }
     }
 }

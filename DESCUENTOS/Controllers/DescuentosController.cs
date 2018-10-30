@@ -11,7 +11,14 @@ namespace DESCUENTOS.Controllers
         // GET: Descuentos
         public ActionResult Index()
         {
-            return View();
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index","Home");
+            }
         }
     }
 }

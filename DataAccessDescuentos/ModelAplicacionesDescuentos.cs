@@ -1,19 +1,15 @@
-namespace DataAccessDescuentos
+namespace DataAccessAplicaciones.DataAccessDescuentos
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-
-    using DataEntitysDescuentos;
-
+   using DataEntitysAplicaciones.DataEntitysDescuentos;
     public partial class ModelAplicacionesDescuentos : DbContext
     {
         public ModelAplicacionesDescuentos()
             : base("name=ModelAplicacionesDescuentos")
         {
-            Configuration.ProxyCreationEnabled = false;
-            var dll = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
         public virtual DbSet<CANALES> CANALES { get; set; }
@@ -27,6 +23,7 @@ namespace DataAccessDescuentos
         public virtual DbSet<REGIONALES> REGIONALES { get; set; }
         public virtual DbSet<ROLES> ROLES { get; set; }
         public virtual DbSet<SUBMENU> SUBMENU { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<USUARIOS> USUARIOS { get; set; }
         public virtual DbSet<VENDEDORES> VENDEDORES { get; set; }
 

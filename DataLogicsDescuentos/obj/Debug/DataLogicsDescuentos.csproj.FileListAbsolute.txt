@@ -1,0 +1,13 @@
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\DataLogicsDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\DataLogicsDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\DataAccessDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\DataEntitysDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\EntityFramework.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\DataAccessDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\DataAccessDescuentos.dll.config
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\DataEntitysDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\bin\Debug\EntityFramework.xml
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\obj\Debug\DataLogicsDescuentos.csproj.CoreCompileInputs.cache
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\obj\Debug\DataLogicsDescuentos.csproj.CopyComplete
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\obj\Debug\DataLogicsDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DataLogicsDescuentos\obj\Debug\DataLogicsDescuentos.pdb

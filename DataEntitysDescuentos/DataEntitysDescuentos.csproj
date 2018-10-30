@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,11 +53,9 @@
     <Compile Include="REGIONALES.cs" />
     <Compile Include="ROLES.cs" />
     <Compile Include="SUBMENU.cs" />
+    <Compile Include="sysdiagrams.cs" />
     <Compile Include="USUARIOS.cs" />
     <Compile Include="VENDEDORES.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

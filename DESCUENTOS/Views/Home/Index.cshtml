@@ -16,7 +16,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" >
+                        <input id="txtuser" type="text" class="form-control" placeholder="Username"  required>
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -24,11 +24,11 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        <input id="txtpsw" type="password" class="form-control" placeholder="Password"  required>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <button class="btn btn-block btn-success mb-3">Ingresar</button>
+                    <button id="btningresar" class="btn btn-block btn-success mb-3">Ingresar</button>
                 </div>
                 <div class="col-md-6">
                     <button class="btn btn-block btn-info mb-3">Registrar</button>
@@ -40,3 +40,5 @@
         </div>
     </div>
 </div>
+@Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+<script src="~/JS/Login.js"></script>

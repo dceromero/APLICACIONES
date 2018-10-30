@@ -1,6 +1,5 @@
 C:\Users\jeromero\source\repos\APLICACIONES\DataEntitysDescuentos\bin\Debug\DataEntitysDescuentos.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DataEntitysDescuentos\bin\Debug\DataEntitysDescuentos.pdb
-C:\Users\jeromero\source\repos\APLICACIONES\DataEntitysDescuentos\obj\Debug\DataEntitysDescuentos.csprojAssemblyReference.cache
 C:\Users\jeromero\source\repos\APLICACIONES\DataEntitysDescuentos\obj\Debug\DataEntitysDescuentos.csproj.CoreCompileInputs.cache
 C:\Users\jeromero\source\repos\APLICACIONES\DataEntitysDescuentos\obj\Debug\DataEntitysDescuentos.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DataEntitysDescuentos\obj\Debug\DataEntitysDescuentos.pdb

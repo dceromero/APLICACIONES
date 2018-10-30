@@ -111,3 +111,10 @@ C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.SqlServer.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.SqlServer.xml
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataLogicsDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataLogicsDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.dll.config

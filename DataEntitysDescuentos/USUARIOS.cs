@@ -1,22 +1,31 @@
-namespace DataEntitysDescuentos
+namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
-    using System;
-    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class USUARIOS
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long CEDULA { get; set; }
 
         public long CODIGO { get; set; }
-        
+
+        [Required]
+        [StringLength(30)]
         public string NOMBRES { get; set; }
-        
+
+        [Required]
+        [StringLength(30)]
         public string APELLIDOS { get; set; }
-        
-        public byte[] CLAVE { get; set; }
+
+        [Required]
+        public string CLAVE { get; set; }
 
         public long JEFEAREA { get; set; }
-        
+
+        [Required]
+        [StringLength(50)]
         public string MAIL { get; set; }
 
         public long TELEFONO { get; set; }
@@ -28,9 +37,13 @@ namespace DataEntitysDescuentos
         public long NIT_EMPRESA { get; set; }
 
         public long ID_CENCOS { get; set; }
-        
+
+        [Required]
+        [StringLength(10)]
         public string ID_CARGO { get; set; }
-        
+
+        [Required]
+        [StringLength(5)]
         public string COD_VENDEDOR { get; set; }
 
         public bool ESTADO { get; set; }

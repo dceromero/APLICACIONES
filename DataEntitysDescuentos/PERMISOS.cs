@@ -1,9 +1,10 @@
-namespace DataEntitysDescuentos
+namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
-    using System;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class PERMISOS
     {
+        [Key]
         public short ID_PERMISO { get; set; }
 
         public short ID_ROL { get; set; }

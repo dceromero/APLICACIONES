@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DataEntitysDescuentos">
+      <HintPath>..\DataEntitysDescuentos\bin\Debug\DataEntitysDescuentos.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLogicsDescuentos">
+      <HintPath>..\DataLogicsDescuentos\bin\Debug\DataLogicsDescuentos.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -165,6 +171,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIS\MenusSubMenusController.cs" />
+    <Compile Include="APIS\UsuariosController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -188,6 +196,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Image\fondoaprob.png" />
     <Content Include="Image\LogoEmpresa.png" />
+    <Content Include="JS\AccesosDatos.js" />
+    <Content Include="JS\Login.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -223,6 +233,7 @@
     <Content Include="Views\Shared\ViewMenu.cshtml" />
     <Content Include="Views\Shared\ViewSubMenu.cshtml" />
     <Content Include="Views\Shared\_LayoutPrincipal.cshtml" />
+    <Content Include="Views\Shared\ViewMessages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
