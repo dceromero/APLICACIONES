@@ -6,10 +6,10 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
     {
         ModelAplicacionesDescuentos dbcontext = null;
 
-        public int Validar(USUARIOS user)
+        public long Validar(USUARIOS user)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            int result = dbcontext.Database.SqlQuery<int>($"select dbo.Func_Validar('{user.CEDULA}','{user.CLAVE}')").FirstOrDefault();
+            long result = dbcontext.Database.SqlQuery<long>($"select dbo.Func_Validar('{user.CEDULA}','{user.CLAVE}')").FirstOrDefault();
             return result;
         }
     }

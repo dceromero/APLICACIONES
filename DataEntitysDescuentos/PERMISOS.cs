@@ -11,8 +11,8 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 
         public short ID_SUBMENU { get; set; }
 
-        public virtual ROLES ROLES { get; set; }
+        //public virtual ROLES ROLES { get; set; }
 
-        public virtual SUBMENU SUBMENU { get; set; }
+        //public virtual SUBMENU SUBMENU { get; set; }
     }
 }

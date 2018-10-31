@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using DataEntitysAplicaciones.DataEntitysDescuentos;
-using DataLogicsDescuentos;
+using DataLogicAplicaciones.DataLogicsDescuentos;
 using Newtonsoft.Json;
 namespace DESCUENTOS.APIS
 {
@@ -15,7 +15,7 @@ namespace DESCUENTOS.APIS
         public string Validar(USUARIOS user)
         {
             loguser = new LogicUsuarios();
-            int result = loguser.ValidarUsuarios(user);
+            long result = loguser.ValidarUsuarios(user);
             System.Web.HttpContext.Current.Session["id"] = (result >= 1) ? result.ToString() : null;
             return JsonConvert.SerializeObject(result);
         }

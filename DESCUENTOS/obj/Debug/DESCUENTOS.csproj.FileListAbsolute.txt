@@ -51,6 +51,10 @@ C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\roslyn\vbc.rsp
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\roslyn\VBCSCompiler.exe
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Antlr3.Runtime.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataLogicsDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.SqlServer.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -74,6 +78,11 @@ C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\System.Web.WebPages.D
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\System.Web.WebPages.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\System.Web.WebPages.Razor.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\WebGrease.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.dll
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataLogicsDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.xml
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.SqlServer.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\System.Web.Helpers.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\System.Web.Mvc.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\System.Web.Optimization.xml
@@ -92,6 +101,8 @@ C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Microsoft.AI.Dependen
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Microsoft.AI.Web.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.dll.config
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\es\System.Web.Helpers.resources.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\es\System.Web.Mvc.resources.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\es\System.Web.Optimization.resources.dll
@@ -107,14 +118,3 @@ C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\obj\Debug\DESCUENTOS.cspr
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\obj\Debug\DESCUENTOS.csproj.CopyComplete
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\obj\Debug\DESCUENTOS.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\obj\Debug\DESCUENTOS.pdb
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.dll
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.SqlServer.dll
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.xml
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.SqlServer.xml
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.dll
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataLogicsDescuentos.dll
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.dll
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.pdb
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataLogicsDescuentos.pdb
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.pdb
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.dll.config

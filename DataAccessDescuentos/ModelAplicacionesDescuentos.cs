@@ -26,6 +26,8 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<USUARIOS> USUARIOS { get; set; }
         public virtual DbSet<VENDEDORES> VENDEDORES { get; set; }
+        public virtual DbSet<VIEW_Permisos> VIEW_Permisos { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -69,20 +71,23 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
                 .WithRequired(e => e.REGIONALES)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<ROLES>()
-                .HasMany(e => e.PERMISOS)
-                .WithRequired(e => e.ROLES)
-                .WillCascadeOnDelete(false);
+            
 
             modelBuilder.Entity<ROLES>()
                 .HasMany(e => e.USUARIOS)
                 .WithRequired(e => e.ROLES)
                 .WillCascadeOnDelete(false);
+  /*
+            modelBuilder.Entity<ROLES>()
+                .HasMany(e => e.PERMISOS)
+                .WithRequired(e => e.ROLES)
+                .WillCascadeOnDelete(false);
 
+          
             modelBuilder.Entity<SUBMENU>()
                 .HasMany(e => e.PERMISOS)
                 .WithRequired(e => e.SUBMENU)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(false);*/
 
             modelBuilder.Entity<USUARIOS>()
                 .Property(e => e.COD_VENDEDOR)

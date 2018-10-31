@@ -17,15 +17,13 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
         {
             mtmenu = new MetodosMenuPrincipal();
             List<MENU> Menus = mtmenu.ListadoMenuPrincipal(cedula);
-            if (Menus != null)
-            {
-                foreach (var mn in Menus)
-                {
-                    mtsubmenu = new MetodosSubMenus();
-                    mn.SUBMENU = mtsubmenu.ListadoSubMenus(mn.ID_MENU);
-                }
-            }
             return Menus;
+        }
+
+        public List<SUBMENU> ListadoSubMenus()
+        {
+            mtsubmenu = new MetodosSubMenus();
+            return mtsubmenu.ListadoSubMenus();
         }
     }
 }

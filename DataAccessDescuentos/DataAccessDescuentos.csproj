@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MetodosMenuPrincipal.cs" />
+    <Compile Include="MetodosPermisos.cs" />
+    <Compile Include="MetodosRoles.cs" />
     <Compile Include="MetodosSubMenus.cs" />
     <Compile Include="MetodosUsuarios.cs" />
     <Compile Include="ModelAplicacionesDescuentos.cs" />

@@ -15,15 +15,31 @@ namespace DESCUENTOS.APIS
         [HttpPost]
         public string Menus()
         {
-            if (HttpContext.Current.Session["id"] != null)
+            var id = System.Web.HttpContext.Current.Session["id"];
+            if (id!= null)
             {
                 logmenusubmenu = new LogicMenuSubMenus();
-                List<MENU> menus = logmenusubmenu.ListadoMenusSubmenus(long.Parse(HttpContext.Current.Session["id"].ToString()));
+                List<MENU> menus = logmenusubmenu.ListadoMenusSubmenus(long.Parse(id.ToString()));
                 return JsonConvert.SerializeObject(menus);
             }
             else
             {
                 return null;
+            }
+        }
+
+        [HttpPost]
+        public string Submenus()
+        {
+            var id = System.Web.HttpContext.Current.Session["id"];
+            if (id != null)
+            {
+                logmenusubmenu = new LogicMenuSubMenus();
+                return JsonConvert.SerializeObject(logmenusubmenu.ListadoSubMenus());
+            }
+            else
+            {
+                return string.Empty;
             }
         }
     }

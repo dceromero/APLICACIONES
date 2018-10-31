@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 using DataEntitysAplicaciones.DataEntitysDescuentos;
 namespace DataAccessAplicaciones.DataAccessDescuentos
 {
-    public class MetodosSubMenus
+    public class MetodosRoles
     {
         ModelAplicacionesDescuentos dbcontext = null;
 
-        public List<SUBMENU> ListadoSubMenus()
+        public int GuardarRoles(ROLES rol)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            return dbcontext.SUBMENU.SqlQuery($"select * from submenu where order by NAMESUBMENU").ToList();
+            dbcontext.ROLES.Add(rol);
+            return dbcontext.SaveChanges();
+        }
+
+        public List<ROLES> ListadoRoles()
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            return dbcontext.ROLES.SqlQuery("Select * from Roles order by namerol").ToList(); ;
         }
 
     }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using DataAccessAplicaciones.DataAccessDescuentos;
 using DataEntitysAplicaciones.DataEntitysDescuentos;
 
-namespace DataLogicsDescuentos
+namespace DataLogicAplicaciones.DataLogicsDescuentos
 {
     public class LogicUsuarios
     {
         MetodosUsuarios mtuser = null;
 
-        public int ValidarUsuarios(USUARIOS user)
+        public long ValidarUsuarios(USUARIOS user)
         {
             mtuser = new MetodosUsuarios();
             return mtuser.Validar(user);
