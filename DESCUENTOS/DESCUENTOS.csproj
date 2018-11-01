@@ -203,6 +203,7 @@
     <Content Include="JS\Descuentos.js" />
     <Content Include="JS\Login.js" />
     <Content Include="JS\Navbar.js" />
+    <Content Include="JS\PreRegistros.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -234,12 +235,13 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\ViewFooter.cshtml" />
-    <Content Include="Views\Shared\ViewMenu.cshtml" />
     <Content Include="Views\Shared\ViewSubMenu.cshtml" />
     <Content Include="Views\Shared\_LayoutPrincipal.cshtml" />
     <Content Include="Views\Shared\ViewMessages.cshtml" />
     <Content Include="Views\Config\Index.cshtml" />
     <Content Include="Views\Descuentos\Index.cshtml" />
+    <Content Include="Views\Shared\ViewUsuarios.cshtml" />
+    <Content Include="Views\Home\PreRegistros.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

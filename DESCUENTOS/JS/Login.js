@@ -30,3 +30,8 @@ $("body").on("click", "#btn-close-advertencia", function () {
 $("body").on("click", "#btn-close-alert-error", function () {
     ClassDataAccess.CloseWindows("#div-alert-error");
 })
+
+$("body").on("click", "#btnregister", function () {
+    location.href = "/Home/Register";
+    //ClassDataAccess.OpenWindows("#div-register", "Pre Registro", 420, 820);
+})

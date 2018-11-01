@@ -13,10 +13,10 @@ AccesosDatos.prototype.Ajax = function (url, datos, funcion) {
     }).done()
 }
 
-AccesosDatos.prototype.Load = function (url, div, funcion1) {
-    $.get(url, function (d) {
-        $(div).html(d);
-    }).done(funcion1)
+
+
+AccesosDatos.prototype.Events = function (id, evento, funcion) {
+    $("body").on(evento, id, funcion);
 }
 
 AccesosDatos.prototype.CloseWindows = function (selector) {

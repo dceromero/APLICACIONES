@@ -13,6 +13,11 @@ namespace DESCUENTOS.Controllers
             return View();
         }
 
+        public ActionResult Register()
+        {
+            return View("PreRegistros");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
