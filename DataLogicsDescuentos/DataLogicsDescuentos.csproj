@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogicCargos.cs" />
+    <Compile Include="LogicCencos.cs" />
+    <Compile Include="LogicEmpresas.cs" />
     <Compile Include="LogicMenuSubMenus.cs" />
     <Compile Include="LogicPermisos.cs" />
     <Compile Include="LogicRoles.cs" />

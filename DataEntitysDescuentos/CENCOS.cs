@@ -9,7 +9,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CENCOS()
         {
-            USUARIOS = new HashSet<USUARIOS>();
+           // USUARIOS = new HashSet<USUARIOS>();
         }
 
         [Key]
@@ -20,7 +20,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [StringLength(100)]
         public string NAMECENCOS { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USUARIOS> USUARIOS { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<USUARIOS> USUARIOS { get; set; }
     }
 }

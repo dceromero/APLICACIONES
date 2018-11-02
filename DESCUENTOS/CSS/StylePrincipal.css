@@ -32,4 +32,7 @@ fieldset {
     box-shadow: 0px 0px 0px 0px #000!important;
     width: 95%!important;
 }
-
+.form-control {
+    border: 1px solid #ced4da!important;
+    border-radius: .25rem!important;
+}

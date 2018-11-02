@@ -171,6 +171,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIS\CargosController.cs" />
+    <Compile Include="APIS\CencosController.cs" />
+    <Compile Include="APIS\EmpresasController.cs" />
     <Compile Include="APIS\MenusSubMenusController.cs" />
     <Compile Include="APIS\PermisosController.cs" />
     <Compile Include="APIS\RolesController.cs" />

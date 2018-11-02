@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MetodosCargos.cs" />
+    <Compile Include="MetodosCencos.cs" />
+    <Compile Include="MetodosEmpresas.cs" />
     <Compile Include="MetodosMenuPrincipal.cs" />
     <Compile Include="MetodosPermisos.cs" />
     <Compile Include="MetodosRoles.cs" />

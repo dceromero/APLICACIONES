@@ -17,5 +17,17 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             mtuser = new MetodosUsuarios();
             return mtuser.Validar(user);
         }
+
+        public Mensajes PreRegistro(USUARIOS user)
+        {
+            mtuser = new MetodosUsuarios();
+            return mtuser.PreRegistro(user);
+        }
+
+        public List<VIEW_Jefes> ListadoDeJefes()
+        {
+            mtuser = new MetodosUsuarios();
+            return mtuser.ListadoDeJefes();
+        }
     }
 }

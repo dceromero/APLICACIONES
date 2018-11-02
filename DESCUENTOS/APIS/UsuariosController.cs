@@ -19,5 +19,20 @@ namespace DESCUENTOS.APIS
             System.Web.HttpContext.Current.Session["id"] = (result >= 1) ? result.ToString() : null;
             return JsonConvert.SerializeObject(result);
         }
+
+        [HttpPost]
+        public string PreRegistro(USUARIOS user)
+        {
+            loguser = new LogicUsuarios();
+            return JsonConvert.SerializeObject(loguser.PreRegistro(user));
+        }
+
+        [HttpPost]
+        public string ListadoDeJefes()
+        {
+            loguser = new LogicUsuarios();
+            return JsonConvert.SerializeObject(loguser.ListadoDeJefes());
+        }
+
     }
 }

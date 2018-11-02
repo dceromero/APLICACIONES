@@ -19,6 +19,34 @@ AccesosDatos.prototype.Events = function (id, evento, funcion) {
     $("body").on(evento, id, funcion);
 }
 
+AccesosDatos.prototype.Events.Blur = function (selector,selectorhidden) {
+    $("body").on("blur", selector, function () {
+        if ($(selectorhidden).val() == "") {
+            $(selector).val("");
+        }
+    });
+}
+
+AccesosDatos.prototype.Events.BlurSoloNumeros = function (selector) {
+    $("body").on("blur", selector, function () {
+        validar = parseInt($(this).val());
+        if (validar.toString() == "NaN") {
+            $(this).val("")
+        }
+    });
+}
+
+
+AccesosDatos.prototype.Events.BlurEmail = function () {
+    $("body").on("blur", '[type="email"]', function () {
+        emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+        //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+        if (!emailRegex.test($(this).val())) {
+            $(this).val("")
+        }
+    });
+}
+
 AccesosDatos.prototype.CloseWindows = function (selector) {
     var dialog = $(selector).data("kendoWindow");
     dialog.close();
@@ -104,6 +132,27 @@ AccesosDatos.prototype.LimpiarCampos = function (control) {
             $(element).val("-1");
         } else {
             $(element).val("");
+        }
+    });
+}
+
+AccesosDatos.prototype.Combox = function (selector,datasources, displayId, displayMember) {
+    $(selector).html("").append("<option value='-1'>Seleccione</option>");    
+    for (var x in datasources) {
+        $(selector).append("<option value='" + datasources[x][displayId] + "'>" + datasources[x][displayMember] + "</option>");
+    }
+}
+
+AccesosDatos.prototype.AutoComplete = function (selector, datasources, displayId, displayMember,selectorhidden) {
+    $(selector).kendoAutoComplete({
+        filter: "contains",
+        dataSource: datasources,
+        dataTextField: displayMember,
+        dataValueField: displayId,
+        select: function (e) {
+            item = e.item;
+            DataItem = this.dataItem(e.item.index());
+            $(selectorhidden).val(DataItem[displayId])
         }
     });
 }

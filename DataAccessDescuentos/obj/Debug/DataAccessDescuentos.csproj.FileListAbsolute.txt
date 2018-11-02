@@ -7,6 +7,7 @@ C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\Entit
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataEntitysDescuentos.pdb
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csprojAssemblyReference.cache
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csproj.CoreCompileInputs.cache
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csproj.CopyComplete
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.dll

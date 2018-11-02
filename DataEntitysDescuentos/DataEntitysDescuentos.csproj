@@ -46,6 +46,7 @@
     <Compile Include="CENCOS.cs" />
     <Compile Include="EMPRESAS.cs" />
     <Compile Include="ERRORES.cs" />
+    <Compile Include="Mensajes.cs" />
     <Compile Include="MENU.cs" />
     <Compile Include="OFICVENTAS.cs" />
     <Compile Include="PERMISOS.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="sysdiagrams.cs" />
     <Compile Include="USUARIOS.cs" />
     <Compile Include="VENDEDORES.cs" />
+    <Compile Include="VIEW_Jefes.cs" />
     <Compile Include="VIEW_Permisos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

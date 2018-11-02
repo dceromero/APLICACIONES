@@ -15,7 +15,7 @@ namespace DESCUENTOS.APIS
         [HttpPost]
         public string Menus()
         {
-            var id = System.Web.HttpContext.Current.Session["id"];
+            var id = HttpContext.Current.Session["id"];
             if (id!= null)
             {
                 logmenusubmenu = new LogicMenuSubMenus();
