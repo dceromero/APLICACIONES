@@ -87,10 +87,16 @@ ClassDataAccess.Events("#btnsave", "click", function () {
     ClassDataAccess.Ajax(
         "/api/Usuarios/PreRegistro",
         JSON.stringify(usuario),
-        function () {
+        function (datos) {
+            js = JSON.parse(datos)
             ClassDataAccess.LimpiarCampos("[required]");
             ClassDataAccess.CloseWindows("#div-mensaje");
+            $("#lblmessage").text(js.message);
+            ClassDataAccess.OpenWindows("#div-mensaje-respuesta", "Mensaje :", 120, 300);
         }
     );
 })
 
+ClassDataAccess.Events("#btn-close-message", "click", function () {
+    ClassDataAccess.CloseWindows("#div-mensaje-respuesta");
+})
