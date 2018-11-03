@@ -13,5 +13,6 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public long CEDULA { get; set; }
         public string NombreCompleto { get; set; }
         public string MAIL { get; set; }
+        public short NIVELUSUARIO { get; set; }
     }
 }

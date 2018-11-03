@@ -202,14 +202,16 @@
     <Content Include="Content\Site.css" />
     <Content Include="Image\fondoaprob.png" />
     <Content Include="Image\LogoEmpresa.png" />
+    <Content Include="JSLIB\all.css" />
     <Content Include="JSLIB\bootstrap.min.css" />
     <Content Include="JSLIB\bootstrap.min.js" />
+    <Content Include="JSLIB\flat\loading.gif" />
     <Content Include="JSLIB\jquery-3.3.1.min.js" />
-    <Content Include="JSLIB\kendo.all.min.js" />
     <Content Include="JSLIB\kendo.common.min.css" />
     <Content Include="JSLIB\kendo.flat.min.css" />
     <Content Include="JSLIB\popper.min.js" />
     <Content Include="JS\AccesosDatos.js" />
+    <Content Include="JS\config.js" />
     <Content Include="JS\Descuentos.js" />
     <Content Include="JS\Login.js" />
     <Content Include="JS\Navbar.js" />
@@ -219,6 +221,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="JSLIB\fonts\glyphs\WebComponentsIcons.woff" />
+    <Content Include="JSLIB\fonts\glyphs\WebComponentsIcons.ttf" />
+    <Content Include="fonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

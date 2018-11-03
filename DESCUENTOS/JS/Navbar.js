@@ -9,6 +9,16 @@ ClassDataAccess.Ajax(
     }
 )
 
+ClassDataAccess.Ajax(
+    "/Api/Usuarios/Usuario",
+    '',
+    function (datos) {
+        js = JSON.parse(datos);
+        console.log(js);
+        $("#lbluser").text(js.NombreCompleto)
+    }
+)
+
 
 function Controles(datos) {
     var a = "";

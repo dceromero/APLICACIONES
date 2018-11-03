@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using System.Web.Http;
 using DataEntitysAplicaciones.DataEntitysDescuentos;
 using DataLogicAplicaciones.DataLogicsDescuentos;
@@ -32,6 +33,21 @@ namespace DESCUENTOS.APIS
         {
             loguser = new LogicUsuarios();
             return JsonConvert.SerializeObject(loguser.ListadoDeJefes());
+        }
+
+        [HttpPost]
+        public string Usuario()
+        {
+            var id = HttpContext.Current.Session["id"];
+            if (id != null)
+            {
+                loguser = new LogicUsuarios();
+                return JsonConvert.SerializeObject(loguser.User(long.Parse(id.ToString())));
+            }
+            else
+            {
+                return string.Empty;
+            }
         }
 
     }

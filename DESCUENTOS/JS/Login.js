@@ -31,6 +31,16 @@ $("body").on("click", "#btn-close-alert-error", function () {
     ClassDataAccess.CloseWindows("#div-alert-error");
 })
 
+ClassDataAccess.Events("#ver-psw","click", function () {
+    if ($("#txtpsw").attr("type") == "password") {
+        $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+        $("#txtpsw").attr("type", "text");
+    } else {
+        $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+        $("#txtpsw").attr("type", "password");
+    }
+})
+
 $("body").on("click", "#btnregister", function () {
     location.href = "/Home/Register";
     //ClassDataAccess.OpenWindows("#div-register", "Pre Registro", 420, 820);

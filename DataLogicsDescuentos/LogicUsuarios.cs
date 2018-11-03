@@ -29,5 +29,11 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             mtuser = new MetodosUsuarios();
             return mtuser.ListadoDeJefes();
         }
+
+        public VIEW_Jefes User(long cedula)
+        {
+            mtuser = new MetodosUsuarios();
+            return mtuser.User(cedula);
+        }
     }
 }

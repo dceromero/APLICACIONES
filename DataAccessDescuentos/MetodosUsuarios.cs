@@ -23,7 +23,14 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public List<VIEW_Jefes> ListadoDeJefes()
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            return dbcontext.VIEW_Jefes.SqlQuery("SELECT * FROM VIEW_Jefes ORDER BY NombreCompleto ").ToList();
+            return dbcontext.VIEW_Jefes.SqlQuery("SELECT * FROM VIEW_Jefes where NIVELUSUARIO>0 ORDER BY NombreCompleto ").ToList();
+        }
+
+
+        public VIEW_Jefes User(long cedula)
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            return dbcontext.VIEW_Jefes.SqlQuery($"select * from VIEW_Jefes where cedula ='{cedula}'").FirstOrDefault();
         }
     }
 }

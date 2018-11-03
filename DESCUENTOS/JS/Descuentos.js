@@ -1,1 +1,2 @@
-﻿
+﻿ClassDataAccess = new AccesosDatos();
+
