@@ -12,7 +12,10 @@ namespace DESCUENTOS.APIS
         public string ListadoEmpresas()
         {
             logemp = new LogicEmpresas();
-            return JsonConvert.SerializeObject(logemp.ListaDeEmpresas());
+            return JsonConvert.SerializeObject(logemp.ListaDeEmpresas(), Formatting.Indented, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
         }
     }
 }

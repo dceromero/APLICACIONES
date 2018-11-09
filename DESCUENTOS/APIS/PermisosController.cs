@@ -32,7 +32,10 @@ namespace DESCUENTOS.APIS
             if (id != null)
             {
                 logper = new LogicPermisos();
-                return JsonConvert.SerializeObject(logper.ListadoPermisos());
+                return JsonConvert.SerializeObject(logper.ListadoPermisos(), Formatting.Indented, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
             }
             else
             {

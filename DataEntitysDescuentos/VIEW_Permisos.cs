@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
-    public class VIEW_Permisos
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    public partial class VIEW_Permisos
     {
         [Key]
-        public short id_permiso { get; set; }
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public short ID_PERMISO { get; set; }
 
-        public string namerol { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(50)]
+        public string NAMEROL { get; set; }
 
-        public string namesubmenu { get; set; }
-
+        [Key]
+        [Column(Order = 2)]
+        [StringLength(30)]
+        public string NAMESUBMENU { get; set; }
     }
 }

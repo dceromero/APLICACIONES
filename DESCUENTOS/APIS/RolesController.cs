@@ -21,7 +21,10 @@ namespace DESCUENTOS.APIS
             if (id != null)
             {
                 logrol = new LogicRoles();
-                return JsonConvert.SerializeObject(logrol.GuardarRol(rol));
+                return JsonConvert.SerializeObject(logrol.GuardarRol(rol), Formatting.Indented, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
             }
             else
             {
@@ -36,7 +39,10 @@ namespace DESCUENTOS.APIS
             if (id != null)
             {
                 logrol = new LogicRoles();
-                return JsonConvert.SerializeObject(logrol.ListadoDeRoles());
+                return JsonConvert.SerializeObject(logrol.ListadoDeRoles(), Formatting.Indented, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
             }
             else
             {

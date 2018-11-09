@@ -202,6 +202,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Image\fondoaprob.png" />
     <Content Include="Image\LogoEmpresa.png" />
+    <Content Include="Image\logosplash.jpg" />
     <Content Include="JSLIB\all.css" />
     <Content Include="JSLIB\bootstrap.min.css" />
     <Content Include="JSLIB\bootstrap.min.js" />

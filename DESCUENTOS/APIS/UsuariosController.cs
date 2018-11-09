@@ -25,14 +25,20 @@ namespace DESCUENTOS.APIS
         public string PreRegistro(USUARIOS user)
         {
             loguser = new LogicUsuarios();
-            return JsonConvert.SerializeObject(loguser.PreRegistro(user));
+            return JsonConvert.SerializeObject(loguser.PreRegistro(user), Formatting.Indented, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
         }
 
         [HttpPost]
         public string ListadoDeJefes()
         {
             loguser = new LogicUsuarios();
-            return JsonConvert.SerializeObject(loguser.ListadoDeJefes());
+            return JsonConvert.SerializeObject(loguser.ListadoDeJefes(), Formatting.Indented, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
         }
 
         [HttpPost]
@@ -42,7 +48,10 @@ namespace DESCUENTOS.APIS
             if (id != null)
             {
                 loguser = new LogicUsuarios();
-                return JsonConvert.SerializeObject(loguser.User(long.Parse(id.ToString())));
+                return JsonConvert.SerializeObject(loguser.User(long.Parse(id.ToString())), Formatting.Indented, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
             }
             else
             {

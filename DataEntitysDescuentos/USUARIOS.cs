@@ -1,10 +1,20 @@
 namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
+    using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     public partial class USUARIOS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public USUARIOS()
+        {
+            JEFATURAS = new HashSet<JEFATURAS>();
+            JEFATURAS1 = new HashSet<JEFATURAS>();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long CEDULA { get; set; }
@@ -53,6 +63,12 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public virtual CENCOS CENCOS { get; set; }
 
         public virtual EMPRESAS EMPRESAS { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<JEFATURAS> JEFATURAS { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<JEFATURAS> JEFATURAS1 { get; set; }
 
         public virtual ROLES ROLES { get; set; }
 

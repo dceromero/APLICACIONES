@@ -17,6 +17,11 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
         {
             mtmenu = new MetodosMenuPrincipal();
             List<MENU> Menus = mtmenu.ListadoMenuPrincipal(cedula);
+            foreach(var m in Menus)
+            {
+                mtsubmenu = new MetodosSubMenus();
+                m.SUBMENU = mtsubmenu.ListadoSubMenus(m.ID_MENU);
+            }
             return Menus;
         }
 
@@ -25,5 +30,6 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             mtsubmenu = new MetodosSubMenus();
             return mtsubmenu.ListadoSubMenus();
         }
+        
     }
 }

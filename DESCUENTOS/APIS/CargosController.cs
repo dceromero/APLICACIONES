@@ -11,7 +11,10 @@ namespace DESCUENTOS.APIS
         public string ListaDeCargos()
         {
             logcargo = new LogicCargos();
-            return JsonConvert.SerializeObject(logcargo.ListadoDeCargos());
+            return JsonConvert.SerializeObject(logcargo.ListadoDeCargos(), Formatting.Indented, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
         }
     }
 }

@@ -1,8 +1,10 @@
 namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     [Table("SUBMENU")]
     public partial class SUBMENU
@@ -10,7 +12,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SUBMENU()
         {
-            //PERMISOS = new HashSet<PERMISOS>();
+            PERMISOS = new HashSet<PERMISOS>();
         }
 
         [Key]
@@ -30,9 +32,9 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [StringLength(30)]
         public string ICOSUBMENU { get; set; }
 
-       // public virtual MENU MENU { get; set; }
+        public virtual MENU MENU { get; set; }
 
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        //public virtual ICollection<PERMISOS> PERMISOS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PERMISOS> PERMISOS { get; set; }
     }
 }
