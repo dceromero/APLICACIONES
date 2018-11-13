@@ -3,7 +3,110 @@
     Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
 }
 <div class="row">
-    <div class="col-md-12">
-        
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Descuentos</strong>
+            </legend>
+            <div class="row">
+                <fieldset>
+                    <legend>
+                        <strong>Datos Basicos del Descuentos</strong>
+                        <hr />
+                    </legend>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <strong>Tipo Solicitud</strong>
+                                    </span>
+                                </div>
+                                <select id="cmbtosol" class="form-control" required></select>
+                            </div>
+
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <strong>Fecha de Inicio</strong>
+                                    </span>
+                                </div>
+                                <input id="txtfecini" type="date" class="form-control" required>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <strong>Cliente</strong>
+                                    </span>
+                                </div>
+                                <input id="txtcliente" type="text" class="form-control" required>
+                                <input id="lblcliente" type="hidden" />
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <strong>Fecha de Fin</strong>
+                                    </span>
+                                </div>
+                                <input id="txtfecfin" type="date" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 ">
+                            <div class="card-footer text-center">
+                                <strong>Motivo</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-12 ">
+                            <textarea class="form-control" required></textarea>
+                        </div>
+
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <strong>Detalle del Descuento</strong>
+                    </legend>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <strong>Producto</strong>
+                                    </span>
+                                </div>
+                                <input id="txtproduct" type="text" class="form-control" required>
+                                <input id="lblcodprod" type="hidden"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <strong>Porcentaje Descuento</strong>
+                                    </span>
+                                </div>
+                                <input id="txtporc" type="number" class="form-control" placeholder="Solo Numeros" required>
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+            </div>
+
+
+        </fieldset>
+       
+
     </div>
 </div>
