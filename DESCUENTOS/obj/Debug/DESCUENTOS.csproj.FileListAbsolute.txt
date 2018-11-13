@@ -80,7 +80,6 @@ C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\System.Web.WebPages.R
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\WebGrease.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataAccessDescuentos.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.pdb
-C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataEntitysDescuentos.dll.config
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\DataLogicsDescuentos.pdb
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DESCUENTOS\bin\EntityFramework.SqlServer.xml

@@ -14,23 +14,23 @@
                         <strong>Datos Basicos del Descuentos</strong>
                         <hr />
                     </legend>
-                    <div class="row">
+                    <div class="row" validarcampos="true">
                         <div class="col-md-6">
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
-                                        <strong>Tipo Solicitud</strong>
+                                        <strong>Tipo Solicitud Descuento</strong>
                                     </span>
                                 </div>
-                                <select id="cmbtosol" class="form-control" required></select>
+                                <select id="cmbtpsol" class="form-control" required></select>
                             </div>
 
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
-                                        <strong>Fecha de Inicio</strong>
+                                        <strong>Fecha Inicial</strong>
                                     </span>
                                 </div>
                                 <input id="txtfecini" type="date" class="form-control" required>
@@ -51,7 +51,7 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
-                                        <strong>Fecha de Fin</strong>
+                                        <strong>Fecha Final</strong>
                                     </span>
                                 </div>
                                 <input id="txtfecfin" type="date" class="form-control" required>
@@ -60,7 +60,7 @@
 
                         <div class="col-md-12 ">
                             <div class="card-footer text-center">
-                                <strong>Motivo</strong>
+                                <strong>Justificación del Descuento</strong>
                             </div>
                         </div>
                         <div class="col-md-12 ">
@@ -73,8 +73,8 @@
                     <legend>
                         <strong>Detalle del Descuento</strong>
                     </legend>
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div id="div-detalle" class="row">
+                        <div class="col-md-5">
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -82,20 +82,30 @@
                                         <strong>Producto</strong>
                                     </span>
                                 </div>
-                                <input id="txtproduct" type="text" class="form-control" required>
-                                <input id="lblcodprod" type="hidden"/>
+                                <input id="txtproduct" type="text" placeholder="Código o Descripción" class="form-control" required>
+                                <input id="lblcodprod" type="hidden" />
                             </div>
 
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
-                                        <strong>Porcentaje Descuento</strong>
+                                        <strong>Descuento en Porcentaje(%)</strong>
                                     </span>
                                 </div>
-                                <input id="txtporc" type="number" class="form-control" placeholder="Solo Numeros" required>
+                                <input id="txtporc" type="number" class="form-control" placeholder="Solo Numeros %" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <button id="btnadd" class="btn btn-block btn-outline-primary">Agregar</button>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div id="grid-add-descuento">
+
                             </div>
                         </div>
 
@@ -106,7 +116,12 @@
 
 
         </fieldset>
-       
+
+
+        @Html.Partial("~/Views/Shared/View_btnSave.cshtml")
 
     </div>
 </div>
+
+@Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+<script src="~/JS/Solicitudes.js"></script>

@@ -14,7 +14,6 @@ ClassDataAccess.Ajax(
     '',
     function (datos) {
         js = JSON.parse(datos);
-        console.log(js);
         $("#lbluser").text(js.NombreCompleto)
     }
 )

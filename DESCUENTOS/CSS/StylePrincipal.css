@@ -36,3 +36,13 @@ fieldset {
     border: 1px solid #ced4da!important;
     border-radius: .25rem!important;
 }
+
+legend strong{
+    color:darkblue!important;
+}
+
+.navbar-brand img {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 2em !important;
+}

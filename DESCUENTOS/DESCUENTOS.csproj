@@ -173,10 +173,13 @@
   <ItemGroup>
     <Compile Include="APIS\CargosController.cs" />
     <Compile Include="APIS\CencosController.cs" />
+    <Compile Include="APIS\ClientesController.cs" />
     <Compile Include="APIS\EmpresasController.cs" />
     <Compile Include="APIS\MenusSubMenusController.cs" />
     <Compile Include="APIS\PermisosController.cs" />
+    <Compile Include="APIS\ProductosController.cs" />
     <Compile Include="APIS\RolesController.cs" />
+    <Compile Include="APIS\SolicitudesController.cs" />
     <Compile Include="APIS\UsuariosController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -200,7 +203,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\cancel.ico" />
     <Content Include="Image\fondoaprob.png" />
+    <Content Include="Image\loading-image.gif" />
     <Content Include="Image\LogoEmpresa.png" />
     <Content Include="Image\logosplash.jpg" />
     <Content Include="JSLIB\all.css" />
@@ -217,6 +222,8 @@
     <Content Include="JS\Login.js" />
     <Content Include="JS\Navbar.js" />
     <Content Include="JS\PreRegistros.js" />
+    <Content Include="JS\Solicitudes.js" />
+    <Content Include="JS\View_btnSave.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -258,6 +265,7 @@
     <Content Include="Views\Descuentos\Index.cshtml" />
     <Content Include="Views\Shared\ViewUsuarios.cshtml" />
     <Content Include="Views\Home\PreRegistros.cshtml" />
+    <Content Include="Views\Shared\View_btnSave.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -55,11 +55,14 @@
   <ItemGroup>
     <Compile Include="MetodosCargos.cs" />
     <Compile Include="MetodosCencos.cs" />
+    <Compile Include="MetodosClientes.cs" />
     <Compile Include="MetodosEmpresas.cs" />
     <Compile Include="MetodosMenuPrincipal.cs" />
     <Compile Include="MetodosPermisos.cs" />
+    <Compile Include="MetodosProductos.cs" />
     <Compile Include="MetodosRoles.cs" />
     <Compile Include="MetodosSubMenus.cs" />
+    <Compile Include="MetodosTipoSolicitud.cs" />
     <Compile Include="MetodosUsuarios.cs" />
     <Compile Include="ModelAplicacionesDescuentos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

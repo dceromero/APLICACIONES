@@ -5,7 +5,6 @@ C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataE
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataEntitysDescuentos.pdb
-C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\DataEntitysDescuentos.dll.config
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csprojAssemblyReference.cache

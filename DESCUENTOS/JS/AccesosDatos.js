@@ -36,7 +36,6 @@ AccesosDatos.prototype.Events.BlurSoloNumeros = function (selector) {
     });
 }
 
-
 AccesosDatos.prototype.Events.BlurEmail = function () {
     $("body").on("blur", '[type="email"]', function () {
         emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -94,6 +93,11 @@ AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
         },
         columns: ArrayColumna
     });
+}
+
+AccesosDatos.prototype.refreshGrilla = function (selector) {
+    $(selector).data('kendoGrid').dataSource.read();
+    $(selector).data("kendoGrid").refresh();
 }
 
 AccesosDatos.prototype.Upload = function (selector, script, namebutton) {

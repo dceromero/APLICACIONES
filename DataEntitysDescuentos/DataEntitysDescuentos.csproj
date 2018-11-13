@@ -74,8 +74,10 @@
     <Compile Include="UNIDADESMEDIDAS.cs" />
     <Compile Include="USUARIOS.cs" />
     <Compile Include="VENDEDORES.cs" />
+    <Compile Include="View_Clientes.cs" />
     <Compile Include="VIEW_Jefes.cs" />
     <Compile Include="VIEW_Permisos.cs" />
+    <Compile Include="View_Productos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
