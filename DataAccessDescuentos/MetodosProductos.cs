@@ -11,10 +11,10 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
     {
         ModelAplicacionesDescuentos dbcontext = null;
 
-        public List<View_Productos> ListarProductos()
+        public List<View_Productos> ListarProductos(long cedula, long codcliente)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            return dbcontext.View_Productos.SqlQuery("select CODPRODUCTO, CONCAT(CODPRODUCTO,'-',DESCRIPCION) AS DESCRIPCION from PRODUCTOS WHERE ESTADO = 1 ").ToList();
+            return dbcontext.View_Productos.SqlQuery($"SELECT * FROM func_Productos('{cedula}', '{codcliente}')").ToList();
         }
            
     }

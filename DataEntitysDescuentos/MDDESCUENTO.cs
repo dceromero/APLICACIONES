@@ -33,6 +33,8 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [Required]
         public string OBS { get; set; }
 
+        public int CANT { get; set; }
+
         public virtual MCDESCUENTOS MCDESCUENTOS { get; set; }
 
         public virtual PRODUCTOS PRODUCTOS { get; set; }

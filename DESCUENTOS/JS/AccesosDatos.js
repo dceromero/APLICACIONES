@@ -160,3 +160,13 @@ AccesosDatos.prototype.AutoComplete = function (selector, datasources, displayId
         }
     });
 }
+
+AccesosDatos.prototype.AutoCompletePersonalizado = function (selector, datasources, displayId, displayMember, funcion) {
+    $(selector).kendoAutoComplete({
+        filter: "contains",
+        dataSource: datasources,
+        dataTextField: displayMember,
+        dataValueField: displayId,
+        select: funcion
+    });
+}

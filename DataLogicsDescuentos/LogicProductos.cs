@@ -12,10 +12,10 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
 
         MetodosProductos mtproduct = null;
 
-       public List<View_Productos> productos()
+       public List<View_Productos> productos(long cedula, long codcliente)
         {
             mtproduct = new MetodosProductos();
-            return mtproduct.ListarProductos();
+            return mtproduct.ListarProductos(cedula, codcliente);
         }
     }
 }

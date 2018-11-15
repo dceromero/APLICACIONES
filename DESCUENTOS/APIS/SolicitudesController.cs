@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using DataEntitysAplicaciones.DataEntitysDescuentos;
 using DataLogicAplicaciones.DataLogicsDescuentos;
 using Newtonsoft.Json;
 namespace DESCUENTOS.APIS
@@ -17,6 +18,12 @@ namespace DESCUENTOS.APIS
         {
             lgsolict = new LogicSolicitudes();
             return JsonConvert.SerializeObject(lgsolict.ListarTiposSolicitudes());
+        }
+
+        [HttpPost]
+        public string Guadarsolicitud(MCDESCUENTOS headerDescuentos)
+        {       
+            return "";
         }
     }
 }

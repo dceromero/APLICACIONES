@@ -46,3 +46,16 @@ legend strong{
     height: 70px !important;
     border-radius: 2em !important;
 }
+
+[disabled]{
+    background-color:white!important;
+    color:darkblue!important;
+   font-weight:500!important;
+}
+
+[role="gridcell"], .k-link{
+    font-weight:700!important;
+    text-align:center!important;
+    font-size:1em;
+    text-align:center!important;
+}
