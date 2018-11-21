@@ -1,0 +1,63 @@
+﻿
+
+    <fieldset>
+        <legend>
+            <strong>Datos Principales</strong>
+            <hr />
+        </legend>
+        <div class="row" validarcampos="true">
+            <div class="col-md-6">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <strong>Tipo Solicitud Descuento</strong>
+                        </span>
+                    </div>
+                    <select id="cmbtpsol" class="form-control" required></select>
+                </div>
+
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <strong>Fecha Inicial</strong>
+                        </span>
+                    </div>
+                    <input id="txtfecini" type="date" class="form-control" required>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <strong>Cliente</strong>
+                        </span>
+                    </div>
+                    <input id="txtcliente" type="text" class="form-control" required>
+                    <input id="lblcliente" type="hidden" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <strong>Fecha Final</strong>
+                        </span>
+                    </div>
+                    <input id="txtfecfin" type="date" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="col-md-12 ">
+                <div class="card-footer text-center">
+                    <strong>Justificación del Descuento</strong>
+                </div>
+            </div>
+            <div class="col-md-12 ">
+                <textarea id="txtmot" class="form-control" required></textarea>
+            </div>
+
+        </div>
+    </fieldset>
+

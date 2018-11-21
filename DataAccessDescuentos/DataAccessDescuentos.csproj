@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -57,10 +58,12 @@
     <Compile Include="MetodosCencos.cs" />
     <Compile Include="MetodosClientes.cs" />
     <Compile Include="MetodosEmpresas.cs" />
+    <Compile Include="MetodosEnviarEmail.cs" />
     <Compile Include="MetodosMenuPrincipal.cs" />
     <Compile Include="MetodosPermisos.cs" />
     <Compile Include="MetodosProductos.cs" />
     <Compile Include="MetodosRoles.cs" />
+    <Compile Include="MetodosSolicitud.cs" />
     <Compile Include="MetodosSubMenus.cs" />
     <Compile Include="MetodosTipoSolicitud.cs" />
     <Compile Include="MetodosUsuarios.cs" />
@@ -68,7 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

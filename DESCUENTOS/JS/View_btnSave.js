@@ -1,6 +1,6 @@
 ﻿ClassDataAccess = new AccesosDatos();
 
-ClassDataAccess.Events("#btnsave", "click", function () {
+ClassDataAccess.Events("#btnconfirm", "click", function () {
     validar = ClassDataAccess.ValidarCampos("[validarcampos] [required]");
     if (validar && myarray.length >= 1) {
         ClassDataAccess.OpenWindows("#div-confirmacion", "Confirmacion :", 100, 300);

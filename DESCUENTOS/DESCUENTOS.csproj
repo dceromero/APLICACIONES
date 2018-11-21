@@ -217,6 +217,8 @@
     <Content Include="JSLIB\kendo.flat.min.css" />
     <Content Include="JSLIB\popper.min.js" />
     <Content Include="JS\AccesosDatos.js" />
+    <Content Include="JS\Autorizacion.js" />
+    <Content Include="JS\Autorizaciones.js" />
     <Content Include="JS\config.js" />
     <Content Include="JS\Descuentos.js" />
     <Content Include="JS\Login.js" />
@@ -266,6 +268,9 @@
     <Content Include="Views\Shared\ViewUsuarios.cshtml" />
     <Content Include="Views\Home\PreRegistros.cshtml" />
     <Content Include="Views\Shared\View_btnSave.cshtml" />
+    <Content Include="Views\Descuentos\Autorizaciones.cshtml" />
+    <Content Include="Views\Shared\View_Descuentos.cshtml" />
+    <Content Include="Views\Descuentos\Autorizacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

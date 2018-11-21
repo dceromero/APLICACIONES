@@ -9,66 +9,8 @@
                 <strong>Descuentos</strong>
             </legend>
             <div class="row">
-                <fieldset>
-                    <legend>
-                        <strong>Datos Basicos del Descuentos</strong>
-                        <hr />
-                    </legend>
-                    <div class="row" validarcampos="true">
-                        <div class="col-md-6">
 
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Tipo Solicitud Descuento</strong>
-                                    </span>
-                                </div>
-                                <select id="cmbtpsol" class="form-control" required></select>
-                            </div>
-
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Fecha Inicial</strong>
-                                    </span>
-                                </div>
-                                <input id="txtfecini" type="date" class="form-control" required>
-                            </div>
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">
-                                        <strong>Cliente</strong>
-                                    </span>
-                                </div>
-                                <input id="txtcliente" type="text" class="form-control" required>
-                                <input id="lblcliente" type="hidden" />
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Fecha Final</strong>
-                                    </span>
-                                </div>
-                                <input id="txtfecfin" type="date" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12 ">
-                            <div class="card-footer text-center">
-                                <strong>Justificación del Descuento</strong>
-                            </div>
-                        </div>
-                        <div class="col-md-12 ">
-                            <textarea id="txtmot" class="form-control" required></textarea>
-                        </div>
-
-                    </div>
-                </fieldset>
+                @Html.Partial("~/Views/Shared/View_Descuentos.cshtml")
                 <fieldset>
                     <legend>
                         <strong>Detalle del Descuento</strong>
@@ -134,18 +76,18 @@
                         </div>
 
                         <div class="col-md-3">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <strong>Valor Total</strong>
-                                </span>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <strong>Valor Total</strong>
+                                    </span>
+                                </div>
+                                <input id="txtvaltotal" type="text" class="form-control" required disabled>
                             </div>
-                            <input id="txtvaltotal" type="text" class="form-control" required disabled>
                         </div>
-                    </div>
 
                         <div class="col-md-3 text-center">
-                            <button id="btnadd" class="btn btn-outline-success"> <span class="fa fa-plus-circle">Agregar</span></button>
+                            <button id="btnadd" class="btn btn-outline-success"> <span class="fa fa-plus-circle">&nbsp;&nbsp;Agregar</span></button>
                         </div>
 
                         <div class="col-md-12 mb-3">

@@ -19,9 +19,9 @@ ClassDataAccess.Ajax(
 )
 
 
-function Controles(datos) {
-    var a = "";
+function Controles(datos) {    
     for (var i in datos) {
+        var a = "";
         for (var x in datos[i].SUBMENU) {
             a = a + '<a class="dropdown-item" href="' + datos[i].SUBMENU[x].URLSUBMENU + '"><strong>' + datos[i].SUBMENU[x].NAMESUBMENU + '</strong></a>'
         }

@@ -20,5 +20,14 @@ namespace DESCUENTOS.Controllers
                 return RedirectToAction("Index","Home");
             }
         }
+
+        public ActionResult Autorizaciones()
+        {
+             return View();
+        }
+        public ActionResult Autorizacion(long id)
+        {
+            return View(id);
+        }
     }
 }

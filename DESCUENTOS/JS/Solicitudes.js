@@ -118,7 +118,8 @@ ClassDataAccess.Events("#btnadd", "click", function () {
                     width: 40,
                     title: "Quitar",
                     template: function (d) {
-                        return '<img alt="Estado" del="true" id="' + d.quitar + '" style="max-width=2em; max-height: 2em;" src="../Image/cancel.ico" />';
+                        ///return '<img alt="Estado" del="true" id="' + d.quitar + '" style="max-width=2em; max-height: 2em;" src="../Image/cancel.ico" />';
+                        return '<button class="btn btn-outline-danger" del><span class="fa fa-minus-circle">&nbsp;&nbsp;Quitar</span></button>'
                     }
                 }
             ]
@@ -151,6 +152,7 @@ ClassDataAccess.Events("#btncancel-item", "click", function () {
 
 
 ClassDataAccess.Events("#btnsave", "click", function () {
+
     headerDescuentos = {
         ID_SOLICITD: $("#cmbtpsol").val(),
         CODCLIENTE: $("#lblcliente").val(),
@@ -159,13 +161,21 @@ ClassDataAccess.Events("#btnsave", "click", function () {
         MOTIVO: $("#txtmot").val(),
         MDDESCUENTO:myarray
     }
-    
+    ClassDataAccess.CloseWindows("#div-confirmacion")
+    ClassDataAccess.OpenWindows("#div-mensaje", "Mensaje :", 100, 300);
     ClassDataAccess.Ajax(
         '/api/Solicitudes/Guadarsolicitud',
         JSON.stringify(headerDescuentos),
-        function () {
-
+        function (datos) {
+            $("#lblmessage").text(datos);
+            ClassDataAccess.CloseWindows("#div-mensaje");
+            ClassDataAccess.OpenWindows("#div-mensaje-respuesta", "Mensaje :", 110, 300);
         }
     )
 })
 
+ClassDataAccess.Events("#btn-close-message", "click", function () {
+    $("#lblmessage").text("");
+    ClassDataAccess.LimpiarCampos("[required]");
+    ClassDataAccess.CloseWindows("#div-mensaje-respuesta");
+})
