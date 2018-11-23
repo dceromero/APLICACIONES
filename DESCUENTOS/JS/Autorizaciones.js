@@ -20,7 +20,7 @@ ClassDataAccess.Ajax(
                 {
                     field: "NAMEOFICVENTA",
                     width: 50,
-                    title: "Oficina"
+                    title: "Oficina de Ventas"
                 },
                 {
                     field: "FECINI",

@@ -211,6 +211,7 @@
     <Content Include="JSLIB\all.css" />
     <Content Include="JSLIB\bootstrap.min.css" />
     <Content Include="JSLIB\bootstrap.min.js" />
+    <Content Include="JSLIB\flat\loading-image.gif" />
     <Content Include="JSLIB\flat\loading.gif" />
     <Content Include="JSLIB\jquery-3.3.1.min.js" />
     <Content Include="JSLIB\kendo.common.min.css" />
