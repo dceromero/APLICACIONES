@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using DataEntitysAplicaciones.DataEntitysDescuentos;
 using DataLogicAplicaciones.DataLogicsDescuentos;
@@ -43,5 +44,17 @@ namespace DESCUENTOS.APIS
             var result = await lgsolict.GuadarSolicitudDescuento(headerDescuentos);
             return JsonConvert.SerializeObject(result);
         }
+
+        [HttpPost]
+        public async Task<string> ActualizarSolicitud(List<MDDESCUENTO> mc)
+        {
+            var id = HttpContext.Current.Session["id"];
+           long cc = long.Parse(id.ToString());
+            lgsolict = new LogicSolicitudes();
+            var result = await  lgsolict.ActualizarMD(mc, cc);
+            return JsonConvert.SerializeObject(result);
+        }
+
+
     }
 }

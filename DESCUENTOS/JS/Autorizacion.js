@@ -5,10 +5,11 @@ ClassDataAccess.Ajax(
     '',
     function (datos) {
         jsdata = JSON.parse(datos)
-        $("#cmbtpsol").html("").append("<option>" + jsdata.DESCRIPCION + "</option>")
-        $("#txtcliente").val(jsdata.RAZSOCCLIENTE)
-        $("#txtfecini").val(jsdata.FECINI.replace("T00:00:00", ""))
-        $("#txtfecfin").val(jsdata.FECFIN.replace("T00:00:00", ""))
+        $("#cmbtpsol").html("").append("<option>" + jsdata.DESCRIPCION + "</option>");
+        $("#txtcliente").val(jsdata.RAZSOCCLIENTE);
+        $("#txtfecini").val(jsdata.FECINI.replace("T00:00:00", ""));
+        $("#txtfecfin").val(jsdata.FECFIN.replace("T00:00:00", ""));
+        $("#txtmot").val(jsdata.MOTIVO);
 
         ClassDataAccess.Grilla("#div-detail-descuento", jsdata.VIEW_VALORPORCLIENTE,
             [
@@ -74,16 +75,33 @@ ClassDataAccess.Events("#check-all", "click", function () {
     }
 })
 
-arrayaprob = new  Array()
-ClassDataAccess.Events("#btn-prueba", "click", function () {
+myarray = new  Array()
+ClassDataAccess.Events("#btnconfirm", "click", function () {
     $("[type='checkbox']").each(function (key, element) {
             aprob = $(element).is(':checked') ? '2' : '1';
             var md = {
-                id: $(element).val(),
-                verifica: aprob
+                ID_MDDESCUENTO: $(element).val(),
+                VERIFICA1: aprob
         }
-        arrayaprob.push(md);
+        myarray.push(md);
     });
-    console.log(JSON.stringify(arrayaprob));
-    arrayaprob.splice(0, arrayaprob.length)
+})
+
+ClassDataAccess.Events("#btnsave", "click", function () {
+    ClassDataAccess.CloseWindows("#div-confirmacion")
+    ClassDataAccess.OpenWindows("#div-mensaje", "Mensaje :", 100, 300);
+    ClassDataAccess.Ajax(
+        '/api/Solicitudes/ActualizarSolicitud/',
+        JSON.stringify(myarray),
+        function (datos) {
+            jsdata = JSON.parse(datos);
+            $("#lblmessage").text(jsdata.message);
+            ClassDataAccess.CloseWindows("#div-mensaje");
+            ClassDataAccess.OpenWindows("#div-mensaje-respuesta", "Mensaje :", 110, 300);
+        }
+    )
+})
+
+ClassDataAccess.Events("#btn-close-message", "click", function () {
+    location.href = "/Descuentos/Autorizaciones";
 })

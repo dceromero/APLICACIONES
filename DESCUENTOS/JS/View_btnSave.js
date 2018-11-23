@@ -16,3 +16,9 @@ ClassDataAccess.Events("#btn-clean", "click", function () {
 ClassDataAccess.Events("#btncancel", "click", function () {
     ClassDataAccess.CloseWindows("#div-confirmacion")
 })
+
+ClassDataAccess.Events("#btn-close-message", "click", function () {
+    $("#lblmessage").text("");
+    ClassDataAccess.LimpiarCampos("[required]");
+    ClassDataAccess.CloseWindows("#div-mensaje-respuesta");
+})

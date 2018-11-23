@@ -21,6 +21,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public string NAMEOFICVENTA { get; set; }
         public DateTime FECINI { get; set; }
         public DateTime FECFIN { get; set; }
+        public string MOTIVO { get; set; }
         public double subtotal { get; set; }
         public double Descuento { get; set; }
         public double total { get; set; }

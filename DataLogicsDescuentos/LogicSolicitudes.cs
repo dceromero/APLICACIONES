@@ -57,5 +57,24 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             return enc;
         }
 
+        public async Task<string> ActualizarMD(List<MDDESCUENTO> mc, long cc)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            Mensajes msj = new Mensajes();
+            string update = "";
+            foreach(var md in mc)
+            {
+                msj = mtsol.UpdateMDDescuentos(md, cc);
+                update = msj.message;
+            }
+            if (msj.id == 1)
+            {
+                MetodosEnviarEmail mtsend = new MetodosEnviarEmail();
+                update = await mtsend.EnviarMensaje(msj.message);
+            }
+            return update;
+        }
+
+
     }
 }

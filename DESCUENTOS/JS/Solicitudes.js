@@ -174,8 +174,4 @@ ClassDataAccess.Events("#btnsave", "click", function () {
     )
 })
 
-ClassDataAccess.Events("#btn-close-message", "click", function () {
-    $("#lblmessage").text("");
-    ClassDataAccess.LimpiarCampos("[required]");
-    ClassDataAccess.CloseWindows("#div-mensaje-respuesta");
-})
+

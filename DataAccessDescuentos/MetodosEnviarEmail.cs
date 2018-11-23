@@ -49,7 +49,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             var mensaje = new MailMessage(FromMail, para);
             mensaje.Bcc.Add(Copia1);
             mensaje.Bcc.Add(Copia2);
-            mensaje.Subject = "Recuperar Contraseña de Proveedor";
+            mensaje.Subject = "Autorizacion de Descuentos";
             mensaje.BodyEncoding = Encoding.UTF8;
             mensaje.Body = $"Link para  Aprobación de un descuento";
             mensaje.IsBodyHtml = true;
