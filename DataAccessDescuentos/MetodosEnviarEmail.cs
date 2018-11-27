@@ -49,9 +49,9 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             var mensaje = new MailMessage(FromMail, para);
             mensaje.Bcc.Add(Copia1);
             mensaje.Bcc.Add(Copia2);
-            mensaje.Subject = "Autorizacion de Descuentos";
+            mensaje.Subject = "Autorización de Descuentos";
             mensaje.BodyEncoding = Encoding.UTF8;
-            mensaje.Body = $"Link para  Aprobación de un descuento";
+            mensaje.Body = $"Ingrese al siguiente Link para aprobar el descuento";
             mensaje.IsBodyHtml = true;
             mensaje.Priority = MailPriority.High;
             using (var servidor = new SmtpClient("smtp.office365.com", 587))
@@ -59,7 +59,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
                 servidor.Credentials = new NetworkCredential(FromMail, MailPsw);
                 servidor.EnableSsl = true;
                 await servidor.SendMailAsync(mensaje);
-                return $"Se ha enviado el correo para que se aprobado";
+                return $"El correo ha sido enviado para su aprobación";
             };
         }
 

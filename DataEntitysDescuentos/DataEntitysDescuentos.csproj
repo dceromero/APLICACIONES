@@ -76,6 +76,8 @@
     <Compile Include="VENDEDORES.cs" />
     <Compile Include="View_Clientes.cs" />
     <Compile Include="VIEW_ENCABEZADO.cs" />
+    <Compile Include="VIEW_ENCABEZADO_INFORME.cs" />
+    <Compile Include="VIEW_EXCEL_SAP.cs" />
     <Compile Include="VIEW_Jefes.cs" />
     <Compile Include="VIEW_Permisos.cs" />
     <Compile Include="View_Productos.cs" />

@@ -1,7 +1,7 @@
 ﻿ClassDataAccess = new AccesosDatos();
 $("[required]").attr('disabled', 'disabled');
 ClassDataAccess.Ajax(
-    "/api/Solicitudes/Encabezados/"+$("#lblid").val(),
+    "/api/Solicitudes/Encabezados/" + $("#lblid").val(),
     '',
     function (datos) {
         jsdata = JSON.parse(datos)
@@ -17,9 +17,9 @@ ClassDataAccess.Ajax(
                 {
                     field: "ID_MDDESCUENTO",
                     width: 30,
-                    title:"<label id='check-all' data-todos = '0'>Selecionar (*)</label>",
+                    title: "<label id='check-all' data-todos = '0'>Selecionar (*)</label>",
                     template: function (d) {
-                        return '<input type="checkbox" value="' + d.ID_MDDESCUENTO+'">';
+                        return '<input type="checkbox" checked value="' + d.ID_MDDESCUENTO + '">';
                     }
                 },
                 {
@@ -70,22 +70,32 @@ ClassDataAccess.Events("#check-all", "click", function () {
         $("#check-all").attr('data-todos', 0)
         $("[type='checkbox']").removeAttr('checked');
     } else {
-        $("#check-all").attr('data-todos',1)
-        $("[type='checkbox']").attr('checked',true);
+        $("#check-all").attr('data-todos', 1)
+        $("[type='checkbox']").attr('checked', true);
     }
 })
 
-myarray = new  Array()
+myarray = new Array()
+count = 0;
 ClassDataAccess.Events("#btnconfirm", "click", function () {
     $("[type='checkbox']").each(function (key, element) {
-            aprob = $(element).is(':checked') ? '2' : '1';
-            var md = {
-                ID_MDDESCUENTO: $(element).val(),
-                VERIFICA1: aprob
+        aprob = $(element).is(':checked') ? '2' : '1';
+        count = aprob == 1 ? count + 1 : count
+        var md = {
+            ID_MDDESCUENTO: $(element).val(),
+            VERIFICA1: aprob
         }
         myarray.push(md);
     });
+    if (count > 0) {
+        $("#lblmensajerech").text("Vas a rechazar " + count + " registros, ")
+        count = 0;
+    } else {
+        $("#lblmensajerech").text("Vas a rechazar " + count + " registros, ")
+        count = 0;
+    }
 })
+
 
 ClassDataAccess.Events("#btnsave", "click", function () {
     ClassDataAccess.CloseWindows("#div-confirmacion")

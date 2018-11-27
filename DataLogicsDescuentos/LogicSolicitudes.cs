@@ -43,10 +43,10 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             return mensaje;
         }
 
-        public List<VIEW_ENCABEZADO> ListadoEncabezados()
+        public List<VIEW_ENCABEZADO> ListadoEncabezados(long cedula)
         {
             MetodosSolicitud mtsol = new MetodosSolicitud();
-            return mtsol.ListadoEncabezado();
+            return mtsol.ListadoEncabezado(cedula);
         }
 
         public VIEW_ENCABEZADO Encabezados(long idmc)
@@ -73,6 +73,18 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
                 update = await mtsend.EnviarMensaje(msj.message);
             }
             return update;
+        }
+
+        public List<VIEW_ENCABEZADO_INFORME> EncabezadoInforme()
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            return mtsol.EncabezadoInformes();
+        }
+
+        public List<VIEW_EXCEL_SAP> ExportarExcel(long idmc)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            return mtsol.ExportarExcel(idmc);
         }
 
 

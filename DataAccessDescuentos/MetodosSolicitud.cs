@@ -34,10 +34,10 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             return result;
         }
 
-        public List<VIEW_ENCABEZADO> ListadoEncabezado()
+        public List<VIEW_ENCABEZADO> ListadoEncabezado(long cedula)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            string tsql = "select * from VIEW_ENCABEZADO where estado = 0 order by fecini";
+            string tsql = $"select * from VIEW_ENCABEZADO where estado = (select NIVELUSUARIO-1 from USUARIOS where CEDULA = '{cedula}') order by fecini";
             var result = dbcontext.VIEW_ENCABEZADO.SqlQuery(tsql).ToList();
             return result;
         }
@@ -55,6 +55,20 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             dbcontext = new ModelAplicacionesDescuentos();
             String tsql = $"exec PROC_APROBACION_COMERCIAL '{cc}','{md.ID_MDDESCUENTO}','{md.VERIFICA1}'";
             var query = dbcontext.Database.SqlQuery<Mensajes>(tsql).FirstOrDefault();
+            return query;
+        }
+
+        public List<VIEW_ENCABEZADO_INFORME> EncabezadoInformes()
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            var query = dbcontext.Database.SqlQuery<VIEW_ENCABEZADO_INFORME>("select * from VIEW_ENCABEZADO_INFORME").ToList();
+            return query;
+        }
+
+        public List<VIEW_EXCEL_SAP> ExportarExcel(long idmc)
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            var query = dbcontext.Database.SqlQuery<VIEW_EXCEL_SAP>($"select * from VIEW_EXCEL_SAP where ID_MCDESCUENTO='{idmc}' ").ToList();
             return query;
         }
 

@@ -26,8 +26,10 @@ namespace DESCUENTOS.APIS
         [HttpPost]
         public string ListarEncabezados()
         {
+            var id = HttpContext.Current.Session["id"];
+            long cc = long.Parse(id.ToString());
             lgsolict = new LogicSolicitudes();
-            return JsonConvert.SerializeObject(lgsolict.ListadoEncabezados());
+            return JsonConvert.SerializeObject(lgsolict.ListadoEncabezados(cc));
         }
 
         [HttpPost]
@@ -55,6 +57,17 @@ namespace DESCUENTOS.APIS
             return JsonConvert.SerializeObject(result);
         }
 
+
+        public string ListadoInforme() {
+            lgsolict = new LogicSolicitudes();
+            return JsonConvert.SerializeObject(lgsolict.EncabezadoInforme());
+        }
+
+        public string ExportExcel(long id)
+        {
+            lgsolict = new LogicSolicitudes();
+            return JsonConvert.SerializeObject(lgsolict.ExportarExcel(id));
+        }
 
     }
 }
