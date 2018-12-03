@@ -25,6 +25,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public double subtotal { get; set; }
         public double Descuento { get; set; }
         public double total { get; set; }
+        public short nivel { get; set; }
         public short estado { get; set; }
         public virtual ICollection<VIEW_VALORPORCLIENTE> VIEW_VALORPORCLIENTE { get; set; }
     }

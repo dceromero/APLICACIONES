@@ -37,7 +37,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public List<VIEW_ENCABEZADO> ListadoEncabezado(long cedula)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            string tsql = $"select * from VIEW_ENCABEZADO where estado = (select NIVELUSUARIO-1 from USUARIOS where CEDULA = '{cedula}') order by fecini";
+            string tsql = $"select * from VIEW_ENCABEZADO where estado <>0 and nivel = (select NIVELUSUARIO-1 from USUARIOS where CEDULA = '{cedula}') order by fecini";
             var result = dbcontext.VIEW_ENCABEZADO.SqlQuery(tsql).ToList();
             return result;
         }
@@ -45,7 +45,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public List<VIEW_VALORPORCLIENTE> ProductosClientes(long idmc)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            string tsql = $"select ID_MDDESCUENTO, Material, PORCENDESC, CANT, subtotal, Descuento, total from VIEW_VALORPORCLIENTE where ID_MCDESCUENTO = '{idmc}'";
+            string tsql = $"select ID_MDDESCUENTO, Material, PORCENDESC, CANT, subtotal, Descuento, total, estado from VIEW_VALORPORCLIENTE where ID_MCDESCUENTO = '{idmc}'";
             var result = dbcontext.Database.SqlQuery<VIEW_VALORPORCLIENTE>(tsql).ToList();
             return result;
         }

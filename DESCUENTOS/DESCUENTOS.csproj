@@ -188,6 +188,7 @@
     <Compile Include="Controllers\ConfigController.cs" />
     <Compile Include="Controllers\DescuentosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +215,7 @@
     <Content Include="JSLIB\flat\loading-image.gif" />
     <Content Include="JSLIB\flat\loading.gif" />
     <Content Include="JSLIB\jquery-3.3.1.min.js" />
+    <Content Include="JSLIB\jszip.min.js" />
     <Content Include="JSLIB\kendo.common.min.css" />
     <Content Include="JSLIB\kendo.flat.min.css" />
     <Content Include="JSLIB\popper.min.js" />
@@ -222,6 +224,7 @@
     <Content Include="JS\Autorizaciones.js" />
     <Content Include="JS\config.js" />
     <Content Include="JS\Descuentos.js" />
+    <Content Include="JS\Informes.js" />
     <Content Include="JS\Login.js" />
     <Content Include="JS\Navbar.js" />
     <Content Include="JS\PreRegistros.js" />
@@ -272,6 +275,7 @@
     <Content Include="Views\Descuentos\Autorizaciones.cshtml" />
     <Content Include="Views\Shared\View_Descuentos.cshtml" />
     <Content Include="Views\Descuentos\Autorizacion.cshtml" />
+    <Content Include="Views\Informes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

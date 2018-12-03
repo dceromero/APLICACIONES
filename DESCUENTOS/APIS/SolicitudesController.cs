@@ -63,6 +63,7 @@ namespace DESCUENTOS.APIS
             return JsonConvert.SerializeObject(lgsolict.EncabezadoInforme());
         }
 
+        
         public string ExportExcel(long id)
         {
             lgsolict = new LogicSolicitudes();

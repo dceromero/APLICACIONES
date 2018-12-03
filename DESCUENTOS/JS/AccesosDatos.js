@@ -13,8 +13,6 @@ AccesosDatos.prototype.Ajax = function (url, datos, funcion) {
     }).done()
 }
 
-
-
 AccesosDatos.prototype.Events = function (id, evento, funcion) {
     $("body").on(evento, id, funcion);
 }
@@ -64,6 +62,21 @@ AccesosDatos.prototype.OpenWindows = function (selector, titulo, altura, ancho) 
     formfind.open();
 }
 
+
+AccesosDatos.prototype.OpenWindows.funcionCerrar = function (selector, titulo, altura, ancho, funcion) {
+    $(selector).kendoWindow({
+        modal: true,
+        height: altura,
+        title: titulo,
+        visible: true,
+        width: ancho,
+        close:funcion
+    });
+    formfind = $(selector).data("kendoWindow");
+    formfind.center();
+    formfind.open();
+}
+
 AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
     $(selector).kendoGrid({
         dataSource: datos,
@@ -93,6 +106,49 @@ AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
         },
         columns: ArrayColumna
     });
+}
+
+AccesosDatos.prototype.GrillaExcel = function (selector, datos, ArrayColumna) {   
+   $(selector).kendoGrid({
+        toolbar: [{ name: "excel", text: "Exportar a Excel" }],
+        excel: {
+            allPages: true,
+            fileName: "Descuentos.xlsx",
+            proxyURL: "http://demos.telerik.com/kendo-ui/service/export",
+            filterable: true
+        },
+        dataSource: datos,
+        groupable: false,
+        sortable: true,
+        filterable: {
+            messages: {
+                info: "Mostrar items que:",
+                filter: "Aplicar",
+                clear: "Borrar"
+            },
+            extra: false,
+            operators: {
+                string: {
+                    contains: "Contiene",
+                    doesnotcontain: "No contiene",
+                    startswith: "Comienza con",
+                    eq: "Es igual a",
+                    neq: "No es igual a",
+                    gte: "Mayor o igual a"
+                }
+            }
+        },
+        pageable: {
+            refresh: true,
+            pageSizes: true
+        },
+        columns: ArrayColumna
+    });
+}
+
+AccesosDatos.prototype.DestruirGrilla=function(selector){
+    var grid = $(selector).data("kendoGrid");
+    grid.destroy();
 }
 
 AccesosDatos.prototype.refreshGrilla = function (selector) {

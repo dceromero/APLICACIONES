@@ -17,8 +17,8 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public int? vacio3 { get; set; }
         public byte PORCENDESC { get; set; }
         public string simbolo { get; set; }
-        public DateTime FECINI { get; set; }
-        public DateTime FECFIN { get; set; }
+        public string FECINI { get; set; }
+        public string FECFIN { get; set; }
         public int CANT { get; set; }
         public string material { get; set; }
     }
