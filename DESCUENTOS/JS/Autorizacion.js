@@ -20,7 +20,7 @@ ClassDataAccess.Ajax(
                     title: "<label id='check-all' data-todos = '0'>Selecionar (*)</label>",
                     template: function (d) {
                         console.log(d.estado)
-                        if (d.estado == 1) {
+                        if (d.estado == 0) {
                             return '<span class="fa fa-minus-circle"></span>'
                         } else {
                             return '<input type="checkbox" checked value="' + d.ID_MDDESCUENTO + '">';

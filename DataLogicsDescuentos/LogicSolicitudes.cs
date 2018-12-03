@@ -35,8 +35,15 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
                 }
                 if (msg.id != 0)
                 {
-                    MetodosEnviarEmail mtsend =new  MetodosEnviarEmail();
-                    mensaje= await mtsend.EnviarMensaje(msg.message);
+                    MetodosEnviarEmail mtsend = new MetodosEnviarEmail();
+                    if (msg.id == 2)
+                    {
+                        mensaje = await mtsend.EnviarMensajeRech(msg.message);
+                    }
+                    else
+                    {
+                        mensaje = await mtsend.EnviarMensaje(msg.message);
+                    }
                 }
 
             }

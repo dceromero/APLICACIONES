@@ -62,7 +62,6 @@ AccesosDatos.prototype.OpenWindows = function (selector, titulo, altura, ancho) 
     formfind.open();
 }
 
-
 AccesosDatos.prototype.OpenWindows.funcionCerrar = function (selector, titulo, altura, ancho, funcion) {
     $(selector).kendoWindow({
         modal: true,
@@ -79,7 +78,10 @@ AccesosDatos.prototype.OpenWindows.funcionCerrar = function (selector, titulo, a
 
 AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
     $(selector).kendoGrid({
-        dataSource: datos,
+        dataSource: {
+            data: datos,
+            pageSize: 15,
+        },
         groupable: false,
         sortable: true,
         filterable: {
@@ -100,10 +102,7 @@ AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
                 }
             }
         },
-        pageable: {
-            refresh: true,
-            pageSizes: true
-        },
+        pageable: true,
         columns: ArrayColumna
     });
 }

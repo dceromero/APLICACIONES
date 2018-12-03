@@ -16,6 +16,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public long CODCLIENTE { get; set; }
         public string RAZSOCCLIENTE { get; set; }
         public string MOTIVO { get; set; }
+        public short nivel { get; set; }
         public short estado { get; set; }
     }
 }

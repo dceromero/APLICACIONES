@@ -63,5 +63,24 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             };
         }
 
+        public async Task<string> EnviarMensajeRech(string para)
+        {
+            var mensaje = new MailMessage(FromMail, para);
+            mensaje.Bcc.Add(Copia1);
+            mensaje.Bcc.Add(Copia2);
+            mensaje.Subject = "Autorización de Descuentos";
+            mensaje.BodyEncoding = Encoding.UTF8;
+            mensaje.Body = $"Ingrese al siguiente Link para aprobar el descuento";
+            mensaje.IsBodyHtml = true;
+            mensaje.Priority = MailPriority.High;
+            using (var servidor = new SmtpClient("smtp.office365.com", 587))
+            {
+                servidor.Credentials = new NetworkCredential(FromMail, MailPsw);
+                servidor.EnableSsl = true;
+                await servidor.SendMailAsync(mensaje);
+                return $"El correo ha sido enviado para su aprobación";
+            };
+        }
+
     }
 }

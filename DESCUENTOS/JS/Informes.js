@@ -49,16 +49,20 @@ ClassDataAccess.Ajax(
                     title: "Razón Social"
                 },
                 {
-                    field: "estado",
+                    field: "nivel",
                     width: 20,
                     title: "Nivel"
                 },
                 {
                     field: "ID_MCDESCUENTO",
                     width: 20,
-                    title: "ver",
+                    title: "Descargar",
                     template: function (d) {
-                        return '<button class="btn btn-outline-info" btn="' + d.ID_MCDESCUENTO +'"><span class="fa fa-eye"></span></button> ';
+                        if (d.nivel == 4 && d.estado==1) {
+                            return '<button class="btn btn-outline-info" btn="' + d.ID_MCDESCUENTO + '"><span class="fa fa-eye"></span></button> ';
+                        } else {
+                            return '<button class="btn btn-outline-info"><span class="fa fa-times-circle"></span></button> ';
+                        }
                     }
                 },
             ]
@@ -156,7 +160,7 @@ ClassDataAccess.Events("[btn]", "click", function () {
                         field: "material",
                         width: 45,
                         title: "Material"
-                    }, 
+                    },
                 ]
             )
         })

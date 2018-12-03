@@ -59,3 +59,15 @@ legend strong{
     font-size:11px!important;
     text-align:center!important;
 }
+
+.k-grid td.k-state-selected:hover, .k-grid tr:hover {
+    color: #2a6496!important;
+    background: rgba(212,228,239,1) !important;
+}
+
+#navbarDropdown{
+    color:#FFF!important;
+}
+#navbarDropdown :hover{
+    color: #ced4da !important;
+}
