@@ -1,20 +1,20 @@
 ﻿ClassDataAccess = new AccesosDatos();
 
 ClassDataAccess.Ajax(
-    "/api/Empresas/ListadoEmpresas",
-    '',
-    function (datos) {
-        js = JSON.parse(datos);
-        ClassDataAccess.Combox("#cmbemp", js, "NIT_EMPRESA", "NAMEEMPRESA");
-    }
-)
-
-ClassDataAccess.Ajax(
     "/api/Vendedores/CodigosVendedores",
     '',
     function (datos) {
         js = JSON.parse(datos);
         ClassDataAccess.Combox("#cmbcodven", js, "COD_VENDEDOR", "NAMEVENDEDOR");
+    }
+)
+
+ClassDataAccess.Ajax(
+    "/api/Empresas/ListadoEmpresas",
+    '',
+    function (datos) {
+        js = JSON.parse(datos);
+        ClassDataAccess.Combox("#cmbemp", js, "NIT_EMPRESA", "NAMEEMPRESA");
     }
 )
 
