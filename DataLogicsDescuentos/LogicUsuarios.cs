@@ -35,5 +35,17 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             mtuser = new MetodosUsuarios();
             return mtuser.User(cedula);
         }
+
+        public List<VIEW_ENCABEZADO_USUARIO> ListadoUsuarios()
+        {
+            mtuser = new MetodosUsuarios();
+            return mtuser.ListaUsuarios();
+        }
+
+        public USUARIOS ConfigUsuarios(long id)
+        {
+            mtuser = new MetodosUsuarios();
+            return mtuser.ConfigUsuario(id);
+        }
     }
 }

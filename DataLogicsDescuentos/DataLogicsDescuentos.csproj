@@ -56,6 +56,7 @@
     <Compile Include="LogicRoles.cs" />
     <Compile Include="LogicSolicitudes.cs" />
     <Compile Include="LogicUsuarios.cs" />
+    <Compile Include="LogicVendedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

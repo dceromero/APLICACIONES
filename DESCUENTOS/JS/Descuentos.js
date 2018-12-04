@@ -1,4 +1,0 @@
-﻿ClassDataAccess = new AccesosDatos();
-
-
-

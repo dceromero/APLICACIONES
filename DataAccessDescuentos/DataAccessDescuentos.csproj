@@ -67,6 +67,7 @@
     <Compile Include="MetodosSubMenus.cs" />
     <Compile Include="MetodosTipoSolicitud.cs" />
     <Compile Include="MetodosUsuarios.cs" />
+    <Compile Include="MetodosVendedores.cs" />
     <Compile Include="ModelAplicacionesDescuentos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -181,6 +181,7 @@
     <Compile Include="APIS\RolesController.cs" />
     <Compile Include="APIS\SolicitudesController.cs" />
     <Compile Include="APIS\UsuariosController.cs" />
+    <Compile Include="APIS\VendedoresController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -222,13 +223,13 @@
     <Content Include="JS\AccesosDatos.js" />
     <Content Include="JS\Autorizacion.js" />
     <Content Include="JS\Autorizaciones.js" />
-    <Content Include="JS\config.js" />
-    <Content Include="JS\Descuentos.js" />
+    <Content Include="JS\Config.js" />
     <Content Include="JS\Informes.js" />
     <Content Include="JS\Login.js" />
     <Content Include="JS\Navbar.js" />
     <Content Include="JS\PreRegistros.js" />
     <Content Include="JS\Solicitudes.js" />
+    <Content Include="JS\UserConfig.js" />
     <Content Include="JS\View_btnSave.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -276,6 +277,7 @@
     <Content Include="Views\Shared\View_Descuentos.cshtml" />
     <Content Include="Views\Descuentos\Autorizacion.cshtml" />
     <Content Include="Views\Informes\Index.cshtml" />
+    <Content Include="Views\Config\User.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

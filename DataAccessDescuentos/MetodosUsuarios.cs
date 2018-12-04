@@ -25,12 +25,27 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             dbcontext = new ModelAplicacionesDescuentos();
             return dbcontext.VIEW_Jefes.SqlQuery("SELECT * FROM VIEW_Jefes where NIVELUSUARIO>0 ORDER BY NombreCompleto ").ToList();
         }
-
-
+        
         public VIEW_Jefes User(long cedula)
         {
             dbcontext = new ModelAplicacionesDescuentos();
             return dbcontext.VIEW_Jefes.SqlQuery($"select * from VIEW_Jefes where cedula ='{cedula}'").FirstOrDefault();
+        }
+
+        public List<VIEW_ENCABEZADO_USUARIO> ListaUsuarios()
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            string tsql = "select * from VIEW_ENCABEZADO_USUARIO";
+            var result = dbcontext.VIEW_ENCABEZADO_USUARIO.SqlQuery(tsql).ToList();
+            return result;
+        }
+
+        public USUARIOS ConfigUsuario(long cc)
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            string tsql = $"select * from VIEW_USUARIO where cedula = '{cc}'";
+            var result = dbcontext.USUARIOS.SqlQuery(tsql).FirstOrDefault();
+            return result;
         }
     }
 }

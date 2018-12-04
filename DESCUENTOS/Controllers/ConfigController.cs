@@ -20,6 +20,18 @@ namespace DESCUENTOS.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
-        
+
+        public ActionResult Usuario(long id)
+        {
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View("User",id);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
     }
 }

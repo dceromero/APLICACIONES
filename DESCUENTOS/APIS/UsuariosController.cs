@@ -59,5 +59,37 @@ namespace DESCUENTOS.APIS
             }
         }
 
+        [HttpPost]
+        public string ListaUsuarios()
+        {
+            var id = HttpContext.Current.Session["id"];
+            if (id != null)
+            {
+                loguser = new LogicUsuarios();
+                var result = loguser.ListadoUsuarios();
+                return JsonConvert.SerializeObject(result);
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
+        [HttpPost]
+        public string Userconfig(long id)
+        {
+            var emp = HttpContext.Current.Session["id"];
+            if (emp != null)
+            {
+                loguser = new LogicUsuarios();
+                var result = loguser.ConfigUsuarios(id);
+                return JsonConvert.SerializeObject(result);
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
     }
 }

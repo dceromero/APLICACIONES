@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<input type="hidden" id="lblid" value="@Model" />
+<div class="row m-3">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Configuración de Usuario</strong>
+                <hr />
+            </legend>
+            <div class="row">
+                @Html.Partial("~/Views/Shared/ViewUsuarios.cshtml")
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <strong>Nivel Usuarios</strong>
+                            </span>
+                        </div>
+                        <select id="cmbnivel" class="form-control" required>
+                            <option value="0">Ninguno</option>
+                            <option value="1">Verificador</option>
+                            <option value="2">Verificador 2</option>
+                            <option value="3">Verificador 3</option>
+                            <option value="4">Aprobador</option>
+                            <option value="5">Aprobador 2</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <strong>Codigo de Vendedor</strong>
+                            </span>
+                        </div>
+                        <select id="cmbcodven" class="form-control" required></select>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <strong>ROL</strong>
+                            </span>
+                        </div>
+                        <input type="text" id="txtrol" required class="form-control" />
+                        <input type="hidden" id="lblrol" />
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <a href="/Config/Index" class="btn btn-outline-danger"><span class="fa fa-hand-point-left">&nbsp;&nbsp;<strong>Atras</strong></span></a>
+                    <button class="btn btn-outline-primary"><span class="fa fa-save">&nbsp;&nbsp;<strong>Guardar</strong></span></button>
+                </div>
+        </fieldset>
+    </div>
+
+</div>
+<script src="~/JS/UserConfig.js"></script>
