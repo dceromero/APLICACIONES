@@ -51,8 +51,10 @@
     <Compile Include="LogicClientes.cs" />
     <Compile Include="LogicEmpresas.cs" />
     <Compile Include="LogicMenuSubMenus.cs" />
+    <Compile Include="LogicMotivos.cs" />
     <Compile Include="LogicPermisos.cs" />
     <Compile Include="LogicProductos.cs" />
+    <Compile Include="LogicReportes.cs" />
     <Compile Include="LogicRoles.cs" />
     <Compile Include="LogicSolicitudes.cs" />
     <Compile Include="LogicUsuarios.cs" />

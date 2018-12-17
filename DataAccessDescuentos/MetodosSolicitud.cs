@@ -13,7 +13,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public long SaveMCDescuento(MCDESCUENTOS mc)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            string tsql = $"exec PROC_SaveMCDESCTO '{mc.ID_SOLICITD}', '{mc.CODCLIENTE}', '{mc.FECINI.ToString("yyyy-MM-dd")}', '{mc.FECFIN.ToString("yyyy-MM-dd")}', '{mc.MOTIVO}'";
+            string tsql = $"exec PROC_SaveMCDESCTO '{mc.ID_SOLICITD}', '{mc.CODCLIENTE}', '{mc.FECINI.ToString("yyyy-MM-dd")}', '{mc.FECFIN.ToString("yyyy-MM-dd")}', '{mc.MOTIVO}','{mc.idmotivos}'";
             long query = dbcontext.Database.SqlQuery<long>(tsql).FirstOrDefault();
             return query;
         }
@@ -50,10 +50,10 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             return result;
         }
 
-        public Mensajes UpdateMDDescuentos(MDDESCUENTO md,  long cc)
+        public Mensajes UpdateMDDescuentos(MDDESCUENTO md, long cc)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            String tsql = $"exec PROC_APROBACION_COMERCIAL '{cc}','{md.ID_MDDESCUENTO}','{md.VERIFICA1}'";
+            String tsql = $"exec PROC_APROBACION_COMERCIAL '{cc}','{md.ID_MDDESCUENTO}','{md.VERIFICA1}', '{md.OBS}'";
             var query = dbcontext.Database.SqlQuery<Mensajes>(tsql).FirstOrDefault();
             return query;
         }

@@ -60,8 +60,10 @@
     <Compile Include="MetodosEmpresas.cs" />
     <Compile Include="MetodosEnviarEmail.cs" />
     <Compile Include="MetodosMenuPrincipal.cs" />
+    <Compile Include="MetodosMotivos.cs" />
     <Compile Include="MetodosPermisos.cs" />
     <Compile Include="MetodosProductos.cs" />
+    <Compile Include="MetodosReportes.cs" />
     <Compile Include="MetodosRoles.cs" />
     <Compile Include="MetodosSolicitud.cs" />
     <Compile Include="MetodosSubMenus.cs" />

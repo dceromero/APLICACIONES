@@ -12,6 +12,15 @@ ClassDataAccess.Ajax(
 )
 
 ClassDataAccess.Ajax(
+    "/api/Motivos/MotivosDesc",
+    '',
+    function (datos) {
+        js = JSON.parse(datos);
+        ClassDataAccess.Combox("#cmbtpmot", js, "idmotivos", "descMotivo");
+    }
+)
+
+ClassDataAccess.Ajax(
     "/api/Clientes/ListarClientexVendedor",
     '',
     function (datos) {
@@ -20,7 +29,16 @@ ClassDataAccess.Ajax(
     }
 )
 
-
+ClassDataAccess.Events("#cmbtpmot", "change", function () {
+    if ($(this).val() != -1) {
+        $("#div-justi").fadeIn("slow")
+        $("#lblmot ").text($("#cmbtpmot :selected").text());
+    } else {
+        $("#div-justi").fadeOut("slow")
+        $("#lblmot ").text("");
+    }
+    
+})
 
 ClassDataAccess.Events.Blur("#txtproduct", "#lblcodprod");
 
@@ -66,6 +84,9 @@ ClassDataAccess.Events("#txtcant", "blur", function () {
 })
 
 ClassDataAccess.Events("#txtporc", "blur", function () {
+    if ($("#txtporc").val() > 99) {
+        $("#txtporc").val("");
+    }
     if ($("#txtcant").val() != "") {
         valorprod = $("#txtcant").val() * $("#lblVALOR").val();
         descuento = valorprod * ($(this).val() / 100)
@@ -159,6 +180,7 @@ ClassDataAccess.Events("#btnsave", "click", function () {
         FECINI: $("#txtfecini").val(),
         FECFIN: $("#txtfecfin").val(),
         MOTIVO: $("#txtmot").val(),
+        idmotivos: $("#cmbtpmot").val(),
         MDDESCUENTO:myarray
     }
     ClassDataAccess.CloseWindows("#div-confirmacion")
@@ -169,6 +191,9 @@ ClassDataAccess.Events("#btnsave", "click", function () {
         function (datos) {
             $("#lblmessage").text(datos);
             ClassDataAccess.CloseWindows("#div-mensaje");
+            myarray.splice(0, myarray.length);
+            $("#grid-add-descuento").data('kendoGrid').dataSource.read();
+            $("#grid-add-descuento").data("kendoGrid").refresh();
             ClassDataAccess.OpenWindows("#div-mensaje-respuesta", "Mensaje :", 110, 300);
         }
     )

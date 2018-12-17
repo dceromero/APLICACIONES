@@ -46,6 +46,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public virtual DbSet<View_Clientes> View_Clientes { get; set; }
         public virtual DbSet<VIEW_ENCABEZADO> VIEW_ENCABEZADO { get; set; }
         public virtual DbSet<VIEW_ENCABEZADO_USUARIO> VIEW_ENCABEZADO_USUARIO { get; set; }
+        public virtual DbSet<MOTIVOS> MOTIVOS { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -6,6 +6,7 @@ ClassDataAccess.Ajax(
     function (datos) {
         jsdata = JSON.parse(datos)
         $("#cmbtpsol").html("").append("<option>" + jsdata.DESCRIPCION + "</option>");
+        $("#cmbtpmot").html("").append("<option>" + jsdata.DESCMOTIVO + "</option>");
         $("#txtcliente").val(jsdata.RAZSOCCLIENTE);
         $("#txtfecini").val(jsdata.FECINI.replace("T00:00:00", ""));
         $("#txtfecfin").val(jsdata.FECFIN.replace("T00:00:00", ""));
@@ -80,6 +81,8 @@ ClassDataAccess.Events("#check-all", "click", function () {
     }
 })
 
+$("#div-justi").fadeIn()
+
 myarray = new Array()
 count = 0;
 ClassDataAccess.Events("#btnconfirm", "click", function () {
@@ -88,23 +91,32 @@ ClassDataAccess.Events("#btnconfirm", "click", function () {
         count = aprob == 1 ? count + 1 : count
         var md = {
             ID_MDDESCUENTO: $(element).val(),
-            VERIFICA1: aprob
+            VERIFICA1: aprob,
+            OBS:"Oki"
         }
         myarray.push(md);
     });
     if (count > 0) {
+        $("#div-motrech").fadeIn()
         $("#lblmensajerech").text("Vas a rechazar " + count + " registros, ")
         count = 0;
     } else {
+        $("#div-motrech").fadeOut()
         $("#lblmensajerech").text("Vas a rechazar " + count + " registros, ")
         count = 0;
     }
 })
 
-
 ClassDataAccess.Events("#btnsave", "click", function () {
-    ClassDataAccess.CloseWindows("#div-confirmacion")
+    urlactual = window.location.href.toString().split("/");
+    div = urlactual[4] == "Autorizacion" ? "#div-confirmacion-aprob" : "#div-confirmacion"
+    ClassDataAccess.CloseWindows(div);
     ClassDataAccess.OpenWindows("#div-mensaje", "Mensaje :", 100, 300);
+    for (i in myarray) {
+        if (myarray[i].VERIFICA1 == 1) {
+            myarray[i].OBS = $("#txtmtrec").val();
+        }
+    }
     ClassDataAccess.Ajax(
         '/api/Solicitudes/ActualizarSolicitud/',
         JSON.stringify(myarray),

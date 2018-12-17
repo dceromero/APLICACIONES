@@ -176,8 +176,10 @@
     <Compile Include="APIS\ClientesController.cs" />
     <Compile Include="APIS\EmpresasController.cs" />
     <Compile Include="APIS\MenusSubMenusController.cs" />
+    <Compile Include="APIS\MotivosController.cs" />
     <Compile Include="APIS\PermisosController.cs" />
     <Compile Include="APIS\ProductosController.cs" />
+    <Compile Include="APIS\ReportesController.cs" />
     <Compile Include="APIS\RolesController.cs" />
     <Compile Include="APIS\SolicitudesController.cs" />
     <Compile Include="APIS\UsuariosController.cs" />
@@ -224,6 +226,7 @@
     <Content Include="JS\Autorizacion.js" />
     <Content Include="JS\Autorizaciones.js" />
     <Content Include="JS\Config.js" />
+    <Content Include="JS\DetalleSolicitud.js" />
     <Content Include="JS\Informes.js" />
     <Content Include="JS\Login.js" />
     <Content Include="JS\Navbar.js" />
@@ -278,6 +281,7 @@
     <Content Include="Views\Descuentos\Autorizacion.cshtml" />
     <Content Include="Views\Informes\Index.cshtml" />
     <Content Include="Views\Config\User.cshtml" />
+    <Content Include="Views\Informes\DetalleSolicitud.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

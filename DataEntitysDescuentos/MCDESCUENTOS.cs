@@ -33,6 +33,8 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [StringLength(60)]
         public string MOTIVO { get; set; }
 
+        public long idmotivos { get; set; }
+
         public virtual CLIENTES_GENERAL CLIENTES_GENERAL { get; set; }
 
         public virtual TIPOSOLICITUD TIPOSOLICITUD { get; set; }

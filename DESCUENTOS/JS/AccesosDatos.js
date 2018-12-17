@@ -145,6 +145,70 @@ AccesosDatos.prototype.GrillaExcel = function (selector, datos, ArrayColumna) {
     });
 }
 
+AccesosDatos.prototype.GrillaExcelGrupable = function (selector, datos, ArrayColumna) {
+    $(selector).kendoGrid({
+        toolbar: [{ name: "excel", text: "Exportar a Excel" }],
+        excel: {
+            allPages: true,
+            fileName: "Descuentos.xlsx",
+            proxyURL: "http://demos.telerik.com/kendo-ui/service/export",
+            filterable: true
+        },
+        dataSource: datos,
+        groupable: {
+            messages: {
+                empty: "Arraste el Encabezado"
+            }
+        },
+        sortable: true,
+        filterable: {
+            messages: {
+                info: "Mostrar items que:",
+                filter: "Aplicar",
+                clear: "Borrar"
+            },
+            extra: false,
+            operators: {
+                string: {
+                    contains: "Contiene",
+                    doesnotcontain: "No contiene",
+                    startswith: "Comienza con",
+                    eq: "Es igual a",
+                    neq: "No es igual a",
+                    gte: "Mayor o igual a"
+                }
+            }
+        },
+        pageable: {
+            refresh: true,
+            pageSizes: true
+        },
+        columns: ArrayColumna
+    });
+}
+
+AccesosDatos.prototype.Charts = function (titulo,selector, arraydeTitulos, arraydeColores, arraydeDatos) {
+    new Chart(document.getElementById(selector), {
+        type: 'bar',
+        data: {
+            labels: arraydeTitulos,
+            datasets: [
+                {
+                    backgroundColor: arraydeColores,
+                    data: arraydeDatos
+                }
+            ]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: titulo
+            }
+        }
+    });
+}
+
 AccesosDatos.prototype.DestruirGrilla=function(selector){
     var grid = $(selector).data("kendoGrid");
     grid.destroy();
@@ -225,3 +289,11 @@ AccesosDatos.prototype.AutoCompletePersonalizado = function (selector, datasourc
         select: funcion
     });
 }
+
+AccesosDatos.prototype.Aleatorio = function(inferior, superior) {
+    numPosibilidades = superior - inferior
+    aleat = Math.random() * numPosibilidades
+    aleat = Math.floor(aleat)
+    return parseInt(inferior) + aleat
+}
+

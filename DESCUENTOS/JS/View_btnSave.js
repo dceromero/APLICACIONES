@@ -2,8 +2,19 @@
 
 ClassDataAccess.Events("#btnconfirm", "click", function () {
     validar = ClassDataAccess.ValidarCampos("[validarcampos] [required]");
-    if (validar && myarray.length >= 1) {
-        ClassDataAccess.OpenWindows("#div-confirmacion", "Confirmación :", 120, 300);
+    urlactual = window.location.href.toString().split("/");
+    if (validar && myarray.length >= 1) {        
+        div = urlactual[4] == "Autorizacion" ? "#div-confirmacion-aprob" : "#div-confirmacion"
+        alt = 0;
+        ancho = 0;
+        if (urlactual[4] == "Autorizacion") {
+            alt = 200;
+            ancho=400
+        } else {
+            alt = 100;
+            ancho = 300
+        }
+        ClassDataAccess.OpenWindows(div, "Confirmación :", alt, ancho);
     } else {
         ClassDataAccess.OpenWindows("#div-advertencia", "Advertencia :", 100, 300);
     }
@@ -14,7 +25,9 @@ ClassDataAccess.Events("#btn-clean", "click", function () {
 })
 
 ClassDataAccess.Events("#btncancel", "click", function () {
-    ClassDataAccess.CloseWindows("#div-confirmacion")
+    urlactual = window.location.href.toString().split("/");
+    div = urlactual[4] == "Autorizacion" ? "#div-confirmacion-aprob" : "#div-confirmacion"
+    ClassDataAccess.CloseWindows(div)
 })
 
 ClassDataAccess.Events("#btn-close-message", "click", function () {

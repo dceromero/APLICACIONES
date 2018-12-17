@@ -67,7 +67,7 @@ ClassDataAccess.Ajax(
                     width: 40,
                     title: "Aprobar",
                     template: function (d) {
-                        return '<a  href="/Descuentos/Autorizacion/' + d.ID_MCDESCUENTO+'" class="btn btn-outline-success" aprob><span class="fa fa-check-circle">&nbsp;&nbsp;Aprobar</span></a>'
+                        return '<a  href="/Descuentos/Autorizacion/' + d.ID_MCDESCUENTO+'" class="btn btn-outline-success" aprob><span class="fa fa-check-circle">&nbsp;&nbsp;Ir al Detalle</span></a>'
                     }
                 }
             ])
