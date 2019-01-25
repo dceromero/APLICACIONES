@@ -204,7 +204,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CSS\StylePrincipal.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="CSS\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\cancel.ico" />
@@ -212,6 +212,7 @@
     <Content Include="Image\loading-image.gif" />
     <Content Include="Image\LogoEmpresa.png" />
     <Content Include="Image\logosplash.jpg" />
+    <Content Include="JSLIB\all - Copia.css" />
     <Content Include="JSLIB\all.css" />
     <Content Include="JSLIB\bootstrap.min.css" />
     <Content Include="JSLIB\bootstrap.min.js" />
@@ -219,6 +220,7 @@
     <Content Include="JSLIB\flat\loading.gif" />
     <Content Include="JSLIB\jquery-3.3.1.min.js" />
     <Content Include="JSLIB\jszip.min.js" />
+    <Content Include="JSLIB\kendo.all.min.js" />
     <Content Include="JSLIB\kendo.common.min.css" />
     <Content Include="JSLIB\kendo.flat.min.css" />
     <Content Include="JSLIB\popper.min.js" />
@@ -241,7 +243,11 @@
     </Content>
     <Content Include="JSLIB\fonts\glyphs\WebComponentsIcons.woff" />
     <Content Include="JSLIB\fonts\glyphs\WebComponentsIcons.ttf" />
-    <Content Include="fonts\fa-solid-900.woff2" />
+    <Content Include="CSS\fonts\fa-solid-900.woff2" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -282,16 +288,28 @@
     <Content Include="Views\Informes\Index.cshtml" />
     <Content Include="Views\Config\User.cshtml" />
     <Content Include="Views\Informes\DetalleSolicitud.cshtml" />
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="CSS\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="CSS\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="CSS\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="CSS\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />

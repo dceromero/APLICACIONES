@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Pre-Registros";
+}
+<div class="row m-3">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Pre - Registro</strong>
+                <hr />
+            </legend>
+            <div class="col-md-12">
+                <div class="row">
+                    @Html.Partial("~/Views/Shared/ViewUsuarios.cshtml")
+                    <div class="col-md-12 mb-3 text-center">
+                        <button id="btnconfirm" class="btn btn-outline-primary mr-2"><strong>Guardar</strong></button>
+                        <button id="btn-atras" class="btn  btn-outline-danger"><strong>Atras</strong></button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+@Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+<script src="~/JS/PreRegistros.js"></script>

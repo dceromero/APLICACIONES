@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/JSLIB/all.css" rel="stylesheet" />
+    <link href="~/JSLIB/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/JSLIB/kendo.flat.min.css" rel="stylesheet" />
+    <link href="~/JSLIB/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/JSLIB/jquery-3.3.1.min.js"></script>
+    <script src="~/JSLIB/kendo.all.min.js"></script>
+    <script src="~/JSLIB/jszip.min.js"></script>
+    <script src="~/JSLIB/bootstrap.min.js"></script>
+    <script src="~/JSLIB/popper.min.js"></script>
+    <link href="~/CSS/StylePrincipal.css" rel="stylesheet" />
+    <script src="~/JS/AccesosDatos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="body-content">
+        @Html.Partial("~/Views/Shared/ViewSubMenu.cshtml")
+        @RenderBody()
+
+        @Html.Partial("~/Views/Shared/ViewFooter.cshtml")
+    </div>
+
+</body>
+</html>

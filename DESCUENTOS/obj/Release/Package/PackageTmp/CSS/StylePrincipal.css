@@ -1,0 +1,73 @@
+﻿body {
+    background-image: url(/Image/fondoaprob.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.card-footer, .card-header {
+    padding: .1rem .1rem !important;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.card-body {
+    padding:15px!important;
+}
+
+.list-inline{
+    margin-top:1em!important;
+}
+.btn {
+    border-radius: 1.7em!important;
+}
+
+fieldset {
+    border: 2px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 auto !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000!important;
+    box-shadow: 0px 0px 0px 0px #000!important;
+    width: 95%!important;
+}
+.form-control {
+    border: 1px solid #ced4da!important;
+    border-radius: .25rem!important;
+}
+
+legend strong{
+    color:darkblue!important;
+}
+
+.navbar-brand img {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 2em !important;
+}
+
+[disabled]{
+    background-color:white!important;
+    color:darkblue!important;
+   font-weight:500!important;
+}
+
+[role="gridcell"], .k-link{
+    font-weight:700!important;
+    text-align:center!important;
+    font-size:11px!important;
+    text-align:center!important;
+}
+
+.k-grid td.k-state-selected:hover, .k-grid tr:hover {
+    color: #2a6496!important;
+    background: rgba(212,228,239,1) !important;
+}
+
+#navbarDropdown{
+    color:#FFF!important;
+}
+#navbarDropdown :hover{
+    color: #ced4da !important;
+}
