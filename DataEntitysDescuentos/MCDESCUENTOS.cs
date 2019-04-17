@@ -30,16 +30,16 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public DateTime FECFIN { get; set; }
 
         [Required]
-        [StringLength(60)]
         public string MOTIVO { get; set; }
 
         public long idmotivos { get; set; }
+
+        public long CEDULA { get; set; }
 
         public virtual CLIENTES_GENERAL CLIENTES_GENERAL { get; set; }
 
         public virtual TIPOSOLICITUD TIPOSOLICITUD { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MDDESCUENTO> MDDESCUENTO { get; set; }
     }
 }

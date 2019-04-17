@@ -24,7 +24,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 
         public string MATERIAL { get; set; }
 
-        public  byte PORCENDESC { get; set; }
+        public  double PORCENDESC { get; set; }
 
         public int CANT { get; set; }
 

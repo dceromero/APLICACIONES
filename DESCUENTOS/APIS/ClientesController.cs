@@ -25,5 +25,11 @@ namespace DESCUENTOS.APIS
                 return string.Empty;
             }
         }
+
+        public string ListarClientexVendedor(long id)
+        {
+            lgclient = new LogicClientes();
+            return JsonConvert.SerializeObject(lgclient.ListarClientesXVendedor(id));
+        }
     }
 }

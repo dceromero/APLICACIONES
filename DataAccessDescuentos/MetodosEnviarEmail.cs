@@ -51,7 +51,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             mensaje.Bcc.Add(Copia2);
             mensaje.Subject = "Autorización de Descuentos";
             mensaje.BodyEncoding = Encoding.UTF8;
-            mensaje.Body = $"Ingrese al siguiente Link para aprobar el descuento";
+            mensaje.Body = $"Ingrese al siguiente <a href='http://186.116.15.58:8084/'>Link<a/> para aprobar el descuento";
             mensaje.IsBodyHtml = true;
             mensaje.Priority = MailPriority.High;
             using (var servidor = new SmtpClient("smtp.office365.com", 587))

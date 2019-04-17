@@ -18,7 +18,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [StringLength(20)]
         public string CODPRODUCTO { get; set; }
 
-        public byte PORCENDESC { get; set; }
+        public double PORCENDESC { get; set; }
 
         public byte VERIFICA1 { get; set; }
 
@@ -34,6 +34,14 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         public string OBS { get; set; }
 
         public int CANT { get; set; }
+
+        public float VUNI { get; set; }
+
+        public byte APRUEBA3 { get; set; }
+
+        public byte APRUEBA4 { get; set; }
+
+        public byte APRUEBA5 { get; set; }
 
         public virtual MCDESCUENTOS MCDESCUENTOS { get; set; }
 

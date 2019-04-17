@@ -18,5 +18,11 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             mtreport = new MetodosReportes();
             return mtreport.DetalleSolicitud(fecini, fecfin);
         }
+
+        public List<VIEW_ENCABEZADO_INFORME> InformeVendedor(MCDESCUENTOS info)
+        {
+            mtreport = new MetodosReportes();
+            return mtreport.InformexVendedor(info);
+        }
     }
 }

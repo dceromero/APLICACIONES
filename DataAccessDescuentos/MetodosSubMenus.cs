@@ -16,10 +16,10 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             return dbcontext.SUBMENU.SqlQuery($"select * from submenu  order by NAMESUBMENU").ToList();
         }
 
-        public List<SUBMENU> ListadoSubMenus(short ID_MENU)
+        public List<SUBMENU> ListadoSubMenus(short ID_MENU, long cedula)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            return dbcontext.SUBMENU.SqlQuery($"select * from submenu where ID_MENU ='{ID_MENU}'order by NAMESUBMENU").ToList();
+            return dbcontext.SUBMENU.SqlQuery($"select * from Func_SubMenus('{cedula}', '{ID_MENU}')order by NAMESUBMENU").ToList();
         }
 
     }

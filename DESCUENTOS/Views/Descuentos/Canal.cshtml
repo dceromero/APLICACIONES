@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Canal";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Descuentos Agrupados por Canal</strong>
+            </legend>
+            <div class="row">
+
+                @Html.Partial("~/Views/Shared/View_DescuentosCanal.cshtml")
+
+                @Html.Partial("~/Views/Shared/ViewDetailDcto.cshtml")
+
+            </div>
+
+
+        </fieldset>
+
+
+        @Html.Partial("~/Views/Shared/View_btnSave.cshtml")
+
+    </div>
+</div>
+
+@Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+<script src="~/JS/DctoCanal.js"></script>
+<script src="~/JS/MotivosSolicitudes.js"></script>

@@ -8,6 +8,11 @@ ClassDataAccess.Ajax(
         ClassDataAccess.Grilla("#grid-autorizaciones", jsdata,
             [
                 {
+                    field: "VENDEDOR",
+                    width: 70,
+                    title: "Vendedor"
+                },
+                {
                     field: "CODCLIENTE",
                     width: 30,
                     title: "Nit"

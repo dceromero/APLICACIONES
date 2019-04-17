@@ -21,11 +21,34 @@ namespace DESCUENTOS.Controllers
             }
         }
 
+        public ActionResult Canal()
+        {
+            return View();
+        }
+
         public ActionResult Autorizaciones()
         {
              return View();
         }
+
+        [HttpGet]
+        public ActionResult AutorizacionesCanal()
+        {
+            return View("AutorizacionClient");
+        }
+
+        [HttpGet]
+        public ActionResult AutorizacionCanal(long id)
+        {
+            return View("AutorizacionCanal",id);
+        }
+
         public ActionResult Autorizacion(long id)
+        {
+            return View(id);
+        }
+
+        public ActionResult DetalleDescuento(long id)
         {
             return View(id);
         }

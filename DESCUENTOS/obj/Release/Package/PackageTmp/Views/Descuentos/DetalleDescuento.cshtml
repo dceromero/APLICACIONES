@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Detalle del Descuento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<input type="hidden" id="lblid" value="@Model" />
+<div class="row m-3">
+    <div class="col-md-12 ">
+        @Html.Partial("~/Views/Shared/View_Descuentos.cshtml")
+    </div>
+
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Detalle del Descuento</strong>
+            </legend>
+            <div id="div-detail-descuento"></div>
+        </fieldset>
+    </div>
+    <div class="col-md-12 text-center">
+        <a href="/Informes/Solicitudes" class="btn btn-outline-danger"><span class="fa fa-hand-point-left">&nbsp;&nbsp;<strong>Atras</strong></span></a>
+    </div>
+</div>
+<script src="~/JS/Autorizacion.js"></script>
+

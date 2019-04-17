@@ -47,9 +47,18 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public virtual DbSet<VIEW_ENCABEZADO> VIEW_ENCABEZADO { get; set; }
         public virtual DbSet<VIEW_ENCABEZADO_USUARIO> VIEW_ENCABEZADO_USUARIO { get; set; }
         public virtual DbSet<MOTIVOS> MOTIVOS { get; set; }
+        public virtual DbSet<MCDCTOCANAL> MCDCTOCANAL { get; set; }
+        public virtual DbSet<MDDCTOCANAL> MDDCTOCANAL { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
+
+            modelBuilder.Entity<MCDCTOCANAL>()
+                 .HasMany(e => e.MDDCTOCANAL)
+                 .WithRequired(e => e.MCDCTOCANAL)
+                 .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<CANALES>()
                 .HasMany(e => e.CLIENTES_SECTOR)
                 .WithRequired(e => e.CANALES)

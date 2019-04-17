@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Autorizacion";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<input type="hidden" id="lblid" value="@Model" />
+<div class="row m-3">
+    <div class="col-md-12 ">
+        @Html.Partial("~/Views/Shared/View_DescuentosCanal.cshtml")
+    </div>
+
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Detalle del Descuento</strong>
+            </legend>
+            <div id="div-detail-descuento"></div>
+        </fieldset>
+    </div>
+    <div class="col-md-12 text-center">
+        <a id="btnatras" class="btn btn-outline-danger"><span class="fa fa-hand-point-left">&nbsp;&nbsp;<strong>Atras</strong></span></a>
+        <button id="btnconfirm" class="btn btn-outline-primary"><span class="fa fa-save">&nbsp;&nbsp;<strong>Aprobar o Rechazar</strong></span></button>
+    </div>
+</div>
+<div style="display:none">
+    @Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+</div>
+
+<script src="~/JS/AutorizacionCanal.js"></script>
+<script src="~/JS/View_btnSave.js"></script>

@@ -46,14 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogicCanales.cs" />
     <Compile Include="LogicCargos.cs" />
     <Compile Include="LogicCencos.cs" />
     <Compile Include="LogicClientes.cs" />
     <Compile Include="LogicEmpresas.cs" />
+    <Compile Include="LogicGrupoClientes.cs" />
     <Compile Include="LogicMenuSubMenus.cs" />
     <Compile Include="LogicMotivos.cs" />
+    <Compile Include="LogicOficinas.cs" />
     <Compile Include="LogicPermisos.cs" />
     <Compile Include="LogicProductos.cs" />
+    <Compile Include="LogicRegionales.cs" />
     <Compile Include="LogicReportes.cs" />
     <Compile Include="LogicRoles.cs" />
     <Compile Include="LogicSolicitudes.cs" />

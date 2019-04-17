@@ -27,7 +27,7 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
                 foreach(var md in mc.MDDESCUENTO)
                 {
                     md.ID_MCDESCUENTO = i;
-                    msg=  mtsol.SaveMDDescuento(md, mc.ID_SOLICITD);
+                    msg=  mtsol.SaveMDDescuento(md, mc.ID_SOLICITD, mc.CEDULA);
                     if (msg.id == 0)
                     {
                         break;
@@ -94,6 +94,17 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             return mtsol.ExportarExcel(idmc);
         }
 
+        public List<VIEW_EXCEL_SAP> ExportarExcel(MCDESCUENTOS fechas)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            return mtsol.ExportarExcel(fechas);
+        }
+
+        public void ActualizarDonwLoad(long id)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            mtsol.ActualizarDescarga(id);
+        }
 
     }
 }

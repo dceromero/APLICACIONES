@@ -56,9 +56,12 @@
     <Compile Include="CLIENTES_SECTOR.cs" />
     <Compile Include="EMPRESAS.cs" />
     <Compile Include="ERRORES.cs" />
+    <Compile Include="GRUPOCLIENTES.cs" />
     <Compile Include="HISTORICOPRECIOS.cs" />
     <Compile Include="JEFATURAS.cs" />
+    <Compile Include="MCDCTOCANAL.cs" />
     <Compile Include="MCDESCUENTOS.cs" />
+    <Compile Include="MDDCTOCANAL.cs" />
     <Compile Include="MDDESCUENTO.cs" />
     <Compile Include="Mensajes.cs" />
     <Compile Include="MENU.cs" />
@@ -76,14 +79,17 @@
     <Compile Include="USUARIOS.cs" />
     <Compile Include="VENDEDORES.cs" />
     <Compile Include="View_Clientes.cs" />
+    <Compile Include="VIEW_DETALLECUPO.cs" />
     <Compile Include="VIEW_ENCABEZADO.cs" />
     <Compile Include="VIEW_ENCABEZADO_INFORME.cs" />
     <Compile Include="VIEW_ENCABEZADO_USUARIO.cs" />
     <Compile Include="VIEW_EXCEL_SAP.cs" />
+    <Compile Include="VIEW_HEADER_CANAL.cs" />
     <Compile Include="VIEW_Jefes.cs" />
     <Compile Include="VIEW_Permisos.cs" />
     <Compile Include="View_Productos.cs" />
     <Compile Include="VIEW_REP_DETALLE_SOLICITUD.cs" />
+    <Compile Include="VIEW_VALORPORCANAL.cs" />
     <Compile Include="VIEW_VALORPORCLIENTE.cs" />
   </ItemGroup>
   <ItemGroup>

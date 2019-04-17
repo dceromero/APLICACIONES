@@ -54,6 +54,14 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [StringLength(2)]
         public string GRPCLIENTE { get; set; }
 
+        public double CUPOASIGNADO { get; set; }
+
+        public double CUPODISPONIBLE { get; set; }
+
+        public double CUPOENCARTERA { get; set; }
+
+        public double CUPOSOLICITADO { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MCDESCUENTOS> MCDESCUENTOS { get; set; }
     }

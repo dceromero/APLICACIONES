@@ -11,93 +11,8 @@
             <div class="row">
 
                 @Html.Partial("~/Views/Shared/View_Descuentos.cshtml")
-                <fieldset>
-                    <legend>
-                        <strong>Detalle del Descuento</strong>
-                    </legend>
-                    <div id="div-detalle" class="row">
-                        <div class="col-md-6">
 
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Producto</strong>
-                                    </span>
-                                </div>
-                                <input id="txtproduct" type="text" placeholder="Código o Descripción" class="form-control" required>
-                                <input id="lblcodprod" type="hidden" />
-                                <input id="lblVALOR" type="hidden" />
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Descto  (%)</strong>
-                                    </span>
-                                </div>
-                                <input id="txtporc" type="number" class="form-control" placeholder="Solo Numeros %" required>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Cantidad</strong>
-                                    </span>
-                                </div>
-                                <input id="txtcant" type="number" class="form-control" placeholder="Solo Numeros" required>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Valor Producto</strong>
-                                    </span>
-                                </div>
-                                <input id="txtvalprod" type="text" class="form-control" required disabled>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Valor Descto</strong>
-                                    </span>
-                                </div>
-                                <input id="txtval" type="text" class="form-control" required disabled>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <strong>Valor Total</strong>
-                                    </span>
-                                </div>
-                                <input id="txtvaltotal" type="text" class="form-control" required disabled>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 text-center">
-                            <button id="btnadd" class="btn btn-outline-success"> <span class="fa fa-plus-circle">&nbsp;&nbsp;Agregar</span></button>
-                        </div>
-
-                        <div class="col-md-12 mb-3">
-                            <div id="grid-add-descuento">
-
-                            </div>
-                        </div>
-
-                    </div>
-                </fieldset>
+                @Html.Partial("~/Views/Shared/ViewDetailDcto.cshtml")
 
             </div>
 
@@ -112,3 +27,4 @@
 
 @Html.Partial("~/Views/Shared/ViewMessages.cshtml")
 <script src="~/JS/Solicitudes.js"></script>
+<script src="~/JS/MotivosSolicitudes.js"></script>

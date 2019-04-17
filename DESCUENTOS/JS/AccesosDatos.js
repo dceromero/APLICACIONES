@@ -2,6 +2,14 @@
 function AccesosDatos() {
 
 }
+
+AccesosDatos.prototype.ViewMobile = function () {    
+    if (navigator.userAgent.match(/Mobile/i) != null) {
+        $("body #div-login").addClass("loginapp");
+    } else {
+        $("body #div-login").addClass("loginweb");
+    }
+}
 AccesosDatos.prototype.Ajax = function (url, datos, funcion) {
     $.ajax({
         type: "POST",
@@ -17,7 +25,7 @@ AccesosDatos.prototype.Events = function (id, evento, funcion) {
     $("body").on(evento, id, funcion);
 }
 
-AccesosDatos.prototype.Events.Blur = function (selector,selectorhidden) {
+AccesosDatos.prototype.Events.Blur = function (selector, selectorhidden) {
     $("body").on("blur", selector, function () {
         if ($(selectorhidden).val() == "") {
             $(selector).val("");
@@ -69,7 +77,7 @@ AccesosDatos.prototype.OpenWindows.funcionCerrar = function (selector, titulo, a
         title: titulo,
         visible: true,
         width: ancho,
-        close:funcion
+        close: funcion
     });
     formfind = $(selector).data("kendoWindow");
     formfind.center();
@@ -107,8 +115,8 @@ AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
     });
 }
 
-AccesosDatos.prototype.GrillaExcel = function (selector, datos, ArrayColumna) {   
-   $(selector).kendoGrid({
+AccesosDatos.prototype.GrillaExcel = function (selector, datos, ArrayColumna) {
+    $(selector).kendoGrid({
         toolbar: [{ name: "excel", text: "Exportar a Excel" }],
         excel: {
             allPages: true,
@@ -187,7 +195,7 @@ AccesosDatos.prototype.GrillaExcelGrupable = function (selector, datos, ArrayCol
     });
 }
 
-AccesosDatos.prototype.Charts = function (titulo,selector, arraydeTitulos, arraydeColores, arraydeDatos) {
+AccesosDatos.prototype.Charts = function (titulo, selector, arraydeTitulos, arraydeColores, arraydeDatos) {
     new Chart(document.getElementById(selector), {
         type: 'bar',
         data: {
@@ -209,7 +217,7 @@ AccesosDatos.prototype.Charts = function (titulo,selector, arraydeTitulos, array
     });
 }
 
-AccesosDatos.prototype.DestruirGrilla=function(selector){
+AccesosDatos.prototype.DestruirGrilla = function (selector) {
     var grid = $(selector).data("kendoGrid");
     grid.destroy();
 }
@@ -259,14 +267,14 @@ AccesosDatos.prototype.LimpiarCampos = function (control) {
     });
 }
 
-AccesosDatos.prototype.Combox = function (selector,datasources, displayId, displayMember) {
-    $(selector).html("").append("<option value='-1'>Seleccione</option>");    
+AccesosDatos.prototype.Combox = function (selector, datasources, displayId, displayMember) {
+    $(selector).html("").append("<option value='-1'>Seleccione</option>");
     for (var x in datasources) {
         $(selector).append("<option value='" + datasources[x][displayId] + "'>" + datasources[x][displayMember] + "</option>");
     }
-}
+};
 
-AccesosDatos.prototype.AutoComplete = function (selector, datasources, displayId, displayMember,selectorhidden) {
+AccesosDatos.prototype.AutoComplete = function (selector, datasources, displayId, displayMember, selectorhidden) {
     $(selector).kendoAutoComplete({
         filter: "contains",
         dataSource: datasources,
@@ -290,10 +298,13 @@ AccesosDatos.prototype.AutoCompletePersonalizado = function (selector, datasourc
     });
 }
 
-AccesosDatos.prototype.Aleatorio = function(inferior, superior) {
+AccesosDatos.prototype.Aleatorio = function (inferior, superior) {
     numPosibilidades = superior - inferior
     aleat = Math.random() * numPosibilidades
     aleat = Math.floor(aleat)
     return parseInt(inferior) + aleat
 }
 
+AccesosDatos.prototype.Redirect = function (ruta) {
+    location.href = ruta;
+};

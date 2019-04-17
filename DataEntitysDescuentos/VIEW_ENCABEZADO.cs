@@ -13,6 +13,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         {
             VIEW_VALORPORCLIENTE = new HashSet<VIEW_VALORPORCLIENTE>();
         }
+        public string VENDEDOR { get; set; }
         [Key]
         public long ID_MCDESCUENTO { get; set; }
         public long CODCLIENTE { get; set; }

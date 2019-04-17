@@ -14,8 +14,14 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public List<View_Productos> ListarProductos(long cedula, long codcliente)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            return dbcontext.View_Productos.SqlQuery($"SELECT * FROM func_Productos('{cedula}', '{codcliente}')").ToList();
+            return dbcontext.View_Productos.SqlQuery($"SELECT * FROM func_Productos('{codcliente}')").ToList();
         }
-           
+
+        public List<View_Productos> ListarProductos(PRECIOS pr)
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            return dbcontext.View_Productos.SqlQuery($"SELECT DESCRIPCION, VALOR FROM VIEW_PRODUCTOS WHERE  OFICINA='{pr.OFICINA}' AND ID_CANAL='{pr.ID_CANAL}' AND GRUPOCLI='{pr.GRUPOCLI}'").ToList();
+        }
+
     }
 }

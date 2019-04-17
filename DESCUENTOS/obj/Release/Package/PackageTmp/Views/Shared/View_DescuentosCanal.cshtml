@@ -1,0 +1,97 @@
+﻿<fieldset>
+    <legend>
+        <strong>Datos Principales</strong>
+    </legend>
+    <div class="row" validarcampos="true">
+
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Regional</strong>
+                    </span>
+                </div>
+                <select id="cmbreg" class="form-control" required></select>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Oficina</strong>
+                    </span>
+                </div>
+                <select id="cmbofi" class="form-control" required></select>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Canal</strong>
+                    </span>
+                </div>
+                <select id="cmbcanal" class="form-control" required></select>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Grupo</strong>
+                    </span>
+                </div>
+                <select id="cmbgrpclient" class="form-control" required></select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Fecha Inicial Descuento</strong>
+                    </span>
+                </div>
+                <input id="txtfecini" type="date" class="form-control" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Tipo de Motivo</strong>
+                    </span>
+                </div>
+                <select id="cmbtpmot" class="form-control" required></select>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Fecha Final Descuento</strong>
+                    </span>
+                </div>
+                <input id="txtfecfin" type="date" class="form-control" required>
+            </div>
+
+            <div id="div-justi" style="display:none;">
+                <div class="card-footer text-center">
+                    <strong>Justificación : <label id="lblmot"></label></strong>
+                </div>
+                <textarea id="txtmot" class="form-control" required></textarea>
+            </div>
+
+        </div>
+
+
+    </div>
+</fieldset>
+
+

@@ -4,7 +4,7 @@ ClassDataAccess.Ajax(
     "/api/Solicitudes/Encabezados/" + $("#lblid").val(),
     '',
     function (datos) {
-        jsdata = JSON.parse(datos)
+        jsdata = JSON.parse(datos);
         $("#cmbtpsol").html("").append("<option>" + jsdata.DESCRIPCION + "</option>");
         $("#cmbtpmot").html("").append("<option>" + jsdata.DESCMOTIVO + "</option>");
         $("#txtcliente").val(jsdata.RAZSOCCLIENTE);
@@ -69,7 +69,7 @@ ClassDataAccess.Ajax(
                 }
             ]
         )
-    })
+    });
 
 ClassDataAccess.Events("#check-all", "click", function () {
     if ($("#check-all").attr('data-todos') != 0) {
@@ -79,11 +79,11 @@ ClassDataAccess.Events("#check-all", "click", function () {
         $("#check-all").attr('data-todos', 1)
         $("[type='checkbox']").attr('checked', true);
     }
-})
+});
 
-$("#div-justi").fadeIn()
+$("#div-justi").fadeIn();
 
-myarray = new Array()
+myarray = new Array();
 count = 0;
 ClassDataAccess.Events("#btnconfirm", "click", function () {
     $("[type='checkbox']").each(function (key, element) {
@@ -92,7 +92,7 @@ ClassDataAccess.Events("#btnconfirm", "click", function () {
         var md = {
             ID_MDDESCUENTO: $(element).val(),
             VERIFICA1: aprob,
-            OBS:"Oki"
+            OBS: "Oki"
         }
         myarray.push(md);
     });
@@ -105,11 +105,11 @@ ClassDataAccess.Events("#btnconfirm", "click", function () {
         $("#lblmensajerech").text("Vas a rechazar " + count + " registros, ")
         count = 0;
     }
-})
+});
 
 ClassDataAccess.Events("#btnsave", "click", function () {
     urlactual = window.location.href.toString().split("/");
-    div = urlactual[4] == "Autorizacion" ? "#div-confirmacion-aprob" : "#div-confirmacion"
+    div = urlactual[4] == "Autorizacion" ? "#div-confirmacion-aprob" : "#div-confirmacion";
     ClassDataAccess.CloseWindows(div);
     ClassDataAccess.OpenWindows("#div-mensaje", "Mensaje :", 100, 300);
     for (i in myarray) {
@@ -122,13 +122,13 @@ ClassDataAccess.Events("#btnsave", "click", function () {
         JSON.stringify(myarray),
         function (datos) {
             jsdata = JSON.parse(datos);
-            $("#lblmessage").text(jsdata.message);
+            $("#lblmessage").text(datos);
             ClassDataAccess.CloseWindows("#div-mensaje");
             ClassDataAccess.OpenWindows("#div-mensaje-respuesta", "Mensaje :", 110, 300);
         }
     )
-})
+});
 
-ClassDataAccess.Events("#btn-close-message", "click", function () {
-    location.href = "/Descuentos/Autorizaciones";
+ClassDataAccess.Events("#btn-close-message, #btnatras", "click", function () {
+    ClassDataAccess.Redirect("/Descuentos/Autorizaciones");
 })

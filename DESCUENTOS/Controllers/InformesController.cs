@@ -18,5 +18,15 @@ namespace DESCUENTOS.Controllers
         {
             return View();
         }
+
+        public ActionResult Solicitudes()
+        {
+            return View("InformeVendedor");
+        }
+
+        public ActionResult Consolidado()
+        {
+            return View();
+        }
     }
 }

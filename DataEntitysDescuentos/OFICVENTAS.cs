@@ -21,6 +21,9 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
         [StringLength(30)]
         public string NAMEOFICVENTA { get; set; }
 
+        [StringLength(5)]
+        public string ID_REGIONAL { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VENDEDORES> VENDEDORES { get; set; }
     }

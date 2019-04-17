@@ -21,8 +21,7 @@ namespace DESCUENTOS.APIS
             lgsolict = new LogicSolicitudes();
             return JsonConvert.SerializeObject(lgsolict.ListarTiposSolicitudes());
         }
-
-
+        
         [HttpPost]
         public string ListarEncabezados()
         {
@@ -40,30 +39,50 @@ namespace DESCUENTOS.APIS
         }
 
         [HttpPost]
+        public string Download(long id)
+        {
+            lgsolict = new LogicSolicitudes();
+            lgsolict.ActualizarDonwLoad(id);
+            return "oki";
+        }
+
+        [HttpPost]
         public async Task<string> Guadarsolicitud(MCDESCUENTOS headerDescuentos)
         {
             lgsolict = new LogicSolicitudes();
-            var result = await lgsolict.GuadarSolicitudDescuento(headerDescuentos);
-            return JsonConvert.SerializeObject(result);
+            var id = HttpContext.Current.Session["id"];
+            long cc = long.Parse(id.ToString());
+            if (cc != 0)
+            {
+                headerDescuentos.CEDULA = cc;
+                var result = await lgsolict.GuadarSolicitudDescuento(headerDescuentos);
+                return JsonConvert.SerializeObject(result);
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
         [HttpPost]
         public async Task<string> ActualizarSolicitud(List<MDDESCUENTO> mc)
         {
             var id = HttpContext.Current.Session["id"];
-           long cc = long.Parse(id.ToString());
+            long cc = long.Parse(id.ToString());
             lgsolict = new LogicSolicitudes();
-            var result = await  lgsolict.ActualizarMD(mc, cc);
+            var result = await lgsolict.ActualizarMD(mc, cc);
             return JsonConvert.SerializeObject(result);
         }
 
 
-        public string ListadoInforme() {
+        public string ListadoInforme()
+        {
             lgsolict = new LogicSolicitudes();
             return JsonConvert.SerializeObject(lgsolict.EncabezadoInforme());
         }
 
-        
+
         public string ExportExcel(long id)
         {
             lgsolict = new LogicSolicitudes();

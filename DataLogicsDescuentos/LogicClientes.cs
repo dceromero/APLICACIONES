@@ -17,5 +17,11 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             mtclient = new MetodosClientes();
             return mtclient.ListarClienteXVendedor(CEDULA);
         }
+
+        public VIEW_DETALLECUPO DETALLECLIENTE(long id)
+        {
+            mtclient = new MetodosClientes();
+            return mtclient.DetalleCupo(id);
+        }
     }
 }

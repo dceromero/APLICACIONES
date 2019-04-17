@@ -30,7 +30,7 @@ ClassDataAccess.Events("#btn-reptsolicitud", "click", function () {
     validar = ClassDataAccess.ValidarCampos("[required]");
     if (validar) {
         ClassDataAccess.Ajax(
-            'http://localhost:57635/api/Reportes/DetalleSolicitud/?FECINI=' + $("#txtfecini").val() + '&FECFIN=' + $("#txtfecfin").val(),
+            '/api/Reportes/DetalleSolicitud/?FECINI=' + $("#txtfecini").val() + '&FECFIN=' + $("#txtfecfin").val(),
             '',
             function (datos) {
                 jsdatos = JSON.parse(datos);

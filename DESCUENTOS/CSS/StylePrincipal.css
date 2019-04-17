@@ -71,3 +71,14 @@ legend strong{
 #navbarDropdown :hover{
     color: #ced4da !important;
 }
+
+.loginweb {
+    width: 40%;
+    margin-top: 5em !important;
+    margin-left: 65% !important;
+}
+
+.loginapp {
+    width: 100%;
+    margin-top: 5em !important;
+}

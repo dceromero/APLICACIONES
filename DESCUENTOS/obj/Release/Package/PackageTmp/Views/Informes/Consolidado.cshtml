@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Consolidado";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Informes Detalle de Solicitud</strong>
+            </legend>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fecha Inicial</strong>
+                            </span>
+                        </div>
+                        <input id="txtfecini" type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fecha Final</strong>
+                            </span>
+                        </div>
+                        <input id="txtfecfin" type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button id="btn-reptsolicitud" class="btn  btn-block btn-outline-info">Buscar</button>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div id="div-grid-download"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+@Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+<script src="~/JS/Consolidado.js"></script>
+

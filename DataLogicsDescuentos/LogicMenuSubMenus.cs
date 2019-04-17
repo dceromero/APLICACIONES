@@ -20,7 +20,7 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             foreach(var m in Menus)
             {
                 mtsubmenu = new MetodosSubMenus();
-                m.SUBMENU = mtsubmenu.ListadoSubMenus(m.ID_MENU);
+                m.SUBMENU = mtsubmenu.ListadoSubMenus(m.ID_MENU,cedula);
             }
             return Menus;
         }

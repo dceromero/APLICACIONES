@@ -24,5 +24,20 @@ namespace DESCUENTOS.APIS
                 return string.Empty;
             }
         }
+
+        [HttpPost]
+        public string ListaProductxCanal(PRECIOS pr)
+        {
+            var id = System.Web.HttpContext.Current.Session["id"];
+            if (id != null)
+            {
+                lgproduct = new LogicProductos();
+                return JsonConvert.SerializeObject(lgproduct.productos(pr));
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
     }
 }

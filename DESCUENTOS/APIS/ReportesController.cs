@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
+using DataEntitysAplicaciones.DataEntitysDescuentos;
 using DataLogicAplicaciones.DataLogicsDescuentos;
 using Newtonsoft.Json;
 namespace DESCUENTOS.APIS
@@ -18,6 +20,31 @@ namespace DESCUENTOS.APIS
             lgrept = new LogicReportes();
             string result = JsonConvert.SerializeObject(lgrept.DetalleSolicitud(fecini, fecfin));
             return result;
+        }
+
+        [HttpPost]
+        public string ExportExcel(MCDESCUENTOS fechas)
+        {
+            LogicSolicitudes lgsolict = new LogicSolicitudes();
+            return JsonConvert.SerializeObject(lgsolict.ExportarExcel(fechas));
+        }
+
+        [HttpPost]
+        public string InformeVendedor(MCDESCUENTOS reporte)
+        {
+            var id = HttpContext.Current.Session["id"];
+            long cc = long.Parse(id.ToString());
+            if (cc != 0)
+            {
+                reporte.CEDULA = cc;
+                lgrept = new LogicReportes();
+                string result = JsonConvert.SerializeObject(lgrept.InformeVendedor(reporte));
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
 
     }

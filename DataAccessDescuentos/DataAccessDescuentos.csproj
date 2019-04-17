@@ -54,15 +54,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MetodosCanales.cs" />
     <Compile Include="MetodosCargos.cs" />
     <Compile Include="MetodosCencos.cs" />
     <Compile Include="MetodosClientes.cs" />
     <Compile Include="MetodosEmpresas.cs" />
     <Compile Include="MetodosEnviarEmail.cs" />
+    <Compile Include="MetodosGrupoClientes.cs" />
     <Compile Include="MetodosMenuPrincipal.cs" />
     <Compile Include="MetodosMotivos.cs" />
+    <Compile Include="MetodosOficVentas.cs" />
     <Compile Include="MetodosPermisos.cs" />
     <Compile Include="MetodosProductos.cs" />
+    <Compile Include="MetodosRegionales.cs" />
     <Compile Include="MetodosReportes.cs" />
     <Compile Include="MetodosRoles.cs" />
     <Compile Include="MetodosSolicitud.cs" />

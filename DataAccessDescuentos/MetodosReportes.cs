@@ -17,5 +17,13 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             var result = dbcontext.Database.SqlQuery<VIEW_REP_DETALLE_SOLICITUD>(tsql).ToList();
             return result;
         }
+
+        public List<VIEW_ENCABEZADO_INFORME> InformexVendedor(MCDESCUENTOS info)
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            string tsql = $"select * from Func_ReporteXVendedor('{info.CEDULA}','{info.FECINI.ToString("yyyy-MM-dd")}','{info.FECFIN.ToString("yyyy-MM-dd")}')";
+            var result = dbcontext.Database.SqlQuery<VIEW_ENCABEZADO_INFORME>(tsql).ToList();
+            return result;
+        }
     }
 }
