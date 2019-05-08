@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Http;
 
 namespace DESCUENTOS.Controllers
 {
@@ -21,12 +22,31 @@ namespace DESCUENTOS.Controllers
 
         public ActionResult Solicitudes()
         {
-            return View("InformeVendedor");
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View("InformeVendedor");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult Consolidado()
         {
             return View();
+        }
+
+        public ActionResult ReportePI()
+        {
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
     }
 }

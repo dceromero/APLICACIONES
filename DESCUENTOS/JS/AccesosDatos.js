@@ -3,13 +3,44 @@ function AccesosDatos() {
 
 }
 
-AccesosDatos.prototype.ViewMobile = function () {    
+AccesosDatos.prototype.FileUp = function (selector, webservices, extensiones, funcion) {
+    $(selector).pluploadQueue({
+        runtimes: 'html5',
+        url: webservices,
+
+        max_file_size: '2mb',
+
+        chunk_size: '1mb',
+
+        resize: {
+            width: 200,
+            height: 200,
+            quality: 90,
+            crop: true // crop to exact dimensions
+        },
+
+        filters: [
+            { title: "Archivos Excel", extensions: extensiones }
+        ],
+
+        rename: true,
+
+        sortable: true,
+
+        dragdrop: true,
+        init: {
+            UploadComplete: funcion
+        }
+    });
+};
+
+AccesosDatos.prototype.ViewMobile = function () {
     if (navigator.userAgent.match(/Mobile/i) != null) {
         $("body #div-login").addClass("loginapp");
     } else {
         $("body #div-login").addClass("loginweb");
     }
-}
+};
 AccesosDatos.prototype.Ajax = function (url, datos, funcion) {
     $.ajax({
         type: "POST",

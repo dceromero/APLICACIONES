@@ -22,7 +22,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public Mensajes SaveMDDsctoCanal(MDDCTOCANAL md,  long cedula)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            string tsql = $"exec Proc_SaveMDDctoCanal '{cedula}', '{md.ID_MCDCTOCANAL}','{md.CODPRODUCTO}', '{md.PORCENDCTO}', '{md.CANT}', '{md.VALOR}'";
+            string tsql = $"exec Proc_SaveMDDctoCanal '{cedula}', '{md.ID_MCDCTOCANAL}','{md.CODPRODUCTO}', '{md.PORCENDCTO}', '{md.CANT}', '{md.VALOR.ToString().Replace(",",".")}'";
             Mensajes query = dbcontext.Database.SqlQuery<Mensajes>(tsql).FirstOrDefault();
             return query;
         }

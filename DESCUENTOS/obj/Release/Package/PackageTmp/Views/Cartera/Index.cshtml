@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="row m-3">
+    <div class="col-md-12 ">
+        @Html.Partial("~/Views/Shared/View_Cartera.cshtml")
+    </div>
+    <div class="col-md-12 " id="div-detalle" style="display:none;">
+        <fieldset>
+            <legend>
+                <strong>Detalle de la Cartera</strong>
+            </legend>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Saldo Disponible</strong>
+                            </span>
+                        </div>
+                        <input id="txtcupodisp" type="number" class="form-control" disabled>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Saldo Vencido</strong>
+                            </span>
+                        </div>
+                        <input id="txtcupoven" type="number" class="form-control" disabled>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <strong>Deuda Total</strong>
+                            </span>
+                        </div>
+                        <input id="txtdeuda" type="text" class="form-control" disabled>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Días Vencidos</strong>
+                            </span>
+                        </div>
+                        <input id="txtdias" type="number" class="form-control" disabled>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<script src="~/JS/Cartera.js"></script>

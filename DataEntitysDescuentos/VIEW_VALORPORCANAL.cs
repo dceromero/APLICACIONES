@@ -10,7 +10,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
     {
         public long ID_MDDCTOCANAL { get; set; }
         public string Material { get; set; }
-        public byte PORCENDCTO { get; set; }
+        public double PORCENDCTO { get; set; }
         public int CANT { get; set; }
         public double subtotal { get; set; }
         public double Descuento { get; set; }

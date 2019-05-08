@@ -8,6 +8,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
     public class VIEW_ENCABEZADO_INFORME
     {
+        public string VENDEDOR { get; set; }
         public long ID_MCDESCUENTO { get; set; }
         public DateTime FECING { get; set; }
         public DateTime FECINI { get; set; }

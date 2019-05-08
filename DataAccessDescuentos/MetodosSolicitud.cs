@@ -29,7 +29,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public VIEW_ENCABEZADO Encabezado(long idmc)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            string tsql = $"select * from VIEW_ENCABEZADO where ID_MCDESCUENTO='{idmc}' order by fecini";
+            string tsql = $"select * from VIEW_ENCABEZADO1 where ID_MCDESCUENTO='{idmc}' order by fecini";
             var result = dbcontext.VIEW_ENCABEZADO.SqlQuery(tsql).FirstOrDefault();
             return result;
         }

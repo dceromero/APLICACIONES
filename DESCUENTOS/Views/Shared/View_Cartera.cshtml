@@ -11,17 +11,27 @@
                         <strong>Tipo Solicitud</strong>
                     </span>
                 </div>
+
                 <select id="cmbtpsol" class="form-control" required>
                     <option value="-1">Seleccione</option>
-                    <option value="1">Modificación de Cupo</option>
-                    <option value="2">Extracupo</option>
+                    <option value="1">Modificación Cupo de Cliente</option>
+                    <option value="2">Extracupo Cliente</option>
                 </select>
             </div>
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">
-                        <strong>Cupo Asignado</strong>
+                        <strong>Codigo Responsable Pago</strong>
+                    </span>
+                </div>
+                <input id="txtcodrespago" type="number" class="form-control" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Cupo Actual</strong>
                     </span>
                 </div>
                 <input id="txtcupoasig" type="number" class="form-control" disabled>
@@ -32,11 +42,20 @@
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">
-                        <strong>Cliente</strong>
+                        <strong>Codigó SAP - Cliente </strong>
                     </span>
                 </div>
                 <input id="txtcliente" type="text" class="form-control" required>
                 <input id="lblcliente" type="hidden" />
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Responsable de Pago</strong>
+                    </span>
+                </div>
+                <input id="txtcupoasig" type="number" class="form-control" disabled>
             </div>
 
             <div class="input-group mb-3">

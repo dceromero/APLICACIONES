@@ -15,7 +15,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 
         public string CODPRODUCTO { get; set; }
 
-        public byte PORCENDCTO { get; set; }
+        public double PORCENDCTO { get; set; }
 
         public byte VERIFICA1 { get; set; }
 

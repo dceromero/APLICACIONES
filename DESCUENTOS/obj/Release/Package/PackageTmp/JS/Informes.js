@@ -8,6 +8,11 @@ ClassDataAccess.Ajax(
         ClassDataAccess.Grilla("#grid-info-desc", jsdata,
             [
                 {
+                    field: "VENDEDOR",
+                    width: 40,
+                    title: "Vendedor"
+                },
+                {
                     field: "FECING",
                     width: 30,
                     title: "Fecha Ingreso",
@@ -94,7 +99,7 @@ ClassDataAccess.Events("[btn]", "click", function () {
                 }
             );
             ClassDataAccess.GrillaExcel("#grid-exp-desc", jsdata,
-                [
+                [                       
                     {
                         field: "CODCLIENTE",
                         width: 20,

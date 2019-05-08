@@ -18,7 +18,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 
         public double CUPOVENCIDO { get; set; }
 
-        public double DIASVEN { get; set; }
+        public long DIASVEN { get; set; }
 
     }
 }

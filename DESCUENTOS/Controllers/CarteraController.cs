@@ -13,5 +13,10 @@ namespace DESCUENTOS.Controllers
         {
             return View();
         }
+
+        public ActionResult SubirArchivo()
+        {
+            return View("FileUpInfo");
+        }
     }
 }

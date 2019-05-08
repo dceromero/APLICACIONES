@@ -20,7 +20,8 @@ namespace  DataAccessAplicaciones.DataAccessDescuentos
         public VIEW_DETALLECUPO DetalleCupo(long id)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            string tsql = $"select * from VIEW_DETALLECUPO CODCLIENTE='{id}'";
+            string tsql = $"select * from VIEW_DETALLECUPO where CODCLIENTE='{id}'";
+
             var query = dbcontext.Database.SqlQuery<VIEW_DETALLECUPO>(tsql).FirstOrDefault();
             return query;
         }

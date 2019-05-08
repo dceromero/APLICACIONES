@@ -11,3 +11,4 @@ C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataA
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csproj.CopyComplete
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.dll
 C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.pdb
+C:\Users\jeromero\source\repos\APLICACIONES\DataAccessDescuentos\obj\Debug\DataAccessDescuentos.csprojAssemblyReference.cache

@@ -208,27 +208,39 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CSS\jquery.plupload.queue.css" />
     <Content Include="CSS\StylePrincipal.css" />
     <Content Include="favicon.ico" />
     <Content Include="CSS\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\backgrounds.gif" />
+    <Content Include="Image\buttons-disabled.png" />
+    <Content Include="Image\buttons.png" />
     <Content Include="Image\cancel.ico" />
+    <Content Include="Image\delete.gif" />
+    <Content Include="Image\done.gif" />
+    <Content Include="Image\error.gif" />
     <Content Include="Image\fondoaprob.png" />
     <Content Include="Image\loading-image.gif" />
     <Content Include="Image\LogoEmpresa.png" />
     <Content Include="Image\logosplash.jpg" />
+    <Content Include="Image\throbber.gif" />
+    <Content Include="Image\transp50.png" />
     <Content Include="JSLIB\all - Copia.css" />
     <Content Include="JSLIB\all.css" />
     <Content Include="JSLIB\bootstrap.min.css" />
     <Content Include="JSLIB\bootstrap.min.js" />
+    <Content Include="JSLIB\es.js" />
     <Content Include="JSLIB\flat\loading-image.gif" />
     <Content Include="JSLIB\flat\loading.gif" />
     <Content Include="JSLIB\jquery-3.3.1.min.js" />
+    <Content Include="JSLIB\jquery.plupload.queue.min.js" />
     <Content Include="JSLIB\jszip.min.js" />
     <Content Include="JSLIB\kendo.all.min.js" />
     <Content Include="JSLIB\kendo.common.min.css" />
     <Content Include="JSLIB\kendo.flat.min.css" />
+    <Content Include="JSLIB\plupload.full.min.js" />
     <Content Include="JSLIB\popper.min.js" />
     <Content Include="JS\AccesosDatos.js" />
     <Content Include="JS\Autorizacion.js" />
@@ -323,9 +335,12 @@
     <Content Include="Views\Informes\Consolidado.cshtml" />
     <Content Include="Views\Cartera\Index.cshtml" />
     <Content Include="Views\Shared\View_Cartera.cshtml" />
+    <Content Include="Views\Cartera\FileUpInfo.cshtml" />
+    <Content Include="Views\Informes\ReportePI.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ExcelCartera\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
