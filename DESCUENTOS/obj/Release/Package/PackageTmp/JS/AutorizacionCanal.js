@@ -1,5 +1,7 @@
 ﻿ClassDataAccess = new AccesosDatos();
 $("[required]").attr('disabled', 'disabled');
+
+
 $("#div-justi").fadeIn();
 ClassDataAccess.Ajax(
     "/api/Canales/Encabezado/" + $("#lblid").val(),
@@ -7,6 +9,7 @@ ClassDataAccess.Ajax(
     function (datos) {
         jsdata = JSON.parse(datos);
         console.log(jsdata);
+        $("#cmbreg").html("").append("<option>" + jsdata.NAMEOFICVENTA + "</option>");
         $("#cmbofi").html("").append("<option>" + jsdata.NAMEOFICVENTA + "</option>");
         $("#cmbcanal").html("").append("<option>" + jsdata.NAMECANALES + "</option>");
         $("#cmbgrpclient").html("").append("<option>" + jsdata.GRPNOMBRE + "</option>");

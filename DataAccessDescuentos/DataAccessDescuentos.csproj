@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,17 +29,24 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataEntitysDescuentos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DataEntitysDescuentos\bin\Debug\DataEntitysDescuentos.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -46,6 +54,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,16 +63,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassPDF.cs" />
+    <Compile Include="DataExcel.cs" />
+    <Compile Include="DataServices.cs" />
+    <Compile Include="DbConextServices.cs" />
+    <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="MetodosAInventarios.cs" />
     <Compile Include="MetodosCanales.cs" />
     <Compile Include="MetodosCargos.cs" />
     <Compile Include="MetodosCencos.cs" />
     <Compile Include="MetodosClientes.cs" />
+    <Compile Include="MetodosCreditos.cs" />
     <Compile Include="MetodosEmpresas.cs" />
     <Compile Include="MetodosEnviarEmail.cs" />
+    <Compile Include="MetodosErrores.cs" />
     <Compile Include="MetodosGrupoClientes.cs" />
+    <Compile Include="MetodosLegalizacion.cs" />
+    <Compile Include="MetodosLiqGanaderos.cs" />
     <Compile Include="MetodosMenuPrincipal.cs" />
     <Compile Include="MetodosMotivos.cs" />
     <Compile Include="MetodosOficVentas.cs" />
+    <Compile Include="MetodosPDFs.cs" />
     <Compile Include="MetodosPermisos.cs" />
     <Compile Include="MetodosProductos.cs" />
     <Compile Include="MetodosRegionales.cs" />
@@ -72,6 +92,7 @@
     <Compile Include="MetodosSolicitud.cs" />
     <Compile Include="MetodosSubMenus.cs" />
     <Compile Include="MetodosTipoSolicitud.cs" />
+    <Compile Include="MetodosTrade.cs" />
     <Compile Include="MetodosUsuarios.cs" />
     <Compile Include="MetodosVendedores.cs" />
     <Compile Include="ModelAplicacionesDescuentos.cs" />
@@ -81,6 +102,13 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataEntitysDescuentos\DataEntitysDescuentos.csproj">
+      <Project>{7530b73e-7795-4a89-a69e-1fb00040338f}</Project>
+      <Name>DataEntitysDescuentos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

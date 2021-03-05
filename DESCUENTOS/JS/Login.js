@@ -16,7 +16,7 @@ $("body").on("click", "#btningresar", function () {
                 if (datos == 0) {
                     ClassDataAccess.OpenWindows("#div-alert-error", "Mensaje :", 120, 300);
                 } else {
-                    location.href = "/Descuentos/Index"
+                    location.href = "/Home/Inicio"
                 }
             }
         )
@@ -46,4 +46,28 @@ ClassDataAccess.Events("#ver-psw","click", function () {
 $("body").on("click", "#btnregister", function () {
     location.href = "/Home/Register";
     //ClassDataAccess.OpenWindows("#div-register", "Pre Registro", 420, 820);
+})
+
+$("body").on("click", "#a-psw", function () {
+    $("#div-motrech").fadeIn()
+    $("#lblmensajerech").text("Ingresa tu numero de cédula")
+    ClassDataAccess.OpenWindows("#div-recuperar_psw", "Recuperar PSW :", 130, 200);
+})
+
+$("body").on("click", "#btnsave", function () {
+    ClassDataAccess.CloseWindows("#div-recuperar_psw");
+    ClassDataAccess.OpenWindows("#div-mensaje", "Mensaje :", 100, 300);
+    ClassDataAccess.Ajax(
+        `/api/Usuarios/Userconfig/${$(txtccrec).val()}`,
+        '',
+        function (datos) {
+            $("#lblmessage").text(datos);
+            ClassDataAccess.CloseWindows("#div-mensaje");
+            ClassDataAccess.OpenWindows("#div-mensaje-respuesta", "Mensaje :", 140, 300);
+        }
+    )
+})
+
+$("body").on("click", "#btn-close-message", function () {
+    ClassDataAccess.CloseWindows("#div-mensaje-respuesta");
 })

@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "AprobacionCartera";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<input type="hidden" id="lblid" value="@Model" />
+<div class="row m-3">
+    <div class="col-md-12 ">
+        @Html.Partial("~/Views/Shared/View_Cartera.cshtml")
+    </div>
+    <div class="col-md-12 " id="div-detalle" style="display:none;">
+        @Html.Partial("~/Views/Shared/View_Cartera_Detalle.cshtml")
+    </div>
+    <div class="col-md-12 ">
+        <div id="div-upload" class="row m-3" style="display:none;">
+            <fieldset>
+                <legend>
+                    <strong>Estudios de Credito</strong>
+                </legend>
+                <div class="col-sm-12">
+                    <div id="upload"></div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-12 text-center">
+        <a id="btnatras" class="btn btn-outline-secondary"><span class="fa fa-hand-point-left">&nbsp;&nbsp;<strong>Atras</strong></span></a>
+        <button msj="Aprobar" class="btn btn-outline-primary"><span class="fa fa-save">&nbsp;&nbsp;<strong>Aprobar</strong></span></button>
+        <button msj="Rechazar" class="btn btn-outline-danger"><span class="fa fa-trash-alt">&nbsp;&nbsp;<strong>Rechazar</strong></span></button>
+    </div>
+</div>
+
+<div style="display:none">
+    @Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+</div>
+<link href="~/CSS/jquery.plupload.queue.css" rel="stylesheet" />
+<script src="~/JSLIB/plupload.full.min.js"></script>
+<script src="~/JSLIB/jquery.plupload.queue.min.js"></script>
+<script src="~/JSLIB/es.js"></script>
+<script src="~/JS/CarteraAprobacion.js"></script>

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DataEntitysAplicaciones.DataEntitysDescuentos;
+
 namespace DataAccessAplicaciones.DataAccessDescuentos
 {
     public class MetodosCanales
@@ -49,11 +50,26 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         }
 
 
+        public List<VIEW_ENCABEZADO_INFORME_CANAL> EncabezadoInformes()
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            var query = dbcontext.Database.SqlQuery<VIEW_ENCABEZADO_INFORME_CANAL>("select * from VIEW_ENCABEZADO_INFORME_CANAL").ToList();
+            return query;
+        }
+
+
         public VIEW_HEADER_CANAL CabeceraCN(long id)
         {
             dbcontext = new ModelAplicacionesDescuentos();
             string tsql = $"SELECT * FROM VIEW_ENCABEZADO_CANAL where ID_MCDCTOCANAL ='{id}'";
             return dbcontext.Database.SqlQuery<VIEW_HEADER_CANAL>(tsql).First();   
+        }
+
+        public List<VIEW_CANAl_EXCEL_SAP> ExportarExcel(long idmc)
+        {
+            dbcontext = new ModelAplicacionesDescuentos();
+            var query = dbcontext.Database.SqlQuery<VIEW_CANAl_EXCEL_SAP>($"select * from VIEW_CANAl_EXCEL_SAP where ID_MCDCTOCANAL='{idmc}'").ToList();
+            return query;
         }
 
         public List<VIEW_VALORPORCANAL> ValorProductXCanal(long id)

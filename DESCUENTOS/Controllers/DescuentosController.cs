@@ -1,8 +1,4 @@
-﻿    using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace DESCUENTOS.Controllers
 {
@@ -17,7 +13,7 @@ namespace DESCUENTOS.Controllers
             }
             else
             {
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
         }
 
@@ -28,7 +24,7 @@ namespace DESCUENTOS.Controllers
 
         public ActionResult Autorizaciones()
         {
-             return View();
+            return View();
         }
 
         [HttpGet]
@@ -40,7 +36,7 @@ namespace DESCUENTOS.Controllers
         [HttpGet]
         public ActionResult AutorizacionCanal(long id)
         {
-            return View("AutorizacionCanal",id);
+            return View("AutorizacionCanal", id);
         }
 
         public ActionResult Autorizacion(long id)
@@ -51,6 +47,11 @@ namespace DESCUENTOS.Controllers
         public ActionResult DetalleDescuento(long id)
         {
             return View(id);
+        }
+
+        public ActionResult Trade()
+        {
+            return View();
         }
     }
 }

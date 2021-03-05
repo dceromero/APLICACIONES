@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Planilla";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Plantillas Carga a SAP</strong>
+            </legend>
+            <div class="row">
+                <div class="col-sm-12 text-left m-1">
+                    <button id="btn-difprecio" class="btn-outline-dark">
+                        <span><strong>Diferencia de Precio</strong></span>
+                    </button>
+                    <button id="btn-prov" class="btn-outline-dark">
+                        <span><strong>Provisión</strong></span>
+                    </button>
+                    <button id="btn-rprov" class="btn-outline-dark">
+                        <span><strong>Reversa de Provisiones</strong></span>
+                    </button>
+                    <button id="btn-legal" class="btn-outline-dark">
+                        <span><strong>Legalización de Notas</strong></span>
+                    </button>
+                </div>
+                @Html.Partial("~/Views/Shared/Trade/ViewGrid.cshtml")
+            </div>
+        </fieldset>
+    </div>
+</div>
+<script src="~/JS/Legalizacion/Planilla.js"></script>

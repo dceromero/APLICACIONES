@@ -18,6 +18,12 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             return mtproduct.ListarProductos(cedula, codcliente);
         }
 
+        public List<View_Productos> getListProduct(long cedula)
+        {
+            mtproduct = new MetodosProductos();
+            return mtproduct.getListProducts(cedula);
+        }
+
         public List<View_Productos> productos(PRECIOS pr)
         {
             mtproduct = new MetodosProductos();

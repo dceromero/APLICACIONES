@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Modificación Notas ";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+
+<input type="hidden" id="lblid" value="@Model" />
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>@ViewBag.Title</strong>
+            </legend>
+            <div class="row">
+                @Html.Partial("~/Views/Shared/Trade/ViewHeader.cshtml")
+                @Html.Partial("~/Views/Shared/Trade/ViewDetail.cshtml")
+                @Html.Partial("~/Views/Shared/Trade/ViewObservacion.cshtml")
+            </div>
+            <div class="m-3">
+                @Html.Partial("~/Views/Shared/Botones/ViewAprobacion.cshtml")
+            </div>
+        </fieldset>
+
+    </div>
+</div>
+@Html.Partial("~/Views/Shared/Botones/ViewMessages.cshtml")
+<script src="~/JS/Trade/Supervisor.js"></script>

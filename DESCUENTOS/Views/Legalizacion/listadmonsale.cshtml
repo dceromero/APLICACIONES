@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "Lista Legalización";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+@Html.Partial("~/Views/Shared/Trade/ViewAprobacion.cshtml")
+
+
+<div id="div-confirmacion" class="col-md-12" style="display:none; text-align:center; margin:0 auto;">
+    <input type="hidden" id="lblidtc" />
+    <table style="font-size:12px!important" class="table table-sm table-bordered border-primary">
+        <thead>
+            <tr>
+                <th>
+                    Código - Descripción
+                </th>
+                <th>
+                    Valor
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table-griddetail">
+        </tbody>
+    </table>
+    <div class="row">
+        <div validarcampos="true" class="col-sm-5">
+            <input id="txtnumsap" type="number" placeholder="Número SAP" class="form-control" required />
+        </div>
+        <div class="col-sm-5">
+            <button id="btnsave" class="btn btn-primary ">Aceptar</button>
+            <button id="btncancel" class="btn btn-danger ">Cancelar</button>
+        </div>
+    </div>
+
+</div>
+
+<div id="div-confirmacion-prov" class="col-md-12" style="display:none; text-align:center; margin:0 auto;">
+    <input type="hidden" id="lblidtcprov" />
+
+    <table style="font-size:12px!important" class="table table-sm table-bordered border-primary">
+        <thead>
+            <tr>
+                <th>
+                    Código - Descripción
+                </th>
+                <th>
+                    Valor
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table-griddetailpr">
+        </tbody>
+    </table>
+    <div class="row">
+        <div validarcampos="true" class="col-sm-5">
+            <input id="txtprov" type="number" placeholder="Número Provición" class="form-control" required />
+        </div>
+        <div class="col-sm-5">
+            <button id="btnsaveprov" class="btn btn-primary ">Aceptar</button>
+            <button id="btncancelprov" class="btn btn-danger ">Cancelar</button>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="div-confirmacion-rprov" class="col-md-12" style="display:none; text-align:center; margin:0 auto;">
+    <input type="hidden" id="lblidtcrp" />
+
+    <table style="font-size:12px!important" class="table table-sm table-bordered border-primary">
+        <thead>
+            <tr>
+                <th>
+                    Código - Descripción
+                </th>
+                <th>
+                    Valor
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table-griddetailrp">
+        </tbody>
+    </table>
+    <div class="row">
+
+        <div validarcampos="true" class="col-sm-5">
+            <input id="txtrprov" type="number" placeholder="Reversa Provición" class="form-control" required />
+        </div>
+        <div class="col-sm-5">
+            <button id="btnsaverp" class="btn btn-primary ">Aceptar</button>
+            <button id="btncancelrp" class="btn btn-danger ">Cancelar</button>
+        </div>
+    </div>
+
+</div>
+
+<div id="div-mensaje" style="display:none; text-align:center; margin:0 auto;">
+    <div>
+        <strong>Guardando información</strong>
+    </div>
+</div>
+
+<div id="div-mensaje-respuesta" style="display:none; text-align:center; margin:0 auto;">
+    <div>
+        <strong><label id="lblmessage"></label></strong>
+    </div>
+    <div style="padding-top:0.5em;">
+        <button id="btn-close-message" class="btn btn-danger ">Cerrar</button>
+    </div>
+</div>
+
+<div id="div-advertencia" style="display:none; text-align:center; margin:0 auto;">
+    <div>
+        <strong>Debe llenar todos los datos</strong>
+    </div>
+    <div style="padding-top:0.5em;">
+        <button id="btn-close-advertencia" class="btn btn-danger ">Cerrar</button>
+    </div>
+</div>
+
+<script src="~/JS/Legalizacion/listAdmonSale.js"></script>

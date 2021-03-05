@@ -20,5 +20,9 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 
         public long DIASVEN { get; set; }
 
+        public long CODRESPAGO { get; set; }
+
+        public string RAZSOCRESP { get; set; }
+
     }
 }

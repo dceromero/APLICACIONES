@@ -1,0 +1,11 @@
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\bin\Release\DataEntitysDescuentos.dll
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\bin\Release\DataEntitysDescuentos.pdb
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\bin\Release\EntityFramework.dll
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\bin\Release\EntityFramework.SqlServer.dll
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\bin\Release\EntityFramework.xml
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\bin\Release\EntityFramework.SqlServer.xml
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\obj\Release\DataEntitysDescuentos.csprojAssemblyReference.cache
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\obj\Release\DataEntitysDescuentos.csproj.CoreCompileInputs.cache
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\obj\Release\DataEntitysDescuentos.csproj.CopyComplete
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\obj\Release\DataEntitysDescuentos.dll
+C:\Jimmy\Documentos\Aplicaciones\APLICACIONES\DataEntitysDescuentos\obj\Release\DataEntitysDescuentos.pdb

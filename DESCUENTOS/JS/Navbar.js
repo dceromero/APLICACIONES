@@ -15,6 +15,7 @@ ClassDataAccess.Ajax(
     function (datos) {
         js = JSON.parse(datos);
         $("#lbluser").text(js.NombreCompleto)
+        $("#lblnivel").val(js.NIVELUSUARIO);
     }
 )
 

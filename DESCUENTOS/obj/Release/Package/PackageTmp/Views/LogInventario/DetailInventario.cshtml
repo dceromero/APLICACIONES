@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "DetailInventario";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<input type="hidden" id="lblid" value="@Model" />
+
+
+@Html.Partial("~/Views/Shared/View_DetailAI.cshtml")
+
+<div class="col-md-12 text-center">
+    <a href="/LogInventario/ListInventario" class="btn btn-outline-info"><span class="fa fa-hand-point-left">&nbsp;&nbsp;<strong>Atras</strong></span></a>
+    <button id="btnconfirm" class="btn btn-outline-primary"><span class="fa fa-save">&nbsp;&nbsp;<strong>Aprobar</strong></span></button>
+    <button id="btnreject" class="btn btn-outline-danger"><span class="fa fa-trash-alt">&nbsp;&nbsp;<strong>Rechazar</strong></span></button>
+</div>
+<div style="display:none">
+    @Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+</div>
+
+
+<script src="~/JS/DetailInventario.js"></script>

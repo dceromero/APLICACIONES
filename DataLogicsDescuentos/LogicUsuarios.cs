@@ -42,10 +42,13 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             return mtuser.ListaUsuarios();
         }
 
-        public USUARIOS ConfigUsuarios(long id)
+        public async Task<string> ConfigUsuarios(long id)
         {
             mtuser = new MetodosUsuarios();
-            return mtuser.ConfigUsuario(id);
+            var mtmail = new MetodosEnviarEmail();
+            var usuario = mtuser.ConfigUsuario(id);
+            var result = await mtmail.EnviarMensaje(usuario.MAIL, usuario.CLAVE);
+            return result;
         }
     }
 }

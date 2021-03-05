@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace DESCUENTOS.Controllers
 {
@@ -25,7 +21,7 @@ namespace DESCUENTOS.Controllers
         {
             if (System.Web.HttpContext.Current.Session["id"] != null)
             {
-                return View("User",id);
+                return View("User", id);
             }
             else
             {

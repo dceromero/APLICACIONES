@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Aprobación";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+
+<input type="hidden" id="lblid" value="@Model" />
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>@ViewBag.Title</strong>
+            </legend>
+            <div class="row">
+                @Html.Partial("~/Views/Shared/Trade/ViewHeader.cshtml")
+                @Html.Partial("~/Views/Shared/Trade/ViewDetailAprob.cshtml")
+                @Html.Partial("~/Views/Shared/Trade/ViewObservacion.cshtml")
+                <fieldset>
+                    <legend>
+                    </legend>
+                    <div class="row">
+                        <div id="div-document" class="col-md-6" style="margin:initial auto;">
+                            <table style="font-size:16px!important;t" class="table table-sm table-bordered border-primary">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align:center;" >
+                                            Documentos Adjuntos
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-griddetail">
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="m-3">
+                @Html.Partial("~/Views/Shared/Botones/ViewAprobacion.cshtml")
+            </div>
+        </fieldset>
+
+    </div>
+</div>
+@Html.Partial("~/Views/Shared/Botones/ViewMessages.cshtml")
+<script src="~/JS/Legalizacion/Aprobacion.js"></script>

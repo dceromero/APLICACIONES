@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "DetailInventario";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<input type="hidden" id="lblid" value="@Model" />
+
+@Html.Partial("~/Views/Shared/View_DetailAI.cshtml")
+
+<div class="col-md-12 text-center">
+    <a href="/LogInventario/ListSupervisor" class="btn btn-outline-info"><span class="fa fa-hand-point-left">&nbsp;&nbsp;<strong>Atras</strong></span></a>
+</div>
+<script src="~/JS/DetailInventario.js"></script>

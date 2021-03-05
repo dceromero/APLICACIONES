@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Informe Inventario";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="row m-3">
+
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Informe de Ajuste Inventario</strong>
+            </legend>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fecha :</strong>
+                            </span>
+                        </div>
+                        <input id="txtfecinv" type="month" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <button id="btn-info-inv" class="btn btn-outline-info">Buscar Información</button>
+                </div>
+            </div>
+            <div id="div-info-inventario"></div>
+        </fieldset>
+    </div>
+</div>
+
+<script src="~/JS/InformeAI.js"></script>

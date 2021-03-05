@@ -13,6 +13,11 @@ ClassDataAccess.Events("#btn-reptsolicitud", "click", function () {
                 ClassDataAccess.GrillaExcelGrupable("#div-grid-download", jsdatos,
                     [
                         {
+                            field: "ID_CANAL",
+                            width: 20,
+                            title: "Canal"
+                        },
+                        {
                             field: "CODCLIENTE",
                             width: 20,
                             title: "Nit"

@@ -37,6 +37,11 @@ ClassDataAccess.Events("#btn-reptsolicitud", "click", function () {
                 ClassDataAccess.GrillaExcelGrupable("#div-grid-rep-det-sol", jsdatos,
                     [
                         {
+                            field: "VENDEDOR",
+                            width: 90,
+                            title: "Supervisor"
+                        },
+                        {
                             field: "TPSOL",
                             width: 90,
                             title: "Tipo Solicitud"
@@ -45,6 +50,16 @@ ClassDataAccess.Events("#btn-reptsolicitud", "click", function () {
                             field: "FECING",
                             width: 90,
                             title: "Fecha de Elaboración"
+                        },
+                        {
+                            field: "NAMECANALES",
+                            width: 90,
+                            title: "Canal"
+                        },
+                        {
+                            field: "GRUPOCLI",
+                            width: 90,
+                            title: "Grupo Cliente"
                         },
                         {
                             field: "NAMEOFICVENTA",
@@ -129,6 +144,7 @@ ClassDataAccess.Events("#btn-reptsolicitud", "click", function () {
 
                     ]
                 )
+
                 ArrayColor = new Array();
                 ArrayValores = new Array();
                 ArrayTitles = new Array();

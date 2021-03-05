@@ -23,5 +23,7 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             mtclient = new MetodosClientes();
             return mtclient.DetalleCupo(id);
         }
+
+        
     }
 }

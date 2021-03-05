@@ -70,8 +70,7 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             }
             return update;
         }
-
-
+        
         public List<VIEW_HEADER_CANAL> ListadoXAutorizar(long cc)
         {
             mtcanales = new MetodosCanales();
@@ -84,6 +83,18 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             var cn = mtcanales.CabeceraCN(id);
             cn.VIEW_VALORPORCANAL = mtcanales.ValorProductXCanal(id);
             return cn;
+        }
+
+        public List<VIEW_ENCABEZADO_INFORME_CANAL> EncabezadoInforme()
+        {
+            mtcanales = new MetodosCanales();
+            return mtcanales.EncabezadoInformes();
+        }
+
+        public List<VIEW_CANAl_EXCEL_SAP> ExportarExcel(long id)
+        {
+            mtcanales = new MetodosCanales();
+            return mtcanales.ExportarExcel(id);
         }
 
     }

@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Lista Notas SAP";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+@Html.Partial("~/Views/Shared/Trade/ViewAprobacion.cshtml")
+
+
+<div id="div-confirmacion" class="col-md-12" style="display:none; text-align:center; margin:0 auto;">
+    <input type="hidden" id="lblidtc" />
+    <div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" name="opt" class="form-check-input" id="optnumsap" checked="checked">Número SAP
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" name="opt" class="form-check-input" id="optbloqueo">Bloqueado
+            </label>
+        </div>
+    </div>
+    <div validarcampos="true" class="col-sm-9">
+        <input id="txtnumsap" type="text" placeholder="Número SAP" class="form-control" required />
+    </div>
+    <div style="padding-top:0.5em;">
+        <button id="btnsave" class="btn btn-primary ">Aceptar</button>
+        <button id="btncancel" class="btn btn-danger ">Cancelar</button>
+    </div>
+
+</div>
+
+<div id="div-mensaje" style="display:none; text-align:center; margin:0 auto;">
+    <div>
+        <strong>Guardando información</strong>
+    </div>
+</div>
+
+<div id="div-mensaje-respuesta" style="display:none; text-align:center; margin:0 auto;">
+    <div>
+        <strong><label id="lblmessage"></label></strong>
+    </div>
+    <div style="padding-top:0.5em;">
+        <button id="btn-close-message" class="btn btn-danger ">Cerrar</button>
+    </div>
+</div>
+
+<div id="div-advertencia" style="display:none; text-align:center; margin:0 auto;">
+    <div>
+        <strong>Debe llenar todos los datos</strong>
+    </div>
+    <div style="padding-top:0.5em;">
+        <button id="btn-close-advertencia" class="btn btn-danger ">Cerrar</button>
+    </div>
+</div>
+
+<script src="~/JS/Trade/listAdmonSale.js"></script>

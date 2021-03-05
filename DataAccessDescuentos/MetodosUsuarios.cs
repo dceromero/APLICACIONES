@@ -14,6 +14,8 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             return result;
         }
 
+
+
         public Mensajes PreRegistro(USUARIOS user)
         {
             dbcontext = new ModelAplicacionesDescuentos();

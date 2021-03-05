@@ -4,7 +4,7 @@ ClassDataAccess.Ajax(
     '/api/Solicitudes/ListadoInforme',
     '',
     function (datos) {
-        jsdata = JSON.parse(datos)
+        jsdata = JSON.parse(datos);
         ClassDataAccess.Grilla("#grid-info-desc", jsdata,
             [
                 {
@@ -92,91 +92,95 @@ ClassDataAccess.Events("[btn]", "click", function () {
         '/api/Solicitudes/ExportExcel/' + $(this).attr("btn"),
         '',
         function (data) {
-            jsdata = JSON.parse(data)
+            jsdata = JSON.parse(data);
             ClassDataAccess.OpenWindows.funcionCerrar("#div-exp", "Formulario para Exportar a Excel : ", 500, 1200,
                 function () {
                     ClassDataAccess.DestruirGrilla("#grid-exp-desc");
                 }
             );
             ClassDataAccess.GrillaExcel("#grid-exp-desc", jsdata,
-                [                       
-                    {
-                        field: "CODCLIENTE",
-                        width: 20,
-                        title: "Nit"
-                    },
-                    {
-                        field: "RAZSOCCLIENTE",
-                        width: 40,
-                        title: "Razon Social"
-                    },
-                    {
-                        field: "producto",
-                        width: 20,
-                        title: "Producto"
-                    },
-                    {
-                        field: "vacio1",
-                        width: 20,
-                        title: "vacio"
-                    }, {
-                        field: "vacio1",
-                        width: 20,
-                        title: "vacio"
-                    }, {
-                        field: "vacio1",
-                        width: 20,
-                        title: "vacio"
-                    },
-                    {
-                        field: "PORCENDESC",
-                        width: 20,
-                        title: "Porcentaje"
-                    }, {
-                        field: "simbolo",
-                        width: 20,
-                        title: "vaciol"
-                    },
-                    {
-                        field: "vacio1",
-                        width: 20,
-                        title: "vacio"
-                    },
-                    {
-                        field: "vacio1",
-                        width: 20,
-                        title: "vacio"
-                    },
-                    {
-                        field: "vacio1",
-                        width: 20,
-                        title: "vacio"
-                    },
-                    {
-                        field: "vacio1",
-                        width: 20,
-                        title: "vacio"
-                    },
-                    {
-                        field: "FECINI",
-                        width: 20,
-                        title: "Fecha Inicio"
-                    },
-                    {
-                        field: "FECFIN",
-                        width: 20,
-                        title: "Fecha Fin"
-                    },
-                    {
-                        field: "CANT",
-                        width: 20,
-                        title: "Cantidad"
-                    },
-                    {
-                        field: "material",
-                        width: 45,
-                        title: "Material"
-                    },
+                [{
+                    field: "ID_CANAL",
+                    width: 20,
+                    title: "Canal"
+                },
+                {
+                    field: "CODCLIENTE",
+                    width: 20,
+                    title: "Nit"
+                },
+                {
+                    field: "RAZSOCCLIENTE",
+                    width: 40,
+                    title: "Razon Social"
+                },
+                {
+                    field: "producto",
+                    width: 20,
+                    title: "Producto"
+                },
+                {
+                    field: "vacio1",
+                    width: 20,
+                    title: "vacio"
+                }, {
+                    field: "vacio1",
+                    width: 20,
+                    title: "vacio"
+                }, {
+                    field: "vacio1",
+                    width: 20,
+                    title: "vacio"
+                },
+                {
+                    field: "PORCENDESC",
+                    width: 20,
+                    title: "Porcentaje"
+                }, {
+                    field: "simbolo",
+                    width: 20,
+                    title: "vaciol"
+                },
+                {
+                    field: "vacio1",
+                    width: 20,
+                    title: "vacio"
+                },
+                {
+                    field: "vacio1",
+                    width: 20,
+                    title: "vacio"
+                },
+                {
+                    field: "vacio1",
+                    width: 20,
+                    title: "vacio"
+                },
+                {
+                    field: "vacio1",
+                    width: 20,
+                    title: "vacio"
+                },
+                {
+                    field: "FECINI",
+                    width: 20,
+                    title: "Fecha Inicio"
+                },
+                {
+                    field: "FECFIN",
+                    width: 20,
+                    title: "Fecha Fin"
+                },
+                {
+                    field: "CANT",
+                    width: 20,
+                    title: "Cantidad"
+                },
+                {
+                    field: "material",
+                    width: 45,
+                    title: "Material"
+                },
                 ]
             )
         })
@@ -256,5 +260,5 @@ ClassDataAccess.Events("#btn-close-div-exp", "click", function () {
     );
     ClassDataAccess.CloseWindows("#div-exp");
     ClassDataAccess.DestruirGrilla("#grid-exp-desc");
-   
+
 })

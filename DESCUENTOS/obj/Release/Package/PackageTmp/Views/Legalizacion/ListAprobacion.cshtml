@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Legalización de Notas";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+@Html.Partial("~/Views/Shared/Trade/ViewAprobacion.cshtml")
+@Html.Partial("~/Views/Shared/Botones/ViewMessages.cshtml")
+<script src="~/JS/Legalizacion/ListAprobacion.js"></script>
+<div id="div-document" class="col-md-12" style="display:none; text-align:center; margin:0 auto;">
+    <table style="font-size:12px!important" class="table table-sm table-bordered border-primary">
+        <thead>
+            <tr>
+                <th>
+                    ARCHIVO
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table-griddetail">
+        </tbody>
+    </table>
+
+</div>

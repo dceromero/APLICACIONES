@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row m-3">
+    <div id="div-login" class="card text-center m-3 " >
+        <div class="card-header">
+            <strong>Inicio de sesión - Gloria Colombia</strong>
+        </div>
+        <div class="card-body">
+            <div class="center-block">
+                <img src="~/Image/LogoEmpresa.png" />
+            </div>
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <input id="txtuser" type="text" class="form-control" placeholder="Username"  required>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        </div>
+                        <input id="txtpsw" type="password" class="form-control" placeholder="Password" required>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                               <i id="ver-psw" class="fa fa-eye-slash"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button id="btningresar" class="btn btn-block btn-outline-success mb-3">Ingresar</button>
+                </div>
+                <div class="col-md-6">
+                    <button id="btnregister" class="btn btn-block btn-outline-info mb-3">Registrar</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <!--label style="color:darkblue!important;">GLORIA COLOMBIA S.A.</label><br--><a href="#" id="a-psw">Olvide mi Contraseña</a>
+        </div>
+    </div>
+</div>
+@Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+
+
+<script src="~/JS/Login.js"></script>

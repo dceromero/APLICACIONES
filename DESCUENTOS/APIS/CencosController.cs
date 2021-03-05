@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Http;
-using DataLogicAplicaciones.DataLogicsDescuentos;
+﻿using DataLogicAplicaciones.DataLogicsDescuentos;
 using Newtonsoft.Json;
+using System.Web.Http;
 namespace DESCUENTOS.APIS
 {
     public class CencosController : ApiController

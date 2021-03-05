@@ -49,13 +49,11 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             }
             return mensaje;
         }
-
         public List<VIEW_ENCABEZADO> ListadoEncabezados(long cedula)
         {
             MetodosSolicitud mtsol = new MetodosSolicitud();
             return mtsol.ListadoEncabezado(cedula);
         }
-
         public VIEW_ENCABEZADO Encabezados(long idmc)
         {
             MetodosSolicitud mtsol = new MetodosSolicitud();
@@ -82,7 +80,22 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             return update;
         }
 
-        public List<VIEW_ENCABEZADO_INFORME> EncabezadoInforme()
+
+        public string ActualizarMasivo(List<MDDESCUENTO> mc, long cc)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            Mensajes msj = new Mensajes();
+            string update = "";
+            foreach (var md in mc)
+            {
+                msj = mtsol.UpdateMDDescuentos(md, cc);
+                update = "Registros Aprobados";
+            }
+            mtsol.EjecutarPrograma();
+            return update;
+        }
+
+            public List<VIEW_ENCABEZADO_INFORME> EncabezadoInforme()
         {
             MetodosSolicitud mtsol = new MetodosSolicitud();
             return mtsol.EncabezadoInformes();
@@ -100,11 +113,35 @@ namespace DataLogicAplicaciones.DataLogicsDescuentos
             return mtsol.ExportarExcel(fechas);
         }
 
-        public void ActualizarDonwLoad(long id)
+        public void ActualizarDonwLoad(long id, short tpdcto)
         {
             MetodosSolicitud mtsol = new MetodosSolicitud();
-            mtsol.ActualizarDescarga(id);
+            mtsol.ActualizarDescarga(id, tpdcto);
         }
 
+
+        public List<APROBACIONTRADE> listaTrade()
+        {
+            MetodosSolicitud  mtsol = new MetodosSolicitud();
+            return mtsol.listAprobacionTrade();
+        }
+
+        public List<VIEW_VENDEDORES> listaDescuentos(MCDESCUENTOS mc)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            return mtsol.listadoVendedores(mc);
+        }
+
+        public List<REPAADMONVENTAS> DetalleDescuentos(MCDESCUENTOS mc)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            return mtsol.RepDetalleSolicitudVendedor(mc);
+        }
+
+        public List<REPAADMONVENTAS> DetalleConsolidado(MCDESCUENTOS mc)
+        {
+            MetodosSolicitud mtsol = new MetodosSolicitud();
+            return mtsol.RepDetalleSolicitud(mc);
+        }
     }
 }

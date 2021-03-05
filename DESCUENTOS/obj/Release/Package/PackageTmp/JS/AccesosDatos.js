@@ -3,44 +3,15 @@ function AccesosDatos() {
 
 }
 
-AccesosDatos.prototype.FileUp = function (selector, webservices, extensiones, funcion) {
-    $(selector).pluploadQueue({
-        runtimes: 'html5',
-        url: webservices,
-
-        max_file_size: '2mb',
-
-        chunk_size: '1mb',
-
-        resize: {
-            width: 200,
-            height: 200,
-            quality: 90,
-            crop: true // crop to exact dimensions
-        },
-
-        filters: [
-            { title: "Archivos Excel", extensions: extensiones }
-        ],
-
-        rename: true,
-
-        sortable: true,
-
-        dragdrop: true,
-        init: {
-            UploadComplete: funcion
-        }
-    });
-};
 
 AccesosDatos.prototype.ViewMobile = function () {
-    if (navigator.userAgent.match(/Mobile/i) != null) {
+    if (navigator.userAgent.match(/Mobile/i) !== null) {
         $("body #div-login").addClass("loginapp");
     } else {
         $("body #div-login").addClass("loginweb");
     }
 };
+    
 AccesosDatos.prototype.Ajax = function (url, datos, funcion) {
     $.ajax({
         type: "POST",
@@ -50,6 +21,44 @@ AccesosDatos.prototype.Ajax = function (url, datos, funcion) {
         contentType: "application/json;charset=utf-8",
         success: funcion
     }).done()
+}
+
+AccesosDatos.prototype.getAjax = function (url, datos, funcion) {
+    $.ajax({
+        type: "GET",
+        url: url,
+        data: datos,
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: funcion
+    }).done()
+}
+
+AccesosDatos.prototype.Charts = function (titulo, selector, arraydeTitulos, arraydeColores, arraydeDatos) {
+    new Chart(document.getElementById(selector), {
+        type: 'bar',
+        data: {
+            labels: arraydeTitulos,
+            datasets: [
+                {
+                    backgroundColor: arraydeColores,
+                    data: arraydeDatos
+                }
+            ]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: titulo
+            }
+        }
+    });
+}
+
+AccesosDatos.prototype.CloseWindows = function (selector) {
+    var dialog = $(selector).data("kendoWindow");
+    dialog.close();
 }
 
 AccesosDatos.prototype.Events = function (id, evento, funcion) {
@@ -68,11 +77,20 @@ AccesosDatos.prototype.Events.BlurSoloNumeros = function (selector) {
     $("body").on("blur", selector, function () {
         validar = parseInt($(this).val());
         if (validar.toString() == "NaN") {
-            $(this).val("")
+            $(this).val("");
         }
     });
-}
-
+};
+AccesosDatos.prototype.Events.Moneda = function (selector) {
+    $("body").on("blur", selector, function () {
+        validar = parseInt($(this).val());
+        if (validar.toString() == "NaN") {
+            $(this).val("");
+        } else {
+            $(this).val(validar.toLocaleString('es-Es'));
+        }
+    });
+};
 AccesosDatos.prototype.Events.BlurEmail = function () {
     $("body").on("blur", '[type="email"]', function () {
         emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -83,10 +101,37 @@ AccesosDatos.prototype.Events.BlurEmail = function () {
     });
 }
 
-AccesosDatos.prototype.CloseWindows = function (selector) {
-    var dialog = $(selector).data("kendoWindow");
-    dialog.close();
-}
+AccesosDatos.prototype.FileUp = function (selector, webservices, extensiones, funcion) {
+    $(selector).pluploadQueue({
+        runtimes: 'html5',
+        url: webservices,
+
+        max_file_size: '8mb',
+
+        chunk_size: '1mb',
+
+        resize: {
+            width: 200,
+            height: 200,
+            quality: 90,
+            crop: true // crop to exact dimensions
+        },
+
+        filters: [
+            { title: "Archivos Excel", extensions: extensiones }
+        ],
+        rename: true,
+
+        sortable: true,
+
+        dragdrop: true,
+        init: {
+            UploadComplete: funcion
+        }
+    });
+};
+
+
 
 AccesosDatos.prototype.OpenWindows = function (selector, titulo, altura, ancho) {
     $(selector).kendoWindow({
@@ -119,7 +164,7 @@ AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
     $(selector).kendoGrid({
         dataSource: {
             data: datos,
-            pageSize: 15,
+            pageSize: 20,
         },
         groupable: false,
         sortable: true,
@@ -146,12 +191,45 @@ AccesosDatos.prototype.Grilla = function (selector, datos, ArrayColumna) {
     });
 }
 
+
+AccesosDatos.prototype.GrillaAgregate = function (selector, datos, ArrayColumna, ArrayAgregate) {
+    $(selector).kendoGrid({
+        dataSource: {
+            data: datos,
+            aggregate: ArrayAgregate,
+        },
+        groupable: false,
+        sortable: true,
+        filterable: {
+            messages: {
+                info: "Mostrar items que:",
+                filter: "Aplicar",
+                clear: "Borrar"
+            },
+            extra: false,
+            operators: {
+                string: {
+                    contains: "Contiene",
+                    doesnotcontain: "No contiene",
+                    startswith: "Comienza con",
+                    eq: "Es igual a",
+                    neq: "No es igual a",
+                    gte: "Mayor o igual a"
+                }
+            }
+        },
+        pageable: true,
+        columns: ArrayColumna,
+    });
+}
+
+
 AccesosDatos.prototype.GrillaExcel = function (selector, datos, ArrayColumna) {
     $(selector).kendoGrid({
         toolbar: [{ name: "excel", text: "Exportar a Excel" }],
         excel: {
             allPages: true,
-            fileName: "Descuentos.xlsx",
+            fileName: "PlantillaSAP.xlsx",
             proxyURL: "http://demos.telerik.com/kendo-ui/service/export",
             filterable: true
         },
@@ -184,16 +262,19 @@ AccesosDatos.prototype.GrillaExcel = function (selector, datos, ArrayColumna) {
     });
 }
 
-AccesosDatos.prototype.GrillaExcelGrupable = function (selector, datos, ArrayColumna) {
+AccesosDatos.prototype.GrillaExcelGrupable = function (selector, datos, ArrayColumna, ArrayAgregate) {
     $(selector).kendoGrid({
         toolbar: [{ name: "excel", text: "Exportar a Excel" }],
         excel: {
             allPages: true,
-            fileName: "Descuentos.xlsx",
+            fileName: "PlantillaSAP.xlsx",
             proxyURL: "http://demos.telerik.com/kendo-ui/service/export",
-            filterable: true
+            filterable: true,
         },
-        dataSource: datos,
+        dataSource: {
+            data: datos,
+            aggregate: ArrayAgregate,
+        },
         groupable: {
             messages: {
                 empty: "Arraste el Encabezado"
@@ -223,28 +304,6 @@ AccesosDatos.prototype.GrillaExcelGrupable = function (selector, datos, ArrayCol
             pageSizes: true
         },
         columns: ArrayColumna
-    });
-}
-
-AccesosDatos.prototype.Charts = function (titulo, selector, arraydeTitulos, arraydeColores, arraydeDatos) {
-    new Chart(document.getElementById(selector), {
-        type: 'bar',
-        data: {
-            labels: arraydeTitulos,
-            datasets: [
-                {
-                    backgroundColor: arraydeColores,
-                    data: arraydeDatos
-                }
-            ]
-        },
-        options: {
-            legend: { display: false },
-            title: {
-                display: true,
-                text: titulo
-            }
-        }
     });
 }
 
@@ -338,4 +397,14 @@ AccesosDatos.prototype.Aleatorio = function (inferior, superior) {
 
 AccesosDatos.prototype.Redirect = function (ruta) {
     location.href = ruta;
+};
+
+AccesosDatos.prototype.Tab = function (selector) {
+    $(selector).kendoTabStrip({
+        animation: {
+            open: {
+                effects: "fadeIn"
+            }
+        }
+    });
 };

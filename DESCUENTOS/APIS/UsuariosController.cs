@@ -1,9 +1,9 @@
-﻿using System;
-using System.Web;
-using System.Web.Http;
-using DataEntitysAplicaciones.DataEntitysDescuentos;
+﻿using DataEntitysAplicaciones.DataEntitysDescuentos;
 using DataLogicAplicaciones.DataLogicsDescuentos;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Http;
 namespace DESCUENTOS.APIS
 {
     public class UsuariosController : ApiController
@@ -76,19 +76,11 @@ namespace DESCUENTOS.APIS
         }
 
         [HttpPost]
-        public string Userconfig(long id)
+        public async Task<string> Userconfig(long id)
         {
-            var emp = HttpContext.Current.Session["id"];
-            if (emp != null)
-            {
-                loguser = new LogicUsuarios();
-                var result = loguser.ConfigUsuarios(id);
-                return JsonConvert.SerializeObject(result);
-            }
-            else
-            {
-                return string.Empty;
-            }
+            loguser = new LogicUsuarios();
+            var result = await loguser.ConfigUsuarios(id);
+            return JsonConvert.SerializeObject(result);
         }
 
     }

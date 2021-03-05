@@ -1,0 +1,135 @@
+﻿
+<fieldset>
+    <legend>
+        <strong>Datos Principales</strong>
+    </legend>
+
+    <div class="row" validarcampos="true">
+
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Tipo de Nota</strong>
+                    </span>
+                </div>
+                <select id="cmbtpnota" class="form-control" required></select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <strong>Codigó SAP - Cliente</strong>
+                    </span>
+                </div>
+                <input id="txtcliente" type="text" class="form-control" required>
+                <input id="lblcliente" type="hidden" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <strong>Nit Cliente</strong>
+                    </span>
+                </div>
+                <input id="txtclientePrincipa" type="text" class="form-control" required disabled>
+                <input id="nitcliente" type="hidden" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Concepto</strong>
+                    </span>
+                </div>
+                <select id="cmbtpmotivo" class="form-control" required></select>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <strong>Número Factura</strong>
+                    </span>
+                </div>
+                <input id="txtnumfact" type="text" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Motivo de Nota</strong>
+                    </span>
+                </div>
+                <select id="cmbtpsolicitud" class="form-control" required></select>
+            </div>
+        </div>
+
+        <fieldset data-oculto  class="col-md-12 d-none" >
+            <legend><strong>Actividad</strong></legend>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fec Inicial </strong>
+                            </span>
+                        </div>
+                        <input id="txtfecini" type="date" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fec Final </strong>
+                            </span>
+                        </div>
+                        <input id="txtfecfin" type="date" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Venta Promedio</strong>
+                            </span>
+                        </div>
+                        <input id="txtvalprom" type="number" class="form-control" required />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Venta Esperada</strong>
+                            </span>
+                        </div>
+                        <input id="txtvalesp" type="number" class="form-control" required />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        
+        <div class="col-md-12 " style="margin-top:1em">
+            <div class="card-footer text-center">
+                <strong>Justificación</strong>
+            </div>
+            <textarea id="txtmot" class="form-control" required></textarea>
+        </div>
+
+    </div>
+</fieldset>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Informe Cartera General";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="col-md-12 ">
+    <fieldset>
+        <legend>
+            <strong>Estado de Solicitudes</strong>
+        </legend>
+        <div id="div-tab">
+            <ul>
+                <li data-proceso="0" class="k-state-active"><strong></strong>Sin Registrar</li>
+                <li data-proceso="1"><strong>Registrados</strong> </li>
+                <li data-proceso="-1"><strong>Rechazados</strong> </li>
+            </ul>
+            <div id="grid-sr"></div>
+            <div id="grid-rs"></div>
+            <div id="grid-rc"></div>
+        </div>
+    </fieldset>
+    <script src="~/JS/InformeCT.js"></script>
+</div>
+<div style="display:none">
+    @Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+</div>

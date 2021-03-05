@@ -13,7 +13,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public List<CARGOS> ListadoCargos()
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            return dbcontext.CARGOS.SqlQuery("select * from CARGOS order by NAMECARGO").ToList();
+            return dbcontext.CARGOS.SqlQuery("select ID_CARGO, CONCAT(ID_CARGO,'-',NAMECARGO)NAMECARGO from CARGOS order by NAMECARGO").ToList();
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿using System.Web.Http;
+﻿using DataEntitysAplicaciones.DataEntitysDescuentos;
 using DataLogicAplicaciones.DataLogicsDescuentos;
-using DataEntitysAplicaciones.DataEntitysDescuentos;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Web.Http;
+
 namespace DESCUENTOS.APIS
 {
     public class ProductosController : ApiController
@@ -9,7 +11,7 @@ namespace DESCUENTOS.APIS
 
 
         LogicProductos lgproduct = null;
-           
+
         [HttpPost]
         public string ListadoProductos(MCDESCUENTOS mc)
         {
@@ -17,7 +19,7 @@ namespace DESCUENTOS.APIS
             if (id != null)
             {
                 lgproduct = new LogicProductos();
-                return JsonConvert.SerializeObject(lgproduct.productos(long.Parse(id.ToString()),mc.CODCLIENTE));
+                return JsonConvert.SerializeObject(lgproduct.productos(long.Parse(id.ToString()), mc.CODCLIENTE));
             }
             else
             {
@@ -38,6 +40,14 @@ namespace DESCUENTOS.APIS
             {
                 return string.Empty;
             }
+        }
+
+
+        [HttpGet]
+        public List<View_Productos> getListProduct(long id)
+        {
+            lgproduct = new LogicProductos();
+            return lgproduct.getListProduct(id);
         }
     }
 }

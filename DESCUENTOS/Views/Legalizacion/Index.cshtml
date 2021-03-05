@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Legalización de Notas";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<input type="hidden" id="lblid" value="@Model" />
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>@ViewBag.Title</strong>
+            </legend>
+
+            <div class="row">
+                @Html.Partial("~/Views/Shared/Trade/ViewHeader.cshtml")
+                @Html.Partial("~/Views/Shared/Trade/ViewDetail.cshtml")
+                @Html.Partial("~/Views/Shared/Trade/ViewObservacion.cshtml")
+
+                <fieldset>
+                    <legend>
+                        <strong>Adjuntar Documentos</strong>
+                    </legend>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="div-upload-docsap"></div>
+                        </div>
+                    </div>
+                </fieldset>
+
+
+            </div>
+            <div class="m-3">
+                @Html.Partial("~/Views/Shared/Botones/ViewAprobacion.cshtml")
+            </div>
+        </fieldset>
+
+    </div>
+</div>
+@Html.Partial("~/Views/Shared/Botones/ViewMessages.cshtml")
+<link href="~/CSS/jquery.plupload.queue.css" rel="stylesheet" />
+<script src="~/JSLIB/plupload.full.min.js"></script>
+<script src="~/JSLIB/jquery.plupload.queue.min.js"></script>
+<script src="~/JSLIB/es.js"></script>
+<script src="~/JS/Legalizacion/Index.js"></script>

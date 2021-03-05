@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Trade";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="row" style="width: 140% !important">
+    <div class="col" id="gridtrade"></div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <button id="btnsend" style="color:black!important;" class="btn btn-outline-success"><strong>Aprobar o Rechazar</strong></button>
+    </div>
+</div>
+
+<div style="display:none">
+    @Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+</div>
+<script src="~/JS/AprobacionTrade.js"></script>

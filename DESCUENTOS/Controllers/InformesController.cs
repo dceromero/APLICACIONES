@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Http;
+﻿using System.Web.Mvc;
 
 namespace DESCUENTOS.Controllers
 {
@@ -12,12 +7,26 @@ namespace DESCUENTOS.Controllers
         // GET: Informes
         public ActionResult Index()
         {
-            return View();
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult DetalleSolicitud()
         {
-            return View();
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult Solicitudes()
@@ -32,9 +41,28 @@ namespace DESCUENTOS.Controllers
             }
         }
 
+        public ActionResult Canal()
+        {
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View("InformeCanal");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
         public ActionResult Consolidado()
         {
-            return View();
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult ReportePI()
@@ -47,6 +75,58 @@ namespace DESCUENTOS.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+
+
         }
+
+        public ActionResult DescVendedor()
+        {
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View("DescuentoVendedor");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+
+        public ActionResult NotasComerciales()
+        {
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        public ActionResult NewConsolidado()
+        {
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        public ActionResult InformeTradeSolicitudes()
+        {
+            if (System.Web.HttpContext.Current.Session["id"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
     }
 }

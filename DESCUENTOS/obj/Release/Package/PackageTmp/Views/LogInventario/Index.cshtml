@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<input type="hidden" id="lbliddoc" />
+
+    <div class="row">
+        <div class="col-md-12 " validarcampos="true">
+            <fieldset>
+                <legend>
+                    <strong>Inventarios Gloria</strong>
+                </legend>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <strong>Centro de Distribución</strong>
+                                </span>
+                            </div>
+                            <select id="cmbcentro" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <strong>Documento SAP</strong>
+                                </span>
+                            </div>
+                            <input id="txtdocsap" type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <strong>Fecha Inventario</strong>
+                                </span>
+                            </div>
+                            <input id="txtfeinv" type="date" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <strong>Cantidad SKU</strong>
+                                </span>
+                            </div>
+                            <input id="txtcantsku" type="number" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <strong>Valor Total del Inventario</strong>
+                                </span>
+                            </div>
+                            <input id="txtvaltotalinv" type="number" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <div class="card-footer text-center">
+                                <strong>Justificación </strong>
+                            </div>
+                            <textarea id="txtjust" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="div-upload-docsap"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        @Html.Partial("~/Views/Shared/View_btnSave.cshtml")
+        @Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+
+    </div>
+
+<link href="~/CSS/jquery.plupload.queue.css" rel="stylesheet" />
+<script src="~/JSLIB/plupload.full.min.js"></script>
+<script src="~/JSLIB/jquery.plupload.queue.min.js"></script>
+<script src="~/JSLIB/es.js"></script>
+<script src="~/JS/JSAInvetarios.js"></script>

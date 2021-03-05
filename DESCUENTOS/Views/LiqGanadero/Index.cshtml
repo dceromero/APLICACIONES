@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "CertificadoLiq";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row m-3">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Generar Certificado Acopio</strong>
+            </legend>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Acopio</strong>
+                            </span>
+                        </div>
+                        <select id="cmbacopio" class="form-control" required></select>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fecha Liquidación</strong>
+                            </span>
+                        </div>
+                        <select id="cmbfecLiq" class="form-control" required></select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Nit </strong>
+                            </span>
+                        </div>
+                        <input id="txtnit" class="form-control" type="text" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button id="btn-all" class="btn  btn-block btn-outline-info">Generar Todos</button>
+                </div>
+                <div class="col-md-6">
+                    <button id="btn-by-user" class="btn  btn-block btn-outline-info">Generar por Nit</button>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+@Html.Partial("~/Views/Shared/ViewMessages.cshtml")
+<script src="~/JS/LiqGanadero.js"></script>

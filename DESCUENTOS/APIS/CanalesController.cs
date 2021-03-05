@@ -1,14 +1,10 @@
-﻿using System;
+﻿using DataEntitysAplicaciones.DataEntitysDescuentos;
+using DataLogicAplicaciones.DataLogicsDescuentos;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using DataEntitysAplicaciones.DataEntitysDescuentos;
-using DataLogicAplicaciones.DataLogicsDescuentos;
-using Newtonsoft.Json;
 
 namespace DESCUENTOS.APIS
 {
@@ -39,7 +35,7 @@ namespace DESCUENTOS.APIS
                 return null;
             }
 
-        } 
+        }
         [HttpPost]
         public async Task<string> ActualizarMD(List<MDDCTOCANAL> mc)
         {
@@ -58,7 +54,25 @@ namespace DESCUENTOS.APIS
             long cc = long.Parse(id.ToString());
             if (cc != 0)
             {
-                var result =  logcanales.ListadoXAutorizar(cc);
+                var result = logcanales.ListadoXAutorizar(cc);
+                return JsonConvert.SerializeObject(result);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        [HttpPost]
+        public string EncabezadoInforme()
+        {
+            logcanales = new LogicCanales();
+            var id = HttpContext.Current.Session["id"];
+            long cc = long.Parse(id.ToString());
+            if (cc != 0)
+            {
+                var result = logcanales.EncabezadoInforme();
                 return JsonConvert.SerializeObject(result);
             }
             else
@@ -85,5 +99,18 @@ namespace DESCUENTOS.APIS
 
         }
 
+        [HttpPost]
+        public string DownloadExcel(long id)
+        {
+            LogicSolicitudes lgsolict = new LogicSolicitudes();
+            lgsolict.ActualizarDonwLoad(id, 2);
+            return "oki";
+        }
+
+        public string ExportExcel(long id)
+        {
+            logcanales = new LogicCanales();
+            return JsonConvert.SerializeObject(logcanales.ExportarExcel(id));
+        }
     }
 }

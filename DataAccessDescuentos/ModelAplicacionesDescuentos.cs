@@ -17,6 +17,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
             Configuration.LazyLoadingEnabled = false;
         }
 
+
         public virtual DbSet<CANALES> CANALES { get; set; }
         public virtual DbSet<CARGOS> CARGOS { get; set; }
         public virtual DbSet<CENCOS> CENCOS { get; set; }
@@ -49,6 +50,9 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public virtual DbSet<MOTIVOS> MOTIVOS { get; set; }
         public virtual DbSet<MCDCTOCANAL> MCDCTOCANAL { get; set; }
         public virtual DbSet<MDDCTOCANAL> MDDCTOCANAL { get; set; }
+
+        public virtual DbSet<LINEAS> LINEAS { get; set; }
+        public virtual DbSet<TEMP_CLIENTES> TEMP_CLIENTES { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

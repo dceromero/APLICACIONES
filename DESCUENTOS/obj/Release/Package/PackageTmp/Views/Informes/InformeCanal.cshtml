@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Informes de Descuentos Canal</strong>
+                <hr />
+            </legend>
+            <div class="row">
+                <div id="grid-info-desc"></div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div id="div-exp" style="display:none">
+        <input type="hidden" id="lblidm" />
+        <div id="grid-exp-desc"></div>
+        <div class="mb-3 text-center">
+            <button id="btn-close-div-exp" class="btn btn-outline-danger">Cerrar</button>
+        </div>
+    </div>
+
+</div>
+<script src="~/JS/InformeCanal.js"></script>
+<script src="~/JSLIB/jszip.min.js"></script>

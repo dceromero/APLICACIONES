@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Informerevenew";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 ">
+        <fieldset>
+            <legend>
+                <strong>Informe Nota Comercial</strong>
+            </legend>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fecha Inicial</strong>
+                            </span>
+                        </div>
+                        <input id="txtfecini" type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <strong>Fecha Final</strong>
+                            </span>
+                        </div>
+                        <input id="txtfecfin" type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button id="btn-reptsolicitud" class="btn  btn-block btn-outline-info">Buscar</button>
+                </div>
+
+                @Html.Partial("~/Views/Shared/Trade/ViewGrid.cshtml")
+
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div id="div-advertencia" style="display:none; text-align:center; margin:0 auto;">
+    <div>
+        <strong>Debe llenar todos los datos</strong>
+    </div>
+    <div style="padding-top:0.5em;">
+        <button id="btn-close-advertencia" class="btn btn-danger ">Cerrar</button>
+    </div>
+</div>
+<script src="~/JS/Trade/Informe.js"></script>

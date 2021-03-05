@@ -8,6 +8,7 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
     public class VIEW_EXCEL_SAP
     {
+        public short ID_CANAL{ get; set; }
         public long ID_MCDESCUENTO { get; set; }
         public long CODCLIENTE { get; set; }
         public string RAZSOCCLIENTE { get; set; }

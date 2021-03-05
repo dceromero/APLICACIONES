@@ -1,4 +1,5 @@
-﻿<fieldset>
+﻿<script src="http://bendewey.com/code/scripts/jquery.formatCurrency.js"></script>
+<fieldset>
     <legend>
         <strong>Datos Principales</strong>
     </legend>
@@ -34,10 +35,20 @@
                         <strong>Cupo Actual</strong>
                     </span>
                 </div>
-                <input id="txtcupoasig" type="number" class="form-control" disabled>
+                <input id="txtcupoasig" type="text" class="form-control" disabled>
+            </div>
+
+            <div data-date class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Fecha Inicial</strong>
+                    </span>
+                </div>
+                <input id="txtfecini" type="text" class="form-control" disabled>
             </div>
 
         </div>
+
         <div class="col-md-6">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -55,18 +66,33 @@
                         <strong>Responsable de Pago</strong>
                     </span>
                 </div>
-                <input id="txtcupoasig" type="number" class="form-control" disabled>
+                <input id="txtrespago" type="text" class="form-control" disabled>
             </div>
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">
-                        <strong>Cupo Solicitado</strong>
+                        <strong>Cupo Adicional</strong>
                     </span>
                 </div>
-                <input id="txtcuposol" type="number" class="form-control" required>
+                <input id="txtcuposol" type="text" class="form-control" required>
             </div>
 
+            <div data-date class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Fecha Final</strong>
+                    </span>
+                </div>
+                <input id="txtfecfin" type="date" class="form-control" required>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="card-footer text-center">
+                <strong>Justificación : <label id="lblmot"></label></strong>
+            </div>
+            <textarea id="txtmot" class="form-control" required></textarea>
         </div>
     </div>
 </fieldset>

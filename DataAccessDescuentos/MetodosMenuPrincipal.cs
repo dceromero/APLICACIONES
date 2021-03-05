@@ -13,7 +13,7 @@ namespace DataAccessAplicaciones.DataAccessDescuentos
         public List<MENU> ListadoMenuPrincipal(long cedula)
         {
             dbcontext = new ModelAplicacionesDescuentos();
-            return dbcontext.MENU.SqlQuery($"select * from Func_MenuPrincipal('{cedula}')").ToList();
+            return dbcontext.MENU.SqlQuery($"select * from Func_MenuPrincipal('{cedula}') ORDER BY NAMEMENU").ToList();
         }
     }
 }

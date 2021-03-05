@@ -8,8 +8,10 @@ namespace DataEntitysAplicaciones.DataEntitysDescuentos
 {
     public class VIEW_REP_DETALLE_SOLICITUD
     {
+        public string VENDEDOR { get; set; }
+        public string NAMECANALES { get; set; }
+        public string GRUPOCLI { get; set; }
         public string TPSOL { get; set; }
-
         public DateTime FECING { get; set; }
 
         public string NAMEOFICVENTA { get; set; }

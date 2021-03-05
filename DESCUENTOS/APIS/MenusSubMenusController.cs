@@ -1,11 +1,9 @@
-﻿using System;
+﻿using DataEntitysAplicaciones.DataEntitysDescuentos;
+using DataLogicAplicaciones.DataLogicsDescuentos;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Http;
-using Newtonsoft.Json;
-using DataLogicAplicaciones.DataLogicsDescuentos;
-using DataEntitysAplicaciones.DataEntitysDescuentos;
 namespace DESCUENTOS.APIS
 {
     public class MenusSubMenusController : ApiController
@@ -16,7 +14,7 @@ namespace DESCUENTOS.APIS
         public string Menus()
         {
             var id = HttpContext.Current.Session["id"];
-            if (id!= null)
+            if (id != null)
             {
                 logmenusubmenu = new LogicMenuSubMenus();
                 List<MENU> menus = logmenusubmenu.ListadoMenusSubmenus(long.Parse(id.ToString()));

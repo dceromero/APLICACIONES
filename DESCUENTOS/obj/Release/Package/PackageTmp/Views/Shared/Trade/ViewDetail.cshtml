@@ -1,0 +1,40 @@
+﻿
+<fieldset>
+    <legend>
+        <strong>Detalle de la Nota</strong>
+    </legend>
+    <div class="row" id="div-detalle">
+        <div class="col-md-8">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Producto</strong>
+                    </span>
+                </div>
+                <input id="txtproduct" type="text" placeholder="Código o Descripción" class="form-control" required>
+                <input id="lblcodprod" type="hidden" />
+                <input id="lblVALOR" type="hidden" />
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <strong>Valor</strong>
+                    </span>
+                </div>
+                <input id="txtvalor" type="number" class="form-control" placeholder="" required>
+            </div>
+        </div>
+
+        <div class="col-md-1">
+            <button id="btnadd" class="btn  btn-outline-info">Agregar</button>
+        </div>
+
+        @Html.Partial("~/Views/Shared/Trade/ViewGrid.cshtml")
+
+    </div>
+</fieldset>

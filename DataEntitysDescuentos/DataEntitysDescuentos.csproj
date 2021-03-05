@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -49,48 +51,92 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI_APROBACIONMASIVA.cs" />
+    <Compile Include="AI_DOCSAP.cs" />
+    <Compile Include="AI_INFORME.cs" />
+    <Compile Include="AI_MOVCABAJUSTE.cs" />
+    <Compile Include="AI_MOVDETAJUSTE.cs" />
+    <Compile Include="APROBACIONTRADE.cs" />
     <Compile Include="CANALES.cs" />
     <Compile Include="CARGOS.cs" />
     <Compile Include="CENCOS.cs" />
+    <Compile Include="CENTRO.cs" />
+    <Compile Include="Clientes.cs" />
     <Compile Include="CLIENTES_GENERAL.cs" />
     <Compile Include="CLIENTES_SECTOR.cs" />
     <Compile Include="EMPRESAS.cs" />
     <Compile Include="ERRORES.cs" />
+    <Compile Include="FILECLIENTCARTERA.cs" />
+    <Compile Include="FUNC_VIEW_EMAILCUPO.cs" />
     <Compile Include="GRUPOCLIENTES.cs" />
+    <Compile Include="HEADCREDITOS.cs" />
     <Compile Include="HISTORICOPRECIOS.cs" />
     <Compile Include="JEFATURAS.cs" />
+    <Compile Include="LINEAS.cs" />
+    <Compile Include="LiqGanaderos.cs" />
     <Compile Include="MCDCTOCANAL.cs" />
     <Compile Include="MCDESCUENTOS.cs" />
     <Compile Include="MDDCTOCANAL.cs" />
     <Compile Include="MDDESCUENTO.cs" />
+    <Compile Include="MensajeAI.cs" />
     <Compile Include="Mensajes.cs" />
     <Compile Include="MENU.cs" />
     <Compile Include="MOTIVOS.cs" />
     <Compile Include="OFICVENTAS.cs" />
     <Compile Include="PERMISOS.cs" />
+    <Compile Include="PLANILLANOTACOMERCIAL.cs" />
     <Compile Include="PRECIOS.cs" />
     <Compile Include="PRODUCTOS.cs" />
+    <Compile Include="ProductosPrecios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REGIONALES.cs" />
+    <Compile Include="REPAADMONTRADE.cs" />
+    <Compile Include="REPAADMONVENTAS.cs" />
     <Compile Include="ROLES.cs" />
+    <Compile Include="SOLICITUDESCUPO.cs" />
     <Compile Include="SUBMENU.cs" />
+    <Compile Include="TEMP_CLIENTES.cs" />
+    <Compile Include="TEMP_CLIENTESECTOR.cs" />
+    <Compile Include="TEMP_PRECIOS.cs" />
+    <Compile Include="TEMP_PRODUCTOS.cs" />
+    <Compile Include="TIPODENOTA.cs" />
     <Compile Include="TIPOSOLICITUD.cs" />
+    <Compile Include="TRADE_CONCEPTO.cs" />
+    <Compile Include="TRADE_DOCUMENTOS.cs" />
+    <Compile Include="TRADE_INFORMEREVENEW.cs" />
+    <Compile Include="TRADE_LEGALIZACION.cs" />
+    <Compile Include="TRADE_MCNOTAXPRECIO.cs" />
+    <Compile Include="TRADE_MDLEGALIZACION.cs" />
+    <Compile Include="TRADE_MDNOTAXPRECIO.cs" />
+    <Compile Include="TRADE_VIEWCONCEPTO.cs" />
+    <Compile Include="TRADE_VIEWDIFPRECIOS.cs" />
+    <Compile Include="TRADE_VIEWINFORMESOLICITUD.cs" />
+    <Compile Include="TRADE_VIEWNOTA.cs" />
     <Compile Include="UNIDADESMEDIDAS.cs" />
     <Compile Include="USUARIOS.cs" />
     <Compile Include="VENDEDORES.cs" />
+    <Compile Include="VIEW_AI.cs" />
+    <Compile Include="VIEW_AIDet.cs" />
+    <Compile Include="VIEW_AIINFORMEESTADOS.cs" />
+    <Compile Include="VIEW_CANAl_EXCEL_SAP.cs" />
     <Compile Include="View_Clientes.cs" />
     <Compile Include="VIEW_DETALLECUPO.cs" />
     <Compile Include="VIEW_ENCABEZADO.cs" />
     <Compile Include="VIEW_ENCABEZADO_INFORME.cs" />
+    <Compile Include="VIEW_ENCABEZADO_INFORME_CANAL.cs" />
     <Compile Include="VIEW_ENCABEZADO_USUARIO.cs" />
     <Compile Include="VIEW_EXCEL_SAP.cs" />
+    <Compile Include="VIEW_FIRMAS_CREDITOS.cs" />
     <Compile Include="VIEW_HEADER_CANAL.cs" />
+    <Compile Include="VIEW_INFORMECARTERA.cs" />
     <Compile Include="VIEW_Jefes.cs" />
     <Compile Include="VIEW_Permisos.cs" />
     <Compile Include="View_Productos.cs" />
     <Compile Include="VIEW_REP_DETALLE_SOLICITUD.cs" />
+    <Compile Include="View_SOLICITUDESCUPO.cs" />
     <Compile Include="VIEW_VALORPORCANAL.cs" />
     <Compile Include="VIEW_VALORPORCLIENTE.cs" />
+    <Compile Include="VIEW_VENDEDORES.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

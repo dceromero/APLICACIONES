@@ -1,0 +1,31 @@
+
+--100004231
+
+--1140841636
+--1013580012 allison contabilidad
+--7253644 Jefe ALmacen
+--1129510661 Jefe Logistica
+--3174132 --Gerencia Supply chain
+--79887120 -- Gerencia Financiera
+--26775007 S26775007 Gerencia General
+
+Agregar 2 Campos: 
+Cantidad de SKU Oki
+Valor del Inventario Oki
+
+En el Excel Agregar otro Campo de Ajustar Si o NO Oki
+Nota cuando diga no: no se debe sumar Oki
+
+Indicadores 
+Diferencia= Valor de la Diferencia Oki
+% de Diferencia = (Valor de la Diferencia / Valor del Inventario) * 100 redondear a 3 decimales Oki
+Exactitud de inventario = (Total de lineas de productos / Cantidad SKU) * 100 Oki
+
+Nota: Validar si valor de diferencia si es cero diga no tenie diferencias. Oki
+
+Informe Total Final de ajuste. Oki
+Mostrar documentos Subidos. Oki
+--Boton de envio de correo de contabilidad 
+formato Backgroud Gris Letra blanco para los items no ajustar Oki.
+
+
